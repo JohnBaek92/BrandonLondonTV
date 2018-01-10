@@ -36,6 +36,7 @@ const About = () => {
         </div>
       </div>
       <div className="current-future-plans">
+        <img className="current-future-photo" src={window.images.sitting} />
         <div className="current-future-text">
           <div>
             Upon arriving in Los Angeles in 2013 during his off season, Brandon joined entertainment series, AfterBuzzTV created by Maria Menounos (Extra TV) as a weekly co-host summarizing events that occur on NBC’s hit series, Revolution and BET's 'The Game.'
