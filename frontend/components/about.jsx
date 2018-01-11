@@ -4,7 +4,9 @@ const About = () => {
   return(
     <div className="about-wrapper">
       <div className="about-football">
-        <img className="about-football-photo" src={window.images.about_football} />
+        <div className="photo-wrapper">
+          <img className="about-football-photo" src={window.images.about_football} />
+        </div>
         <div className="about-football-text">
           <div>
             As an athlete, actor, and broadcast personality, Brandon London is well on his way to becoming the next triple threat in the industry. Known as the “Cultured Athlete”, London combines his talent and charisma on and off the football field. After being signed to the NY Giants in 2006 as a free agent, London acquired his first SuperBowl ring.

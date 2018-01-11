@@ -18,6 +18,8 @@
 .about-football-text {
   padding-top: 1em;
   clear: right;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-life-photo {
@@ -33,6 +35,8 @@
 
 .about-life-text {
   padding-top: 2.5em;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-life-photo {
@@ -41,6 +45,10 @@
 
 .italics {
   font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .current-future-plans {
@@ -57,4 +65,11 @@
 
 .current-future-text {
   padding-top: 0.3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-wrapper {
+  display: table;
+  float: left;
 }
