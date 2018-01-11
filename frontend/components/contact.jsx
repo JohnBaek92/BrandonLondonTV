@@ -9,13 +9,13 @@ const Contact = () => {
         <div>Babette Perry</div>
         <div>Innovative Artists (LA)</div>
         <div>Email: Babette.Perry@IALA.com</div>
-        <div>Website: http://www.InovativeArtists.com​</div>
+        <div>Website: <a href="http://www.InovativeArtists.com​">Innovative Artists</a></div>
         <br />
         <div>Marki Costello</div>
         <div>CMEG TALENT | Owner/President</div>
         <div>Twitter: @cmegtalent</div>
         <div>​Email: clients@cmeg.com</div>
-        <div>Website: http://cmeg.com​</div>
+        <div>Website: <a href="http://cmeg.com">CMEG</a>​</div>
         <br />
         <div>Simona Sheinkman</div>
         <div>Vice President/Head Booker</div>
@@ -23,7 +23,7 @@ const Contact = () => {
         <div>T-212-253-8353 ext 223</div>
         <div>C-917-501-6085</div>
         <div>Email: Simona@nymmg.com</div>
-        <div>Website: www.nymmg.com </div>
+        <div>Website: <a href="http://nymmg.com">NYMMG</a></div>
       </div>
     </div>
   );
