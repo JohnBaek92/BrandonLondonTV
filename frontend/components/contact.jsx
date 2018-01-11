@@ -23,7 +23,7 @@ const Contact = () => {
         <div>T-212-253-8353 ext 223</div>
         <div>C-917-501-6085</div>
         <div>Email: Simona@nymmg.com</div>
-        <div>Website: <a href="http://nymmg.com">NYMMG</a></div>
+        <div>Website: x<a href="http://nymmg.com">NYMMG</a></div>
       </div>
     </div>
   );
