@@ -13,11 +13,6 @@ const Video = styled.ul`
     margin: 0 auto;
 }`
 
-const TwitterTimelineWrapper = styled.ul`
-  margin-top: 2vw;
-  margin-left: 40px;
-`
-
 class Landing extends React.Component {
   constructor(props){
     super(props);
@@ -73,7 +68,7 @@ class Landing extends React.Component {
         </div>
         <div className="social-embed">
           <Timeline dataSource={{ sourceType: 'profile', screenName: 'BrandonLondonTV' }}
-            options={{ username: 'BrandonLondonTV', height: '35vw' }} />
+            options={{ username: 'BrandonLondonTV', height: '40vh', width: '45vw' }} />
 
         </div>
       </div>

@@ -5,7 +5,7 @@ const Header = () => {
   return(
     <section className="header-wrapper">
       <div className="top-header">
-        <div>BRANDON LONDON</div>
+        <Link to="/">BRANDON LONDON</Link>
       </div>
       <div className="bottom-header">
         <Link to="/about">About</Link>

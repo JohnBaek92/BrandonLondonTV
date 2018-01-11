@@ -4,7 +4,7 @@ const LondonAthletic = () => {
   return(
     <div className="london-athletics-wrapper">
       <div className="london-athletic-video-wrapper">
-        <iframe className="london-athletic-video" width="700px" height="380px"
+        <iframe className="london-athletic-video" width="700px" height="380px" frameBorder="0"
           src="https://www.youtube.com/embed/qUNDomDbYtI">
         </iframe>
       </div>

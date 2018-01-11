@@ -1,12 +1,14 @@
 .landing-page-wrapper {
   display: flex;
   flex-direction: column;
-}
-
-.twitter-timeline {
-  height: 2em;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .youtube-video {
-  padding-top: 7em;
+  padding-top: 7%;
+}
+
+.social-embed {
+  margin-top: 5%;
 }
