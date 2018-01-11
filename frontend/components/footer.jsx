@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return(
     <div className="footer-wrapper">
       <div className="footer">
-        <img className="footer-logo" src={window.images.circle_logo} />
+        <Link to="/"><img className="footer-logo" src={window.images.circle_logo} /></Link>
       </div>
     </div>
   );
