@@ -7,15 +7,17 @@
 
 .top-header {
   margin: 0 auto;
-  margin-top: 1em;
-  width: 10em;
+  margin-top: 2em;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 1em;
 }
 
 .header-wrapper {
   width: 100%;
   border-bottom: 1px solid black;
   position: fixed;
-  height: 5.5em;
+  height: 7.5em;
   z-index: 10;
   background: white;
 }
