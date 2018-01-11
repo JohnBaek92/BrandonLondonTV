@@ -4,7 +4,7 @@ const Footer = () => {
   return(
     <div className="footer-wrapper">
       <div className="footer">
-        <div>BRANDON LONDON</div>
+        <img className="footer-logo" src={window.images.circle_logo} />
       </div>
     </div>
   );

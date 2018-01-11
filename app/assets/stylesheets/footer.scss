@@ -8,6 +8,7 @@
 .footer-wrapper {
   border-top: 1px solid black;
   margin-top: 1em;
+background: white;
 }
 
 .Site {
@@ -24,4 +25,8 @@
     margin-top: var( — space);
     height: 0;
     visibility: hidden;
+}
+
+.footer-logo {
+  width: 67%
 }
