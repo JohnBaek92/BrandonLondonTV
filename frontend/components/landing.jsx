@@ -70,7 +70,7 @@ class Landing extends React.Component {
         <div className="social-embed">
           <Timeline dataSource={{ sourceType: 'profile', screenName: 'BrandonLondonTV' }}
             options={{ username: 'BrandonLondonTV', height: '70vh', width: '45vw', theme: "dark" }} />
-
+          <div className="social-embed">YO<div>
         </div>
       </div>
     )
