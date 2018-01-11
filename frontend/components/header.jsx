@@ -10,9 +10,9 @@ const Header = () => {
       <div className="bottom-header">
         <Link to="/about">About</Link>
         <div>Entertainment</div>
-        <div>Football</div>
+        <div>Blog</div>
         <div>Jersey Off Suit On</div>
-        <div>London Athletic</div>
+        <Link to="/london-athletic">London Athletic</Link>
         <div>Press</div>
         <div>Contact</div>
       </div>
