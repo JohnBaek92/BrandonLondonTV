@@ -14,7 +14,7 @@ const Header = () => {
         <div>Jersey Off Suit On</div>
         <Link to="/london-athletic">London Athletic</Link>
         <div>Press</div>
-        <div>Contact</div>
+        <Link to="/contact">Contact</Link>
       </div>
     </section>
   );

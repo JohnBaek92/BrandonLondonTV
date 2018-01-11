@@ -3,6 +3,7 @@ import React from 'react';
 const About = () => {
   return(
     <div className="about-wrapper">
+      <div className="header-space"></div>
       <div className="about-football">
         <div className="photo-wrapper">
           <img className="about-football-photo" src={window.images.about_football} />

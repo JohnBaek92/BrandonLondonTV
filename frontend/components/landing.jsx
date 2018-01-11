@@ -63,6 +63,7 @@ class Landing extends React.Component {
     if(!this.state.video) return null
     return(
       <div className="landing-page-wrapper">
+        <div className="header-space"></div>
         <div className="youtube-video">
           <Video>{this.parseVideo()}</Video>
         </div>
