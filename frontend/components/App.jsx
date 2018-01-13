@@ -10,7 +10,7 @@ import Contact from './contact';
 const App = () => (
   <div className="Site">
     <Header />
-    <div className="Site-content">
+    <div className="container">
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/about" component={About} />
       <Route exact path="/london-athletic" component={LondonAthletic} />
