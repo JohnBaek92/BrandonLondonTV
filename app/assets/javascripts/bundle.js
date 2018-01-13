@@ -21535,7 +21535,7 @@ var App = function App() {
     _react2.default.createElement(_header2.default, null),
     _react2.default.createElement(
       'div',
-      { className: 'Site-content' },
+      { className: 'container' },
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _landing2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _about2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/london-athletic', component: _london_athletic2.default }),
@@ -25201,7 +25201,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _react = __webpack_require__(0);
@@ -25212,59 +25212,50 @@ var _reactRouterDom = __webpack_require__(18);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link: "entertainment" }, { name: "Jersey Of Suit On", link: "joso" }, { name: "Blog", link: "blog" }, { name: "London Athletic", link: "london-athletic" }, { name: "Press", link: "press" }];
+
 var Header = function Header() {
-  return _react2.default.createElement(
-    'section',
-    { className: 'header-wrapper' },
-    _react2.default.createElement(
-      'div',
-      { className: 'top-header' },
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/' },
-        'BRANDON LONDON'
-      )
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'bottom-header' },
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/about' },
-        'About'
-      ),
-      _react2.default.createElement(
-        'div',
-        null,
-        'Entertainment'
-      ),
-      _react2.default.createElement(
-        'div',
-        null,
-        'Blog'
-      ),
-      _react2.default.createElement(
-        'div',
-        null,
-        'Jersey Off Suit On'
-      ),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/london-athletic' },
-        'London Athletic'
-      ),
-      _react2.default.createElement(
-        'div',
-        null,
-        'Press'
-      ),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/contact' },
-        'Contact'
-      )
-    )
-  );
+	return _react2.default.createElement(
+		"div",
+		{ className: "block" },
+		_react2.default.createElement(
+			"nav",
+			{ className: "nav" },
+			_react2.default.createElement(
+				"div",
+				{ className: "nav-left" },
+				_react2.default.createElement(
+					"div",
+					{ className: "navbar-item" },
+					_react2.default.createElement(
+						_reactRouterDom.Link,
+						{ className: "title is-3", to: "/" },
+						"BRANDON LONDON"
+					)
+				)
+			),
+			_react2.default.createElement(
+				"div",
+				{ className: "nav-center" },
+				addresses.map(function (address) {
+					return NavBarItem(address);
+				})
+			),
+			_react2.default.createElement("div", { className: "nav-right" })
+		)
+	);
+};
+
+var NavBarItem = function NavBarItem(item) {
+	return _react2.default.createElement(
+		"div",
+		{ className: "navbar-item" },
+		_react2.default.createElement(
+			_reactRouterDom.Link,
+			{ to: "/" + item.link, key: item.name },
+			item.name
+		)
+	);
 };
 
 exports.default = Header;
@@ -25277,7 +25268,7 @@ exports.default = Header;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _react = __webpack_require__(0);
@@ -25289,19 +25280,23 @@ var _reactRouterDom = __webpack_require__(18);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Footer = function Footer() {
-  return _react2.default.createElement(
-    'div',
-    { className: 'footer-wrapper' },
-    _react2.default.createElement(
-      'div',
-      { className: 'footer' },
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/' },
-        _react2.default.createElement('img', { className: 'footer-logo', src: window.images.circle_logo })
-      )
-    )
-  );
+	return _react2.default.createElement(
+		"footer",
+		{ "class": "footer" },
+		_react2.default.createElement(
+			"div",
+			{ "class": "container" },
+			_react2.default.createElement(
+				"div",
+				{ "class": "content has-text-centered" },
+				_react2.default.createElement(
+					_reactRouterDom.Link,
+					{ to: "/" },
+					_react2.default.createElement("img", { className: "footer-logo", src: window.images.circle_logo })
+				)
+			)
+		)
+	);
 };
 
 exports.default = Footer;
@@ -25314,26 +25309,24 @@ exports.default = Footer;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _templateObject = _taggedTemplateLiteral(['\n  display: flex;\n  margin-top: 2em;\n  iframe {\n    width: 65vw;\n    height: 35vw;\n    frame-border: 0;\n    margin: 0 auto;\n}'], ['\n  display: flex;\n  margin-top: 2em;\n  iframe {\n    width: 65vw;\n    height: 35vw;\n    frame-border: 0;\n    margin: 0 auto;\n}']);
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = __webpack_require__(217);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _recent_video_item = __webpack_require__(223);
-
-var _recent_video_item2 = _interopRequireDefault(_recent_video_item);
-
 var _reactTwitterWidgets = __webpack_require__(129);
+
+var _instagram_feed = __webpack_require__(214);
+
+var _instagram_feed2 = _interopRequireDefault(_instagram_feed);
+
+var _hero = __webpack_require__(227);
+
+var _hero2 = _interopRequireDefault(_hero);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25343,94 +25336,51 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Video = _styledComponents2.default.ul(_templateObject);
-
 var Landing = function (_React$Component) {
-  _inherits(Landing, _React$Component);
+	_inherits(Landing, _React$Component);
 
-  function Landing(props) {
-    _classCallCheck(this, Landing);
+	function Landing(props) {
+		_classCallCheck(this, Landing);
 
-    var _this = _possibleConstructorReturn(this, (Landing.__proto__ || Object.getPrototypeOf(Landing)).call(this, props));
+		return _possibleConstructorReturn(this, (Landing.__proto__ || Object.getPrototypeOf(Landing)).call(this, props));
+	}
 
-    _this.state = { video: null };
+	_createClass(Landing, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ className: "container" },
+				_react2.default.createElement(_hero2.default, null),
+				_react2.default.createElement(
+					"div",
+					{ className: "block social-embed columns" },
+					_react2.default.createElement(
+						"div",
+						{ className: "column" },
+						_react2.default.createElement(_reactTwitterWidgets.Timeline, {
+							dataSource: {
+								sourceType: "profile",
+								screenName: "BrandonLondonTV"
+							},
+							options: {
+								username: "BrandonLondonTV",
+								height: "70vh",
+								theme: "dark"
+							}
+						})
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "column" },
+						_react2.default.createElement(_instagram_feed2.default, null)
+					)
+				)
+			);
+		}
+	}]);
 
-    _this.onYouTubeApiLoad = _this.onYouTubeApiLoad.bind(_this);
-    _this.onSearchResponse = _this.onSearchResponse.bind(_this);
-    _this.parseVideo = _this.parseVideo.bind(_this);
-    return _this;
-  }
-
-  _createClass(Landing, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      window.gapi.load('client', function () {
-        window.gapi.client.load('youtube', 'v3', _this2.onYouTubeApiLoad);
-      });
-    }
-  }, {
-    key: 'onYouTubeApiLoad',
-    value: function onYouTubeApiLoad() {
-      window.gapi.client.setApiKey('AIzaSyD7LR5NLIRrMUB6IrmJa0MPpVInKGQiGdA');
-      this.search();
-    }
-  }, {
-    key: 'onSearchResponse',
-    value: function onSearchResponse(response) {
-      var video = response.items;
-      this.setState({
-        video: video
-      });
-    }
-  }, {
-    key: 'search',
-    value: function search() {
-      var request = window.gapi.client.youtube.search.list({
-        part: 'snippet',
-        channelId: "UCe2nmwp6hFabG0ugQ8ZwnLA",
-        order: "date",
-        maxResults: 1
-      });
-      request.execute(this.onSearchResponse);
-    }
-  }, {
-    key: 'parseVideo',
-    value: function parseVideo() {
-      var video = this.state.video;
-      return _react2.default.createElement(_recent_video_item2.default, { id: video[0].id.videoId });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      if (!this.state.video) return null;
-      return _react2.default.createElement(
-        'div',
-        { className: 'landing-page-wrapper' },
-        _react2.default.createElement('div', { className: 'header-space' }),
-        _react2.default.createElement(
-          'div',
-          { className: 'youtube-video' },
-          _react2.default.createElement(
-            Video,
-            null,
-            this.parseVideo()
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'social-embed' },
-          _react2.default.createElement(_reactTwitterWidgets.Timeline, { dataSource: { sourceType: 'profile', screenName: 'BrandonLondonTV' },
-            options: { username: 'BrandonLondonTV', height: '70vh', width: '45vw', theme: "dark" } })
-        )
-      );
-    }
-  }]);
-
-  return Landing;
+	return Landing;
 }(_react2.default.Component);
 
 exports.default = Landing;
@@ -28617,9 +28567,587 @@ Tweet.defaultProps = {
 exports.default = Tweet;
 
 /***/ }),
-/* 214 */,
-/* 215 */,
-/* 216 */,
+/* 214 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _instafeed = __webpack_require__(215);
+
+var _instafeed2 = _interopRequireDefault(_instafeed);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Instagram = function (_React$Component) {
+    _inherits(Instagram, _React$Component);
+
+    function Instagram() {
+        _classCallCheck(this, Instagram);
+
+        var _this = _possibleConstructorReturn(this, (Instagram.__proto__ || Object.getPrototypeOf(Instagram)).call(this));
+
+        _this.state = {};
+
+        return _this;
+    }
+
+    _createClass(Instagram, [{
+        key: 'parse',
+        value: function parse(res) {
+
+            var data = res.data;
+        }
+    }, {
+        key: 'getFeed',
+        value: function getFeed() {
+
+            console.log(process.env["instagram_api"]);
+            var feed = new _instafeed2.default({
+                get: "user",
+                userId: "30442803",
+                accessToken: "30442803.892eb7a.27a523a44f654c2195dc56cb307c590f",
+                sortBy: "most-recent",
+                template: '<a class="photo-insta" href="{{link}}"><img src="{{image}}" /></a>'
+                // success: this.parse
+            });
+            feed.run();
+            return null;
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            this.getFeed();
+            return _react2.default.createElement('div', { id: 'instafeed', className: 'column' });
+        }
+    }]);
+
+    return Instagram;
+}(_react2.default.Component);
+
+exports.default = Instagram;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.9.3
+(function() {
+  var Instafeed;
+
+  Instafeed = (function() {
+    function Instafeed(params, context) {
+      var option, value;
+      this.options = {
+        target: 'instafeed',
+        get: 'popular',
+        resolution: 'thumbnail',
+        sortBy: 'none',
+        links: true,
+        mock: false,
+        useHttp: false
+      };
+      if (typeof params === 'object') {
+        for (option in params) {
+          value = params[option];
+          this.options[option] = value;
+        }
+      }
+      this.context = context != null ? context : this;
+      this.unique = this._genKey();
+    }
+
+    Instafeed.prototype.hasNext = function() {
+      return typeof this.context.nextUrl === 'string' && this.context.nextUrl.length > 0;
+    };
+
+    Instafeed.prototype.next = function() {
+      if (!this.hasNext()) {
+        return false;
+      }
+      return this.run(this.context.nextUrl);
+    };
+
+    Instafeed.prototype.run = function(url) {
+      var header, instanceName, script;
+      if (typeof this.options.clientId !== 'string') {
+        if (typeof this.options.accessToken !== 'string') {
+          throw new Error("Missing clientId or accessToken.");
+        }
+      }
+      if (typeof this.options.accessToken !== 'string') {
+        if (typeof this.options.clientId !== 'string') {
+          throw new Error("Missing clientId or accessToken.");
+        }
+      }
+      if ((this.options.before != null) && typeof this.options.before === 'function') {
+        this.options.before.call(this);
+      }
+      if (typeof document !== "undefined" && document !== null) {
+        script = document.createElement('script');
+        script.id = 'instafeed-fetcher';
+        script.src = url || this._buildUrl();
+        header = document.getElementsByTagName('head');
+        header[0].appendChild(script);
+        instanceName = "instafeedCache" + this.unique;
+        window[instanceName] = new Instafeed(this.options, this);
+        window[instanceName].unique = this.unique;
+      }
+      return true;
+    };
+
+    Instafeed.prototype.parse = function(response) {
+      var anchor, childNodeCount, childNodeIndex, childNodesArr, e, eMsg, fragment, header, htmlString, httpProtocol, i, image, imageObj, imageString, imageUrl, images, img, imgHeight, imgOrient, imgUrl, imgWidth, instanceName, j, k, len, len1, len2, node, parsedLimit, reverse, sortSettings, targetEl, tmpEl;
+      if (typeof response !== 'object') {
+        if ((this.options.error != null) && typeof this.options.error === 'function') {
+          this.options.error.call(this, 'Invalid JSON data');
+          return false;
+        } else {
+          throw new Error('Invalid JSON response');
+        }
+      }
+      if (response.meta.code !== 200) {
+        if ((this.options.error != null) && typeof this.options.error === 'function') {
+          this.options.error.call(this, response.meta.error_message);
+          return false;
+        } else {
+          throw new Error("Error from Instagram: " + response.meta.error_message);
+        }
+      }
+      if (response.data.length === 0) {
+        if ((this.options.error != null) && typeof this.options.error === 'function') {
+          this.options.error.call(this, 'No images were returned from Instagram');
+          return false;
+        } else {
+          throw new Error('No images were returned from Instagram');
+        }
+      }
+      if ((this.options.success != null) && typeof this.options.success === 'function') {
+        this.options.success.call(this, response);
+      }
+      this.context.nextUrl = '';
+      if (response.pagination != null) {
+        this.context.nextUrl = response.pagination.next_url;
+      }
+      if (this.options.sortBy !== 'none') {
+        if (this.options.sortBy === 'random') {
+          sortSettings = ['', 'random'];
+        } else {
+          sortSettings = this.options.sortBy.split('-');
+        }
+        reverse = sortSettings[0] === 'least' ? true : false;
+        switch (sortSettings[1]) {
+          case 'random':
+            response.data.sort(function() {
+              return 0.5 - Math.random();
+            });
+            break;
+          case 'recent':
+            response.data = this._sortBy(response.data, 'created_time', reverse);
+            break;
+          case 'liked':
+            response.data = this._sortBy(response.data, 'likes.count', reverse);
+            break;
+          case 'commented':
+            response.data = this._sortBy(response.data, 'comments.count', reverse);
+            break;
+          default:
+            throw new Error("Invalid option for sortBy: '" + this.options.sortBy + "'.");
+        }
+      }
+      if ((typeof document !== "undefined" && document !== null) && this.options.mock === false) {
+        images = response.data;
+        parsedLimit = parseInt(this.options.limit, 10);
+        if ((this.options.limit != null) && images.length > parsedLimit) {
+          images = images.slice(0, parsedLimit);
+        }
+        fragment = document.createDocumentFragment();
+        if ((this.options.filter != null) && typeof this.options.filter === 'function') {
+          images = this._filter(images, this.options.filter);
+        }
+        if ((this.options.template != null) && typeof this.options.template === 'string') {
+          htmlString = '';
+          imageString = '';
+          imgUrl = '';
+          tmpEl = document.createElement('div');
+          for (i = 0, len = images.length; i < len; i++) {
+            image = images[i];
+            imageObj = image.images[this.options.resolution];
+            if (typeof imageObj !== 'object') {
+              eMsg = "No image found for resolution: " + this.options.resolution + ".";
+              throw new Error(eMsg);
+            }
+            imgWidth = imageObj.width;
+            imgHeight = imageObj.height;
+            imgOrient = "square";
+            if (imgWidth > imgHeight) {
+              imgOrient = "landscape";
+            }
+            if (imgWidth < imgHeight) {
+              imgOrient = "portrait";
+            }
+            imageUrl = imageObj.url;
+            httpProtocol = window.location.protocol.indexOf("http") >= 0;
+            if (httpProtocol && !this.options.useHttp) {
+              imageUrl = imageUrl.replace(/https?:\/\//, '//');
+            }
+            imageString = this._makeTemplate(this.options.template, {
+              model: image,
+              id: image.id,
+              link: image.link,
+              type: image.type,
+              image: imageUrl,
+              width: imgWidth,
+              height: imgHeight,
+              orientation: imgOrient,
+              caption: this._getObjectProperty(image, 'caption.text'),
+              likes: image.likes.count,
+              comments: image.comments.count,
+              location: this._getObjectProperty(image, 'location.name')
+            });
+            htmlString += imageString;
+          }
+          tmpEl.innerHTML = htmlString;
+          childNodesArr = [];
+          childNodeIndex = 0;
+          childNodeCount = tmpEl.childNodes.length;
+          while (childNodeIndex < childNodeCount) {
+            childNodesArr.push(tmpEl.childNodes[childNodeIndex]);
+            childNodeIndex += 1;
+          }
+          for (j = 0, len1 = childNodesArr.length; j < len1; j++) {
+            node = childNodesArr[j];
+            fragment.appendChild(node);
+          }
+        } else {
+          for (k = 0, len2 = images.length; k < len2; k++) {
+            image = images[k];
+            img = document.createElement('img');
+            imageObj = image.images[this.options.resolution];
+            if (typeof imageObj !== 'object') {
+              eMsg = "No image found for resolution: " + this.options.resolution + ".";
+              throw new Error(eMsg);
+            }
+            imageUrl = imageObj.url;
+            httpProtocol = window.location.protocol.indexOf("http") >= 0;
+            if (httpProtocol && !this.options.useHttp) {
+              imageUrl = imageUrl.replace(/https?:\/\//, '//');
+            }
+            img.src = imageUrl;
+            if (this.options.links === true) {
+              anchor = document.createElement('a');
+              anchor.href = image.link;
+              anchor.appendChild(img);
+              fragment.appendChild(anchor);
+            } else {
+              fragment.appendChild(img);
+            }
+          }
+        }
+        targetEl = this.options.target;
+        if (typeof targetEl === 'string') {
+          targetEl = document.getElementById(targetEl);
+        }
+        if (targetEl == null) {
+          eMsg = "No element with id=\"" + this.options.target + "\" on page.";
+          throw new Error(eMsg);
+        }
+        targetEl.appendChild(fragment);
+        header = document.getElementsByTagName('head')[0];
+        header.removeChild(document.getElementById('instafeed-fetcher'));
+        instanceName = "instafeedCache" + this.unique;
+        window[instanceName] = void 0;
+        try {
+          delete window[instanceName];
+        } catch (_error) {
+          e = _error;
+        }
+      }
+      if ((this.options.after != null) && typeof this.options.after === 'function') {
+        this.options.after.call(this);
+      }
+      return true;
+    };
+
+    Instafeed.prototype._buildUrl = function() {
+      var base, endpoint, final;
+      base = "https://api.instagram.com/v1";
+      switch (this.options.get) {
+        case "popular":
+          endpoint = "media/popular";
+          break;
+        case "tagged":
+          if (!this.options.tagName) {
+            throw new Error("No tag name specified. Use the 'tagName' option.");
+          }
+          endpoint = "tags/" + this.options.tagName + "/media/recent";
+          break;
+        case "location":
+          if (!this.options.locationId) {
+            throw new Error("No location specified. Use the 'locationId' option.");
+          }
+          endpoint = "locations/" + this.options.locationId + "/media/recent";
+          break;
+        case "user":
+          if (!this.options.userId) {
+            throw new Error("No user specified. Use the 'userId' option.");
+          }
+          endpoint = "users/" + this.options.userId + "/media/recent";
+          break;
+        default:
+          throw new Error("Invalid option for get: '" + this.options.get + "'.");
+      }
+      final = base + "/" + endpoint;
+      if (this.options.accessToken != null) {
+        final += "?access_token=" + this.options.accessToken;
+      } else {
+        final += "?client_id=" + this.options.clientId;
+      }
+      if (this.options.limit != null) {
+        final += "&count=" + this.options.limit;
+      }
+      final += "&callback=instafeedCache" + this.unique + ".parse";
+      return final;
+    };
+
+    Instafeed.prototype._genKey = function() {
+      var S4;
+      S4 = function() {
+        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+      };
+      return "" + (S4()) + (S4()) + (S4()) + (S4());
+    };
+
+    Instafeed.prototype._makeTemplate = function(template, data) {
+      var output, pattern, ref, varName, varValue;
+      pattern = /(?:\{{2})([\w\[\]\.]+)(?:\}{2})/;
+      output = template;
+      while (pattern.test(output)) {
+        varName = output.match(pattern)[1];
+        varValue = (ref = this._getObjectProperty(data, varName)) != null ? ref : '';
+        output = output.replace(pattern, function() {
+          return "" + varValue;
+        });
+      }
+      return output;
+    };
+
+    Instafeed.prototype._getObjectProperty = function(object, property) {
+      var piece, pieces;
+      property = property.replace(/\[(\w+)\]/g, '.$1');
+      pieces = property.split('.');
+      while (pieces.length) {
+        piece = pieces.shift();
+        if ((object != null) && piece in object) {
+          object = object[piece];
+        } else {
+          return null;
+        }
+      }
+      return object;
+    };
+
+    Instafeed.prototype._sortBy = function(data, property, reverse) {
+      var sorter;
+      sorter = function(a, b) {
+        var valueA, valueB;
+        valueA = this._getObjectProperty(a, property);
+        valueB = this._getObjectProperty(b, property);
+        if (reverse) {
+          if (valueA > valueB) {
+            return 1;
+          } else {
+            return -1;
+          }
+        }
+        if (valueA < valueB) {
+          return 1;
+        } else {
+          return -1;
+        }
+      };
+      data.sort(sorter.bind(this));
+      return data;
+    };
+
+    Instafeed.prototype._filter = function(images, filter) {
+      var filteredImages, fn, i, image, len;
+      filteredImages = [];
+      fn = function(image) {
+        if (filter(image)) {
+          return filteredImages.push(image);
+        }
+      };
+      for (i = 0, len = images.length; i < len; i++) {
+        image = images[i];
+        fn(image);
+      }
+      return filteredImages;
+    };
+
+    return Instafeed;
+
+  })();
+
+  (function(root, factory) {
+    if (true) {
+      return !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof module === 'object' && module.exports) {
+      return module.exports = factory();
+    } else {
+      return root.Instafeed = factory();
+    }
+  })(this, function() {
+    return Instafeed;
+  });
+
+}).call(this);
+
+
+/***/ }),
+/* 216 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tmargin-top: 2em;\n\tiframe {\n\t\twidth: 65vw;\n\t\theight: 35vw;\n\t\tframe-border: 0;\n\t\tmargin: 0 auto;\n\t}\n"], ["\n\tdisplay: flex;\n\tmargin-top: 2em;\n\tiframe {\n\t\twidth: 65vw;\n\t\theight: 35vw;\n\t\tframe-border: 0;\n\t\tmargin: 0 auto;\n\t}\n"]);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = __webpack_require__(217);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _recent_video_item = __webpack_require__(223);
+
+var _recent_video_item2 = _interopRequireDefault(_recent_video_item);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Video = _styledComponents2.default.ul(_templateObject);
+
+var Youtube = function (_React$Component) {
+	_inherits(Youtube, _React$Component);
+
+	function Youtube() {
+		_classCallCheck(this, Youtube);
+
+		var _this = _possibleConstructorReturn(this, (Youtube.__proto__ || Object.getPrototypeOf(Youtube)).call(this));
+
+		_this.state = { video: null };
+
+		_this.onYouTubeApiLoad = _this.onYouTubeApiLoad.bind(_this);
+		_this.onSearchResponse = _this.onSearchResponse.bind(_this);
+		_this.parseVideo = _this.parseVideo.bind(_this);
+		return _this;
+	}
+
+	_createClass(Youtube, [{
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			var _this2 = this;
+
+			window.gapi.load("client", function () {
+				window.gapi.client.load("youtube", "v3", _this2.onYouTubeApiLoad);
+			});
+		}
+	}, {
+		key: "onYouTubeApiLoad",
+		value: function onYouTubeApiLoad() {
+			window.gapi.client.setApiKey("AIzaSyD7LR5NLIRrMUB6IrmJa0MPpVInKGQiGdA");
+			this.search();
+		}
+	}, {
+		key: "onSearchResponse",
+		value: function onSearchResponse(response) {
+			var video = response.items;
+			this.setState({ video: video });
+		}
+	}, {
+		key: "search",
+		value: function search() {
+			var request = window.gapi.client.youtube.search.list({
+				part: "snippet",
+				channelId: "UCe2nmwp6hFabG0ugQ8ZwnLA",
+				order: "date",
+				maxResults: 1
+			});
+			request.execute(this.onSearchResponse);
+		}
+	}, {
+		key: "parseVideo",
+		value: function parseVideo() {
+			var video = this.state.video;
+			return _react2.default.createElement(_recent_video_item2.default, { id: video[0].id.videoId });
+		}
+	}, {
+		key: "renderVideo",
+		value: function renderVideo() {
+			var video = this.state.video;
+
+			if (!video) {
+				return null;
+			}
+			return _react2.default.createElement(
+				Video,
+				null,
+				this.parseVideo()
+			);
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ className: "youtube-video" },
+				this.renderVideo()
+			);
+		}
+	}]);
+
+	return Youtube;
+}(_react2.default.Component);
+
+exports.default = Youtube;
+
+/***/ }),
 /* 217 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -32164,7 +32692,7 @@ exports.default = RecentVideoItem;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _react = __webpack_require__(0);
@@ -32174,99 +32702,137 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var About = function About() {
-  return _react2.default.createElement(
-    "div",
-    { className: "about-wrapper" },
-    _react2.default.createElement("div", { className: "header-space" }),
-    _react2.default.createElement(
-      "div",
-      { className: "about-football" },
-      _react2.default.createElement(
-        "div",
-        { className: "photo-wrapper" },
-        _react2.default.createElement("img", { className: "about-football-photo", src: window.images.about_football })
-      ),
-      _react2.default.createElement(
-        "div",
-        { className: "about-football-text" },
-        _react2.default.createElement(
-          "div",
-          null,
-          "As an athlete, actor, and broadcast personality, Brandon London is well on his way to becoming the next triple threat in the industry. Known as the \u201CCultured Athlete\u201D, London combines his talent and charisma on and off the football field. After being signed to the NY Giants in 2006 as a free agent, London acquired his first SuperBowl ring."
-        ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement(
-          "div",
-          null,
-          "From NY, he then headed to the Miami Dolphins as a reserve receiver. Mainly used as Special Teams contributor, he also made his mark at Wide Receiver posting a team high of 4 catches in the first round playoffs vs. the Baltimore Ravens."
-        ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement(
-          "div",
-          null,
-          "In 2010, London signed with the Canadian Football League\u2019s Montreal Alouettes and won a Grey Cup Championship (equivalent to the NFL\u2019s SuperBowl). He is one of 6 players to win both a Super Bowl and Grey Cup championship."
-        )
-      )
-    ),
-    _react2.default.createElement(
-      "div",
-      { className: "about-life-entertainment" },
-      _react2.default.createElement("img", { className: "about-life-photo", src: window.images.headshot }),
-      _react2.default.createElement(
-        "div",
-        { className: "about-life-text" },
-        _react2.default.createElement(
-          "div",
-          { className: "italics" },
-          "\u201CBrandon London is a tall drink of personality. He is a generous host with a genius brand\u201D -Marki Costello"
-        ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement(
-          "div",
-          null,
-          "Originally from Richmond, Virginia, Brandon grew up learning about football firsthand from his father, who is a respected college football coach at the University of Virginia. Upon high school graduation, Brandon played football and studied sociology at the University of Massachusetts. While at UMass, he broke records in career catches and touchdowns."
-        ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement(
-          "div",
-          null,
-          "In 2008, Brandon appeared on BET\u2019s \u201CRip the Runway\u201D hosted by Sean \u201CDiddy\u201D Combs. It was there that Brandon discovered his passion to act and host, aside from his natural athletic talent. With an irresistible charm, unforgettable personality and business savvy that rivals entertainment industry veterans; Brandon London is becoming one of the most sought after personalities on the red carpet."
-        )
-      )
-    ),
-    _react2.default.createElement(
-      "div",
-      { className: "current-future-plans" },
-      _react2.default.createElement("img", { className: "current-future-photo", src: window.images.sitting }),
-      _react2.default.createElement(
-        "div",
-        { className: "current-future-text" },
-        _react2.default.createElement(
-          "div",
-          null,
-          "Upon arriving in Los Angeles in 2013 during his off season, Brandon joined entertainment series, AfterBuzzTV created by Maria Menounos (Extra TV) as a weekly co-host summarizing events that occur on NBC\u2019s hit series, Revolution and BET's 'The Game.'"
-        ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement(
-          "div",
-          null,
-          "\u200BLaunching his own series \u201CJersey Off, Suit On\u201D exemplifies his persona as a football star and entertainer. This series allows the viewer to learn about fashion, music, and football from \u201CThe Cultured Athlete\u201D himself."
-        ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement(
-          "div",
-          null,
-          "For the past 5 years, London has taken his on field knowledge to train and help mentor many of the top high school football players along the east and west coast, Brandon is committed to using his celebrity status for more than red carpets and exclusive events. He is committed to empowering the youth and encourage them to follow their dreams as a positive role model."
-        ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement(
-          "div",
-          null,
-          "Brandon is well on his way to becoming the next leading multimedia brand and he is very clear that his passion isn\u2019t solely about making money it\u2019s about making history!"
-        )
-      )
-    )
-  );
+	return _react2.default.createElement(
+		"div",
+		{ className: "block" },
+		_react2.default.createElement(
+			"div",
+			{ className: "tile is-ancestor" },
+			_react2.default.createElement(
+				"div",
+				{ className: "tile is-vertical is-12" },
+				_react2.default.createElement(
+					"div",
+					{ className: "tile" },
+					_react2.default.createElement(
+						"div",
+						{ className: "tile is-parent is-vertical" },
+						_react2.default.createElement(
+							"article",
+							{ className: "tile is-child" },
+							_react2.default.createElement(
+								"p",
+								{ className: "subtitle" },
+								"As an athlete, actor, and broadcast personality, Brandon London is well on his way to becoming the next triple threat in the industry. Known as the \u201CCultured Athlete\u201D, London combines his talent and charisma on and off the football field. After being signed to the NY Giants in 2006 as a free agent, London acquired his first SuperBowl ring."
+							)
+						),
+						_react2.default.createElement(
+							"article",
+							{ className: "tile is-child notification is-warning" },
+							_react2.default.createElement("p", { className: "title" }),
+							_react2.default.createElement(
+								"p",
+								{ className: "title" },
+								"\u201CBrandon London is a tall drink of personality. He is a generous host with a genius brand\u201D -Marki Costello"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "tile is-parent" },
+						_react2.default.createElement(
+							"figure",
+							{ className: "image" },
+							_react2.default.createElement("img", { src: window.images.about_football })
+						)
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "tile is-parent" },
+					_react2.default.createElement(
+						"article",
+						{ className: "tile is-child" },
+						_react2.default.createElement(
+							"p",
+							{ className: "subtitle" },
+							"From NY, he then headed to the Miami Dolphins as a reserve receiver. Mainly used as Special Teams contributor, he also made his mark at Wide Receiver posting a team high of 4 catches in the first round playoffs vs. the Baltimore Ravens. In 2010, London signed with the Canadian Football League\u2019s Montreal Alouettes and won a Grey Cup Championship (equivalent to the NFL\u2019s SuperBowl). He is one of 6 players to win both a Super Bowl and Grey Cup championship."
+						),
+						_react2.default.createElement("div", { className: "content" })
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "tile is_parent level" },
+					_react2.default.createElement(
+						"div",
+						{ className: "tile is_child is-4 level-left" },
+						_react2.default.createElement("img", { src: window.images.smiling })
+					),
+					_react2.default.createElement("div", { className: "tile is_child is_1" }),
+					_react2.default.createElement(
+						"div",
+						{ className: "tile is_child is-7 level-right" },
+						_react2.default.createElement(
+							"p",
+							{ className: "subtitle" },
+							_react2.default.createElement(
+								"div",
+								null,
+								_react2.default.createElement(
+									"p",
+									{ className: "subtitle" },
+									"Originally from Richmond, Virginia, Brandon grew up learning about football firsthand from his father, who is a respected college football coach at the University of Virginia. Upon high school graduation, Brandon played football and studied sociology at the University of Massachusetts. While at UMass, he broke records in career catches and touchdowns. In 2008, Brandon appeared on BET\u2019s \u201CRip the Runway\u201D hosted by Sean \u201CDiddy\u201D Combs."
+								),
+								_react2.default.createElement(
+									"p",
+									{ className: "subtitle" },
+									"It was there that Brandon discovered his passion to act and host, aside from his natural athletic talent. With an irresistible charm, unforgettable personality and business savvy that rivals entertainment industry veterans; Brandon London is becoming one of the most sought after personalities on the red carpet."
+								),
+								_react2.default.createElement(
+									"p",
+									{ className: "subtitle" },
+									"Upon arriving in Los Angeles in 2013 during his off season, Brandon joined entertainment series, AfterBuzzTV created by Maria Menounos (Extra TV) as a weekly co-host summarizing events that occur on NBC\u2019s hit series, Revolution and BET's 'The Game.'"
+								)
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "tile is_parent" },
+					_react2.default.createElement(
+						"div",
+						{ className: "tile is_child is-9" },
+						_react2.default.createElement(
+							"div",
+							null,
+							_react2.default.createElement(
+								"p",
+								{ className: "subtitle" },
+								"Launching his own series \u201CJersey Off, Suit On\u201D exemplifies his persona as a football star and entertainer. This series allows the viewer to learn about fashion, music, and football from \u201CThe Cultured Athlete\u201D himself."
+							),
+							_react2.default.createElement(
+								"p",
+								{ className: "subtitle" },
+								"For the past 5 years, London has taken his on field knowledge to train and help mentor many of the top high school football players along the east and west coast, Brandon is committed to using his celebrity status for more than red carpets and exclusive events. He is committed to empowering the youth and encourage them to follow their dreams as a positive role model."
+							),
+							_react2.default.createElement(
+								"p",
+								{ className: "subtitle" },
+								"Brandon is well on his way to becoming the next leading multimedia brand and he is very clear that his passion isn\u2019t solely about making money it\u2019s about making history!"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "tile is_child is_3" },
+						_react2.default.createElement("img", { src: window.images.cheese, alt: "" })
+					)
+				)
+			)
+		)
+	);
 };
 
 exports.default = About;
@@ -32474,7 +33040,7 @@ var Contact = function Contact() {
       _react2.default.createElement(
         "div",
         null,
-        "Website: ",
+        "Website: x",
         _react2.default.createElement(
           "a",
           { href: "http://nymmg.com" },
@@ -32486,6 +33052,72 @@ var Contact = function Contact() {
 };
 
 exports.default = Contact;
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _youtube = __webpack_require__(216);
+
+var _youtube2 = _interopRequireDefault(_youtube);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Hero = function Hero() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "youtube-video block" },
+		_react2.default.createElement(
+			"section",
+			{ "class": "hero is-fullheight" },
+			_react2.default.createElement(
+				"div",
+				{ "class": "hero-body" },
+				_react2.default.createElement(
+					"div",
+					{ "class": "container columns level" },
+					_react2.default.createElement(
+						"div",
+						{ className: "column level-left" },
+						_react2.default.createElement(
+							"div",
+							{ className: "flex content" },
+							_react2.default.createElement(
+								"p",
+								{ className: "title is-2" },
+								"the cultured athlete"
+							),
+							_react2.default.createElement(
+								"p",
+								{ className: "subtitle is-4" },
+								"CURATING THE SPORTS LIFESTYLE EXPERIENCE!"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "column level-right" },
+						_react2.default.createElement("img", { src: window.images.smiling })
+					)
+				)
+			)
+		),
+		_react2.default.createElement(_youtube2.default, null)
+	);
+};
+
+exports.default = Hero;
 
 /***/ })
 /******/ ]);
