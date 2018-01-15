@@ -25217,7 +25217,7 @@ var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link
 var Header = function Header() {
 	return _react2.default.createElement(
 		"div",
-		{ className: "block" },
+		{ className: "header-wrapper" },
 		_react2.default.createElement(
 			"nav",
 			{ className: "top-nav" },
@@ -25350,6 +25350,7 @@ var Landing = function (_React$Component) {
 			return _react2.default.createElement(
 				"div",
 				{ className: "container" },
+				_react2.default.createElement("div", { className: "header-space" }),
 				_react2.default.createElement(_hero2.default, null),
 				_react2.default.createElement(
 					"div",
@@ -32736,6 +32737,7 @@ var About = function About() {
 	return _react2.default.createElement(
 		"div",
 		{ className: "block" },
+		_react2.default.createElement("div", { className: "header-space" }),
 		_react2.default.createElement(
 			"div",
 			{ className: "tile is-ancestor" },
@@ -32970,112 +32972,124 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Contact = function Contact() {
   return _react2.default.createElement(
     "div",
-    { className: "contact-wrapper" },
+    { className: "block" },
     _react2.default.createElement("div", { className: "header-space" }),
     _react2.default.createElement(
       "div",
-      { className: "contact-text" },
+      {
+        className: "title block",
+        style: {
+          textAlign: "center",
+          textTransform: "uppercase"
+        }
+      },
+      "Management"
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "contact-text columns" },
       _react2.default.createElement(
         "div",
-        null,
-        "Management"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Babette Perry"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Innovative Artists (LA)"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Email: Babette.Perry@IALA.com"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Website: ",
+        { className: "column" },
         _react2.default.createElement(
-          "a",
-          { href: "http://www.InovativeArtists.com\u200B" },
-          "Innovative Artists"
+          "p",
+          { className: "title is-primary" },
+          "Babette Perry"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Head of Alternative TV/Broadcasting"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Innovative Artists (LA)"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Email: Babette.Perry@IALA.com"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Website:",
+          " ",
+          _react2.default.createElement(
+            "a",
+            { href: "http://www.InovativeArtists.com\u200B" },
+            "Innovative Artists"
+          )
         )
       ),
-      _react2.default.createElement("br", null),
       _react2.default.createElement(
         "div",
-        null,
-        "Marki Costello"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "CMEG TALENT | Owner/President"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Twitter: @cmegtalent"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "\u200BEmail: clients@cmeg.com"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Website: ",
+        { className: "column" },
         _react2.default.createElement(
-          "a",
-          { href: "http://cmeg.com" },
-          "CMEG"
+          "p",
+          { className: "title is-info" },
+          "Marki Costello"
         ),
-        "\u200B"
-      ),
-      _react2.default.createElement("br", null),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Simona Sheinkman"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Vice President/Head Booker"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "MMG- Model, Talent & Celebrity Management"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "T-212-253-8353 ext 223"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "C-917-501-6085"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Email: Simona@nymmg.com"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Website: x",
         _react2.default.createElement(
-          "a",
-          { href: "http://nymmg.com" },
-          "NYMMG"
+          "p",
+          null,
+          "CMEG TALENT | Owner/President"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Twitter: @cmegtalent"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "\u200BEmail: clients@cmeg.com"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Website: ",
+          _react2.default.createElement(
+            "a",
+            { href: "http://cmeg.com" },
+            "CMEG"
+          ),
+          "\u200B"
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "column" },
+        _react2.default.createElement(
+          "p",
+          { className: "title is-primary" },
+          "Simona Sheinkman"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Vice President/Head Booker"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "MMG- Model, Talent & Celebrity Management"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Email: Simona@nymmg.com"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Website: ",
+          _react2.default.createElement(
+            "a",
+            { href: "http://nymmg.com" },
+            "NYMMG"
+          )
         )
       )
     )

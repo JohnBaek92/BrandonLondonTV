@@ -1,32 +1,50 @@
-import React from 'react';
+import React from "react";
 
 const Contact = () => {
-  return(
-    <div className="contact-wrapper">
-      <div className="header-space"></div>
-      <div className="contact-text">
-        <div>Management</div>
-        <div>Babette Perry</div>
-        <div>Innovative Artists (LA)</div>
-        <div>Email: Babette.Perry@IALA.com</div>
-        <div>Website: <a href="http://www.InovativeArtists.com​">Innovative Artists</a></div>
-        <br />
-        <div>Marki Costello</div>
-        <div>CMEG TALENT | Owner/President</div>
-        <div>Twitter: @cmegtalent</div>
-        <div>​Email: clients@cmeg.com</div>
-        <div>Website: <a href="http://cmeg.com">CMEG</a>​</div>
-        <br />
-        <div>Simona Sheinkman</div>
-        <div>Vice President/Head Booker</div>
-        <div>MMG- Model, Talent & Celebrity Management</div>
-        <div>T-212-253-8353 ext 223</div>
-        <div>C-917-501-6085</div>
-        <div>Email: Simona@nymmg.com</div>
-        <div>Website: x<a href="http://nymmg.com">NYMMG</a></div>
+  return (
+    <div className="block">
+			<div className="header-space"></div>
+      <div
+        className="title block"
+        style={{
+          textAlign: "center",
+          textTransform: "uppercase"
+        }}
+      >
+        Management
+      </div>
+      <div className="contact-text columns">
+        <div className="column">
+          <p className="title is-primary">Babette Perry</p>
+          <p>Head of Alternative TV/Broadcasting</p>
+          <p>Innovative Artists (LA)</p>
+          <p>Email: Babette.Perry@IALA.com</p>
+          <p>
+            Website:{" "}
+            <a href="http://www.InovativeArtists.com​">Innovative Artists</a>
+          </p>
+        </div>
+        <div className="column">
+          <p className="title is-info">Marki Costello</p>
+          <p>CMEG TALENT | Owner/President</p>
+          <p>Twitter: @cmegtalent</p>
+          <p>​Email: clients@cmeg.com</p>
+          <p>
+            Website: <a href="http://cmeg.com">CMEG</a>​
+          </p>
+        </div>
+        <div className="column">
+          <p className="title is-primary">Simona Sheinkman</p>
+          <p>Vice President/Head Booker</p>
+          <p>MMG- Model, Talent & Celebrity Management</p>
+          <p>Email: Simona@nymmg.com</p>
+          <p>
+            Website: <a href="http://nymmg.com">NYMMG</a>
+          </p>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Contact;

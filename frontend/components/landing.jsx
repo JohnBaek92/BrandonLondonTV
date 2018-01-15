@@ -13,6 +13,7 @@ class Landing extends React.Component {
 	render() {
 		return (
 			<div className="container">
+  			<div className="header-space"></div>
 				<Hero />
 				<div className="block social-embed columns">
 					<div className="column">

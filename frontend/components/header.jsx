@@ -12,7 +12,7 @@ let addresses = [
 ];
 
 const Header = () => (
-	<div className="block">
+	<div className="header-wrapper">
     <nav className="top-nav">
       <div className="navbar-item title">
         <Link className="title is-3" to="/">BRANDON LONDON</Link>
