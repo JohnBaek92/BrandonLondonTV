@@ -7,7 +7,8 @@ let addresses = [
 	{ name: "Jersey Of Suit On", link: "joso" },
 	{ name: "Blog", link: "blog" },
 	{ name: "London Athletic", link: "london-athletic" },
-	{ name: "Press", link: "press" }
+	{ name: "Press", link: "press" },
+  { name: "Contact", link: "contact" }
 ];
 
 const Header = () => (
@@ -18,17 +19,9 @@ const Header = () => (
       </div>
     </nav>
 		<nav className="bottom-nav">
-			{/* <div className="nav-left">
-			</div> */}
-
-      <div className="nav-center">
-
-      </div>
-
 			<div className="nav-center">
 				{addresses.map(address => NavBarItem(address))}
 			</div>
-			{/* <div className="nav-right" /> */}
 		</nav>
 	</div>
 );

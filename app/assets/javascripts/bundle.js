@@ -25212,7 +25212,7 @@ var _reactRouterDom = __webpack_require__(18);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link: "entertainment" }, { name: "Jersey Of Suit On", link: "joso" }, { name: "Blog", link: "blog" }, { name: "London Athletic", link: "london-athletic" }, { name: "Press", link: "press" }];
+var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link: "entertainment" }, { name: "Jersey Of Suit On", link: "joso" }, { name: "Blog", link: "blog" }, { name: "London Athletic", link: "london-athletic" }, { name: "Press", link: "press" }, { name: "Contact", link: "contact" }];
 
 var Header = function Header() {
 	return _react2.default.createElement(
@@ -25234,7 +25234,6 @@ var Header = function Header() {
 		_react2.default.createElement(
 			"nav",
 			{ className: "bottom-nav" },
-			_react2.default.createElement("div", { className: "nav-center" }),
 			_react2.default.createElement(
 				"div",
 				{ className: "nav-center" },
