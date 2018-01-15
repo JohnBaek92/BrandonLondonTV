@@ -25365,7 +25365,8 @@ var Landing = function (_React$Component) {
 							options: {
 								username: "BrandonLondonTV",
 								height: "70vh",
-								theme: "dark"
+								theme: "dark",
+								chrome: "noscrollbar"
 							}
 						})
 					),
@@ -28622,8 +28623,8 @@ var Instagram = function (_React$Component) {
                 get: "user",
                 userId: "30442803",
                 accessToken: "30442803.892eb7a.27a523a44f654c2195dc56cb307c590f",
-                sortBy: "most-recent",
-                template: '<a class="photo-insta" href="{{link}}"><img src="{{image}}" /></a>'
+                sortBy: "most-recent"
+                // template: '<a class="photo-insta" href="{{link}}"><img src="{{image}}" /></a>',
                 // success: this.parse
             });
             feed.run();

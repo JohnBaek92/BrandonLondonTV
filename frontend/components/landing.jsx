@@ -7,8 +7,8 @@ class Landing extends React.Component {
 	constructor(props) {
 		super(props);
   }
-  
-  
+
+
 
 	render() {
 		return (
@@ -24,7 +24,8 @@ class Landing extends React.Component {
 							options={{
 								username: "BrandonLondonTV",
 								height: "70vh",
-								theme: "dark"
+								theme: "dark",
+                chrome: "noscrollbar"
 							}}
 						/>
 					</div>
