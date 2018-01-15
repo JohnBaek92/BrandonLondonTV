@@ -48,11 +48,10 @@ const About = () => {
 						</article>
 					</div>
 					<div className="tile is_parent level">
-						<div className="tile is_child is-4 level-left">
+						<div className="tile is_child is-5 level-left">
 							<img src={window.images.smiling} />
 						</div>
-						<div className="tile is_child is_1" />
-						<div className="tile is_child is-7 level-right">
+						<div className="tile is_child is-7 level-right" style={{padding: "0 0 0 0.8em;"}}>
 							<p className="subtitle">
 								<div>
 									<p className="subtitle">
@@ -81,37 +80,28 @@ const About = () => {
 										events that occur on NBC’s hit series, Revolution and BET's
 										'The Game.'
 									</p>
+									<p className="subtitle">
+										Launching his own series “Jersey Off, Suit On” exemplifies his
+										persona as a football star and entertainer. This series allows
+										the viewer to learn about fashion, music, and football from
+										“The Cultured Athlete” himself.
+									</p>
+									<p className="subtitle">
+										For the past 5 years, London has taken his on field knowledge
+										to train and help mentor many of the top high school football
+										players along the east and west coast, Brandon is committed to
+										using his celebrity status for more than red carpets and
+										exclusive events. He is committed to empowering the youth and
+										encourage them to follow their dreams as a positive role
+										model.
+									</p>
+									<p className="subtitle">
+										Brandon is well on his way to becoming the next leading
+										multimedia brand and he is very clear that his passion isn’t
+										solely about making money it’s about making history!
+									</p>
 								</div>
 							</p>
-						</div>
-					</div>
-					<div className="tile is_parent">
-						<div className="tile is_child is-9">
-							<div>
-								<p className="subtitle">
-									Launching his own series “Jersey Off, Suit On” exemplifies his
-									persona as a football star and entertainer. This series allows
-									the viewer to learn about fashion, music, and football from
-									“The Cultured Athlete” himself.
-								</p>
-								<p className="subtitle">
-									For the past 5 years, London has taken his on field knowledge
-									to train and help mentor many of the top high school football
-									players along the east and west coast, Brandon is committed to
-									using his celebrity status for more than red carpets and
-									exclusive events. He is committed to empowering the youth and
-									encourage them to follow their dreams as a positive role
-									model.
-								</p>
-								<p className="subtitle">
-									Brandon is well on his way to becoming the next leading
-									multimedia brand and he is very clear that his passion isn’t
-									solely about making money it’s about making history!
-								</p>
-							</div>
-						</div>
-						<div className="tile is_child is_3">
-							<img src={window.images.cheese} alt="" />
 						</div>
 					</div>
 				</div>

@@ -32799,13 +32799,12 @@ var About = function About() {
 					{ className: "tile is_parent level" },
 					_react2.default.createElement(
 						"div",
-						{ className: "tile is_child is-4 level-left" },
+						{ className: "tile is_child is-5 level-left" },
 						_react2.default.createElement("img", { src: window.images.smiling })
 					),
-					_react2.default.createElement("div", { className: "tile is_child is_1" }),
 					_react2.default.createElement(
 						"div",
-						{ className: "tile is_child is-7 level-right" },
+						{ className: "tile is_child is-7 level-right", style: { padding: "0 0 0 0.8em;" } },
 						_react2.default.createElement(
 							"p",
 							{ className: "subtitle" },
@@ -32826,41 +32825,24 @@ var About = function About() {
 									"p",
 									{ className: "subtitle" },
 									"Upon arriving in Los Angeles in 2013 during his off season, Brandon joined entertainment series, AfterBuzzTV created by Maria Menounos (Extra TV) as a weekly co-host summarizing events that occur on NBC\u2019s hit series, Revolution and BET's 'The Game.'"
+								),
+								_react2.default.createElement(
+									"p",
+									{ className: "subtitle" },
+									"Launching his own series \u201CJersey Off, Suit On\u201D exemplifies his persona as a football star and entertainer. This series allows the viewer to learn about fashion, music, and football from \u201CThe Cultured Athlete\u201D himself."
+								),
+								_react2.default.createElement(
+									"p",
+									{ className: "subtitle" },
+									"For the past 5 years, London has taken his on field knowledge to train and help mentor many of the top high school football players along the east and west coast, Brandon is committed to using his celebrity status for more than red carpets and exclusive events. He is committed to empowering the youth and encourage them to follow their dreams as a positive role model."
+								),
+								_react2.default.createElement(
+									"p",
+									{ className: "subtitle" },
+									"Brandon is well on his way to becoming the next leading multimedia brand and he is very clear that his passion isn\u2019t solely about making money it\u2019s about making history!"
 								)
 							)
 						)
-					)
-				),
-				_react2.default.createElement(
-					"div",
-					{ className: "tile is_parent" },
-					_react2.default.createElement(
-						"div",
-						{ className: "tile is_child is-9" },
-						_react2.default.createElement(
-							"div",
-							null,
-							_react2.default.createElement(
-								"p",
-								{ className: "subtitle" },
-								"Launching his own series \u201CJersey Off, Suit On\u201D exemplifies his persona as a football star and entertainer. This series allows the viewer to learn about fashion, music, and football from \u201CThe Cultured Athlete\u201D himself."
-							),
-							_react2.default.createElement(
-								"p",
-								{ className: "subtitle" },
-								"For the past 5 years, London has taken his on field knowledge to train and help mentor many of the top high school football players along the east and west coast, Brandon is committed to using his celebrity status for more than red carpets and exclusive events. He is committed to empowering the youth and encourage them to follow their dreams as a positive role model."
-							),
-							_react2.default.createElement(
-								"p",
-								{ className: "subtitle" },
-								"Brandon is well on his way to becoming the next leading multimedia brand and he is very clear that his passion isn\u2019t solely about making money it\u2019s about making history!"
-							)
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "tile is_child is_3" },
-						_react2.default.createElement("img", { src: window.images.cheese, alt: "" })
 					)
 				)
 			)
