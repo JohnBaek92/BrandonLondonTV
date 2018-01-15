@@ -1,0 +1,77 @@
+.about-wrapper {
+  margin: 0 auto;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.about-football {
+  width: available;
+}
+
+.about-football-photo {
+  float: left;
+  width: 23em;
+  margin-right: 2em;
+  padding-top: 4%;
+}
+
+.about-football-text {
+  padding-top: 1em;
+  clear: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-life-photo {
+  width: 11em;
+  float: right;
+}
+
+.about-life-entertainment {
+  width: available;
+  padding-top: 2em;
+  clear: both;
+}
+
+.about-life-text {
+  padding-top: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-life-photo {
+  padding-left: 1em;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.current-future-plans {
+  margin-top: 4%;
+  margin-bottom: 2em;
+  width: available;
+}
+
+.current-future-photo {
+  width: 26em;
+  padding-right: 1em;
+  float: left;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.current-future-text {
+  padding-top: 0.3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-wrapper {
+  display: table;
+  float: left;
+}

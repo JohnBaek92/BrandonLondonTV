@@ -21514,15 +21514,15 @@ var _landing = __webpack_require__(128);
 
 var _landing2 = _interopRequireDefault(_landing);
 
-var _about = __webpack_require__(224);
+var _about = __webpack_require__(225);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _london_athletic = __webpack_require__(225);
+var _london_athletic = __webpack_require__(226);
 
 var _london_athletic2 = _interopRequireDefault(_london_athletic);
 
-var _contact = __webpack_require__(226);
+var _contact = __webpack_require__(227);
 
 var _contact2 = _interopRequireDefault(_contact);
 
@@ -25220,28 +25220,28 @@ var Header = function Header() {
 		{ className: "block" },
 		_react2.default.createElement(
 			"nav",
-			{ className: "nav" },
+			{ className: "top-nav" },
 			_react2.default.createElement(
 				"div",
-				{ className: "nav-left" },
+				{ className: "navbar-item title" },
 				_react2.default.createElement(
-					"div",
-					{ className: "navbar-item" },
-					_react2.default.createElement(
-						_reactRouterDom.Link,
-						{ className: "title is-3", to: "/" },
-						"BRANDON LONDON"
-					)
+					_reactRouterDom.Link,
+					{ className: "title is-3", to: "/" },
+					"BRANDON LONDON"
 				)
-			),
+			)
+		),
+		_react2.default.createElement(
+			"nav",
+			{ className: "bottom-nav" },
+			_react2.default.createElement("div", { className: "nav-center" }),
 			_react2.default.createElement(
 				"div",
 				{ className: "nav-center" },
 				addresses.map(function (address) {
 					return NavBarItem(address);
 				})
-			),
-			_react2.default.createElement("div", { className: "nav-right" })
+			)
 		)
 	);
 };
@@ -25324,7 +25324,7 @@ var _instagram_feed = __webpack_require__(214);
 
 var _instagram_feed2 = _interopRequireDefault(_instagram_feed);
 
-var _hero = __webpack_require__(227);
+var _hero = __webpack_require__(216);
 
 var _hero2 = _interopRequireDefault(_hero);
 
@@ -29035,6 +29035,37 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _youtube = __webpack_require__(217);
+
+var _youtube2 = _interopRequireDefault(_youtube);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Hero = function Hero() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "youtube-video block" },
+		_react2.default.createElement(_youtube2.default, null)
+	);
+};
+
+exports.default = Hero;
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tmargin-top: 2em;\n\tiframe {\n\t\twidth: 65vw;\n\t\theight: 35vw;\n\t\tframe-border: 0;\n\t\tmargin: 0 auto;\n\t}\n"], ["\n\tdisplay: flex;\n\tmargin-top: 2em;\n\tiframe {\n\t\twidth: 65vw;\n\t\theight: 35vw;\n\t\tframe-border: 0;\n\t\tmargin: 0 auto;\n\t}\n"]);
@@ -29043,11 +29074,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = __webpack_require__(217);
+var _styledComponents = __webpack_require__(218);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _recent_video_item = __webpack_require__(223);
+var _recent_video_item = __webpack_require__(224);
 
 var _recent_video_item2 = _interopRequireDefault(_recent_video_item);
 
@@ -29148,7 +29179,7 @@ var Youtube = function (_React$Component) {
 exports.default = Youtube;
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29160,15 +29191,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withTheme", function() { return wrapWithTheme; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerStyleSheet", function() { return ServerStyleSheet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetManager", function() { return StyleSheetManager; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_is_plain_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_stylis__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__);
 
 
@@ -30895,10 +30926,10 @@ var styled = _styled(StyledComponent, constructWithOptions);
 
 /* harmony default export */ __webpack_exports__["default"] = (styled);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(218)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(219)(module)))
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -30928,7 +30959,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30941,7 +30972,7 @@ module.exports = function(originalModule) {
 
 
 
-var isObject = __webpack_require__(220);
+var isObject = __webpack_require__(221);
 
 function isObjectObject(o) {
   return isObject(o) === true
@@ -30972,7 +31003,7 @@ module.exports = function isPlainObject(o) {
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30991,7 +31022,7 @@ module.exports = function isObject(val) {
 
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -32605,7 +32636,7 @@ module.exports = function isObject(val) {
 
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32662,7 +32693,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32685,7 +32716,7 @@ var RecentVideoItem = function RecentVideoItem(props) {
 exports.default = RecentVideoItem;
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32838,7 +32869,7 @@ var About = function About() {
 exports.default = About;
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32920,7 +32951,7 @@ var LondonAthletic = function LondonAthletic() {
 exports.default = LondonAthletic;
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33052,72 +33083,6 @@ var Contact = function Contact() {
 };
 
 exports.default = Contact;
-
-/***/ }),
-/* 227 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _youtube = __webpack_require__(216);
-
-var _youtube2 = _interopRequireDefault(_youtube);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Hero = function Hero() {
-	return _react2.default.createElement(
-		"div",
-		{ className: "youtube-video block" },
-		_react2.default.createElement(
-			"section",
-			{ "class": "hero is-fullheight" },
-			_react2.default.createElement(
-				"div",
-				{ "class": "hero-body" },
-				_react2.default.createElement(
-					"div",
-					{ "class": "container columns level" },
-					_react2.default.createElement(
-						"div",
-						{ className: "column level-left" },
-						_react2.default.createElement(
-							"div",
-							{ className: "flex content" },
-							_react2.default.createElement(
-								"p",
-								{ className: "title is-2" },
-								"the cultured athlete"
-							),
-							_react2.default.createElement(
-								"p",
-								{ className: "subtitle is-4" },
-								"CURATING THE SPORTS LIFESTYLE EXPERIENCE!"
-							)
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "column level-right" },
-						_react2.default.createElement("img", { src: window.images.smiling })
-					)
-				)
-			)
-		),
-		_react2.default.createElement(_youtube2.default, null)
-	);
-};
-
-exports.default = Hero;
 
 /***/ })
 /******/ ]);

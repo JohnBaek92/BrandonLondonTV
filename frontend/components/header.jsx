@@ -12,17 +12,23 @@ let addresses = [
 
 const Header = () => (
 	<div className="block">
-		<nav className="nav">
-			<div className="nav-left">
-				<div className="navbar-item">
-					<Link className="title is-3" to="/">BRANDON LONDON</Link>
-				</div>
-			</div>
+    <nav className="top-nav">
+      <div className="navbar-item title">
+        <Link className="title is-3" to="/">BRANDON LONDON</Link>
+      </div>
+    </nav>
+		<nav className="bottom-nav">
+			{/* <div className="nav-left">
+			</div> */}
+
+      <div className="nav-center">
+
+      </div>
 
 			<div className="nav-center">
 				{addresses.map(address => NavBarItem(address))}
 			</div>
-			<div className="nav-right" />
+			{/* <div className="nav-right" /> */}
 		</nav>
 	</div>
 );
