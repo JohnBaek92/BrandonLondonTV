@@ -25281,13 +25281,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Footer = function Footer() {
 	return _react2.default.createElement(
 		"footer",
-		{ "class": "footer" },
+		{ className: "footer" },
 		_react2.default.createElement(
 			"div",
-			{ "class": "container" },
+			{ className: "container" },
 			_react2.default.createElement(
 				"div",
-				{ "class": "content has-text-centered" },
+				{ className: "content has-text-centered" },
 				_react2.default.createElement(
 					_reactRouterDom.Link,
 					{ to: "/" },
