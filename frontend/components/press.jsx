@@ -44,7 +44,7 @@ const Tile = () => (
 			<img src="https://bulma.io/images/placeholders/640x480.png" />
 			<div className="subtext" style={thingy}>
 				<p className="subtitle">
-					This Is The Real World, Homie school finished
+					Working Caption
 				</p>
 			</div>
 		</figure>

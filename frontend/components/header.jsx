@@ -27,8 +27,8 @@ const Header = () => (
 );
 
 const NavBarItem = item => (
-	<div className="navbar-item">
-		<Link to={`/${item.link}`} key={item.name}>
+	<div className="navbar-item" key={item.name}>
+		<Link className="link-color" to={`/${item.link}`}>
 			{item.name}
 		</Link>
 	</div>

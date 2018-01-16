@@ -21544,7 +21544,7 @@ var App = function App() {
 		_react2.default.createElement("div", { className: "header-space" }),
 		_react2.default.createElement(
 			"div",
-			{ className: "container" },
+			{ className: "container Site-content" },
 			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _landing2.default }),
 			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/about", component: _about2.default }),
 			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/press", component: _press2.default }),
@@ -25259,10 +25259,10 @@ var Header = function Header() {
 var NavBarItem = function NavBarItem(item) {
 	return _react2.default.createElement(
 		"div",
-		{ className: "navbar-item" },
+		{ className: "navbar-item", key: item.name },
 		_react2.default.createElement(
 			_reactRouterDom.Link,
-			{ to: "/" + item.link, key: item.name },
+			{ className: "link-color", to: "/" + item.link },
 			item.name
 		)
 	);
@@ -28582,7 +28582,7 @@ exports.default = Tweet;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -28622,14 +28622,11 @@ var Instagram = function (_React$Component) {
     _createClass(Instagram, [{
         key: 'parse',
         value: function parse(res) {
-
             var data = res.data;
         }
     }, {
         key: 'getFeed',
         value: function getFeed() {
-
-            console.log(process.env["instagram_api"]);
             var feed = new _instafeed2.default({
                 get: "user",
                 userId: "30442803",
@@ -28653,7 +28650,6 @@ var Instagram = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Instagram;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 /* 215 */
@@ -32786,7 +32782,7 @@ var About = function About() {
 						_react2.default.createElement(
 							"figure",
 							{ className: "image" },
-							_react2.default.createElement("img", { src: window.images.about_football })
+							_react2.default.createElement("img", { style: { marginTop: "1em" }, src: window.images.about_football })
 						)
 					)
 				),
@@ -32806,11 +32802,11 @@ var About = function About() {
 				),
 				_react2.default.createElement(
 					"div",
-					{ className: "tile is_parent level" },
+					{ className: "tile is_parent level", style: { marginBottom: "1em" } },
 					_react2.default.createElement(
 						"div",
 						{ className: "tile is_child is-5 level-left" },
-						_react2.default.createElement("img", { src: window.images.smiling })
+						_react2.default.createElement("img", { style: { objectFit: "contain" }, src: window.images.smiling })
 					),
 					_react2.default.createElement(
 						"div",
@@ -32900,43 +32896,99 @@ var LondonAthletic = function LondonAthletic() {
       ),
       _react2.default.createElement(
         "div",
-        { className: "padding-bottom-london-athletic" },
-        "\u2022 Strength & Conditioning for Athletes"
+        { style: { display: "flex", flexDirection: "column" } },
+        _react2.default.createElement(
+          "div",
+          { className: "padding-bottom-london-athletic" },
+          "\u2022 Strength & Conditioning for Athletes"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "padding-bottom-london-athletic" },
+          "\u2022 TRX Body Sculpt Classes"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "padding-bottom-london-athletic" },
+          "\u2022 Fitness Bootcamps"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "padding-bottom-london-athletic" },
+          "\u2022 Celebrity Training"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "padding-bottom-london-athletic" },
+          "\u2022 NFL Combine Training"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "padding-bottom-london-athletic" },
+          "\u2022 Offensive Pass Game Training"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "padding-bottom-london-athletic" },
+          "\u2022 Power Plate Training"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "padding-bottom-london-athletic" },
+          "\u2022 Train Like An Athlete Fitness Workout"
+        )
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      null,
+      _react2.default.createElement(
+        "div",
+        { className: "title is-primary", style: { textTransform: "uppercase", textAlign: "center" } },
+        "Catches Clinics - Pass Game Development - Lineman Work"
       ),
       _react2.default.createElement(
         "div",
-        { className: "padding-bottom-london-athletic" },
-        "\u2022 TRX Body Sculpt Classes"
+        { className: "block flex-row-center" },
+        _react2.default.createElement("iframe", { width: "500px", height: "400px", frameBorder: "0",
+          src: "https://www.youtube.com/embed/wk5GSPw_zX8" }),
+        _react2.default.createElement("iframe", { className: "padding-left", width: "500px", height: "400px", frameBorder: "0",
+          src: "https://www.youtube.com/embed/G7-pGlG1DB0" })
       ),
       _react2.default.createElement(
         "div",
-        { className: "padding-bottom-london-athletic" },
-        "\u2022 Fitness Bootcamps"
+        { className: "block flex-row-center" },
+        _react2.default.createElement("iframe", { width: "500px", height: "400px", frameBorder: "0",
+          src: "https://www.youtube.com/embed/aAT5wsRrjFs" }),
+        _react2.default.createElement("iframe", { className: "padding-left", width: "500px", height: "400px", frameBorder: "0",
+          src: "https://www.youtube.com/embed/r3xmEm75MUE" })
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      null,
+      _react2.default.createElement(
+        "div",
+        { className: "title is-primary", style: { textTransform: "uppercase", textAlign: "center", marginTop: "0.5em" } },
+        "High School-NCAA-Pro Athletes Trained"
       ),
       _react2.default.createElement(
         "div",
-        { className: "padding-bottom-london-athletic" },
-        "\u2022 Celebrity Training"
+        { className: "block flex-row-center" },
+        _react2.default.createElement("img", { className: "", style: { width: "400px", height: "400px" }, src: window.images.coleman }),
+        _react2.default.createElement("img", { className: "padding-left", style: { width: "400px", height: "400px" }, src: window.images.dubois })
       ),
       _react2.default.createElement(
         "div",
-        { className: "padding-bottom-london-athletic" },
-        "\u2022 NFL Combine Training"
+        { className: "block flex-row-center" },
+        _react2.default.createElement("img", { className: "", style: { width: "400px", height: "400px" }, src: window.images.kg_gray }),
+        _react2.default.createElement("img", { className: "padding-left", style: { width: "400px", height: "400px" }, src: window.images.lewis })
       ),
       _react2.default.createElement(
         "div",
-        { className: "padding-bottom-london-athletic" },
-        "\u2022 Offensive Pass Game Training"
-      ),
-      _react2.default.createElement(
-        "div",
-        { className: "padding-bottom-london-athletic" },
-        "\u2022 Power Plate Training"
-      ),
-      _react2.default.createElement(
-        "div",
-        { className: "padding-bottom-london-athletic" },
-        "\u2022 Train Like An Athlete Fitness Workout"
+        { className: "block flex-row-center" },
+        _react2.default.createElement("img", { className: "", style: { width: "400px", height: "400px" }, src: window.images.fitzpatrick }),
+        _react2.default.createElement("img", { className: "padding-left", style: { width: "400px", height: "400px" }, src: window.images.vassel })
       )
     )
   );
@@ -33185,7 +33237,7 @@ var Tile = function Tile() {
 				_react2.default.createElement(
 					"p",
 					{ className: "subtitle" },
-					"This Is The Real World, Homie school finished"
+					"Working Caption"
 				)
 			)
 		)
