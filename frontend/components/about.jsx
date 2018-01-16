@@ -28,7 +28,7 @@ const About = () => {
 						</div>
 						<div className="tile is-parent">
 							<figure className="image">
-								<img src={window.images.about_football} />
+								<img style={{marginTop: "1em"}} src={window.images.about_football} />
 							</figure>
 						</div>
 					</div>
@@ -47,9 +47,9 @@ const About = () => {
 							<div className="content" />
 						</article>
 					</div>
-					<div className="tile is_parent level">
+					<div className="tile is_parent level" style={{marginBottom: "1em"}}>
 						<div className="tile is_child is-5 level-left">
-							<img src={window.images.smiling} />
+							<img style={{objectFit: "contain"}} src={window.images.smiling} />
 						</div>
 						<div className="tile is_child is-7 level-right" style={{padding: "0 0 0 0.8em"}}>
 							<div className="subtitle">

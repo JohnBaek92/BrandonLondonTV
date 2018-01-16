@@ -9,15 +9,11 @@ export default class Instagram extends React.Component {
     }
 
     parse(res){
-
         let data = res.data
-
     }
 
 
     getFeed(){
-
-        console.log(process.env["instagram_api"])
         const feed = new Instafeed({
 					get: "user",
 					userId: "30442803",
