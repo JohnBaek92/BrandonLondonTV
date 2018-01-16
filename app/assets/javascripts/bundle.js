@@ -33173,13 +33173,41 @@ var Press = function (_React$Component) {
 	function Press() {
 		_classCallCheck(this, Press);
 
-		return _possibleConstructorReturn(this, (Press.__proto__ || Object.getPrototypeOf(Press)).call(this));
+		var _this = _possibleConstructorReturn(this, (Press.__proto__ || Object.getPrototypeOf(Press)).call(this));
+
+		_this.state = {};
+		_this.fetchPress = _this.fetchPress.bind(_this);
+		return _this;
 	}
 
 	_createClass(Press, [{
 		key: "componentDidMount",
 		value: function componentDidMount() {
-			console.log("press");
+			this.fetchPress();
+		}
+	}, {
+		key: "fetchPress",
+		value: function fetchPress() {
+			var _this2 = this;
+
+			fetch("/pages/1").then(function (res) {
+				return res.json();
+			}).then(function (press) {
+				_this2.setState({ press: press });
+			});
+		}
+	}, {
+		key: "renderPress",
+		value: function renderPress() {
+			var press = this.state.press;
+
+
+			if (!press) {
+				return null;
+			}
+			return press.map(function (el) {
+				return _react2.default.createElement(Tile, { article: el });
+			});
 		}
 	}, {
 		key: "render",
@@ -33195,9 +33223,7 @@ var Press = function (_React$Component) {
 				_react2.default.createElement(
 					"div",
 					{ className: "block columns is-multiline" },
-					Array.from({ length: 7 }).map(function (el) {
-						return _react2.default.createElement(Tile, null);
-					})
+					this.renderPress()
 				)
 			);
 		}
@@ -33220,24 +33246,26 @@ var thingy = {
 	height: "50%"
 };
 
-var Tile = function Tile() {
+var Tile = function Tile(_ref) {
+	var article = _ref.article;
+
 	return _react2.default.createElement(
 		"article",
 		{
-			"class": "column is-3 tile is-child notification news-tile",
+			className: "column is-3 tile is-child notification news-tile",
 			style: news
 		},
 		_react2.default.createElement(
 			"figure",
-			{ "class": "image is-4by3" },
-			_react2.default.createElement("img", { src: "https://bulma.io/images/placeholders/640x480.png" }),
+			{ className: "image is-square" },
+			_react2.default.createElement("img", { className: "cover", src: article.image }),
 			_react2.default.createElement(
 				"div",
 				{ className: "subtext", style: thingy },
 				_react2.default.createElement(
 					"p",
 					{ className: "subtitle" },
-					"Working Caption"
+					article.title
 				)
 			)
 		)

@@ -11,4 +11,5 @@
 class Page < ApplicationRecord
 
     has_many :links
+    has_many :images, through: :links
 end
