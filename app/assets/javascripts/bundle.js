@@ -33232,7 +33232,7 @@ var Tile = function Tile() {
 				_react2.default.createElement(
 					"p",
 					{ className: "subtitle" },
-					"This Is The Real World, Homie school finished"
+					"Working Caption"
 				)
 			)
 		)
