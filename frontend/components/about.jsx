@@ -3,7 +3,6 @@ import React from "react";
 const About = () => {
 	return (
 		<div className="block">
-			<div className="header-space"></div>
 			<div className="tile is-ancestor">
 				<div className="tile is-vertical is-12">
 					<div className="tile">

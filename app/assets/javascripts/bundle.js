@@ -32738,7 +32738,6 @@ var About = function About() {
 	return _react2.default.createElement(
 		"div",
 		{ className: "block" },
-		_react2.default.createElement("div", { className: "header-space" }),
 		_react2.default.createElement(
 			"div",
 			{ className: "tile is-ancestor" },
@@ -32874,7 +32873,6 @@ var LondonAthletic = function LondonAthletic() {
   return _react2.default.createElement(
     "div",
     { className: "london-athletics-wrapper" },
-    _react2.default.createElement("div", { className: "header-space" }),
     _react2.default.createElement(
       "div",
       { className: "london-athletic-video-wrapper" },
