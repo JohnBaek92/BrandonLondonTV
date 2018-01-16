@@ -21514,15 +21514,15 @@ var _landing = __webpack_require__(128);
 
 var _landing2 = _interopRequireDefault(_landing);
 
-var _about = __webpack_require__(224);
+var _about = __webpack_require__(225);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _london_athletic = __webpack_require__(225);
+var _london_athletic = __webpack_require__(226);
 
 var _london_athletic2 = _interopRequireDefault(_london_athletic);
 
-var _contact = __webpack_require__(226);
+var _contact = __webpack_require__(227);
 
 var _contact2 = _interopRequireDefault(_contact);
 
@@ -25212,36 +25212,35 @@ var _reactRouterDom = __webpack_require__(18);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link: "entertainment" }, { name: "Jersey Of Suit On", link: "joso" }, { name: "Blog", link: "blog" }, { name: "London Athletic", link: "london-athletic" }, { name: "Press", link: "press" }];
+var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link: "entertainment" }, { name: "Jersey Of Suit On", link: "joso" }, { name: "Blog", link: "blog" }, { name: "London Athletic", link: "london-athletic" }, { name: "Press", link: "press" }, { name: "Contact", link: "contact" }];
 
 var Header = function Header() {
 	return _react2.default.createElement(
 		"div",
-		{ className: "block" },
+		{ className: "header-wrapper" },
 		_react2.default.createElement(
 			"nav",
-			{ className: "nav" },
+			{ className: "top-nav" },
 			_react2.default.createElement(
 				"div",
-				{ className: "nav-left" },
+				{ className: "navbar-item title" },
 				_react2.default.createElement(
-					"div",
-					{ className: "navbar-item" },
-					_react2.default.createElement(
-						_reactRouterDom.Link,
-						{ className: "title is-3", to: "/" },
-						"BRANDON LONDON"
-					)
+					_reactRouterDom.Link,
+					{ className: "title is-3", to: "/" },
+					"BRANDON LONDON"
 				)
-			),
+			)
+		),
+		_react2.default.createElement(
+			"nav",
+			{ className: "bottom-nav" },
 			_react2.default.createElement(
 				"div",
 				{ className: "nav-center" },
 				addresses.map(function (address) {
 					return NavBarItem(address);
 				})
-			),
-			_react2.default.createElement("div", { className: "nav-right" })
+			)
 		)
 	);
 };
@@ -25282,13 +25281,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Footer = function Footer() {
 	return _react2.default.createElement(
 		"footer",
-		{ "class": "footer" },
+		{ className: "footer" },
 		_react2.default.createElement(
 			"div",
-			{ "class": "container" },
+			{ className: "container" },
 			_react2.default.createElement(
 				"div",
-				{ "class": "content has-text-centered" },
+				{ className: "content has-text-centered" },
 				_react2.default.createElement(
 					_reactRouterDom.Link,
 					{ to: "/" },
@@ -25324,7 +25323,7 @@ var _instagram_feed = __webpack_require__(214);
 
 var _instagram_feed2 = _interopRequireDefault(_instagram_feed);
 
-var _hero = __webpack_require__(227);
+var _hero = __webpack_require__(216);
 
 var _hero2 = _interopRequireDefault(_hero);
 
@@ -25351,6 +25350,7 @@ var Landing = function (_React$Component) {
 			return _react2.default.createElement(
 				"div",
 				{ className: "container" },
+				_react2.default.createElement("div", { className: "header-space" }),
 				_react2.default.createElement(_hero2.default, null),
 				_react2.default.createElement(
 					"div",
@@ -25366,7 +25366,8 @@ var Landing = function (_React$Component) {
 							options: {
 								username: "BrandonLondonTV",
 								height: "70vh",
-								theme: "dark"
+								theme: "dark",
+								chrome: "noscrollbar"
 							}
 						})
 					),
@@ -28623,8 +28624,8 @@ var Instagram = function (_React$Component) {
                 get: "user",
                 userId: "30442803",
                 accessToken: "30442803.892eb7a.27a523a44f654c2195dc56cb307c590f",
-                sortBy: "most-recent",
-                template: '<a class="photo-insta" href="{{link}}"><img src="{{image}}" /></a>'
+                sortBy: "most-recent"
+                // template: '<a class="photo-insta" href="{{link}}"><img src="{{image}}" /></a>',
                 // success: this.parse
             });
             feed.run();
@@ -29035,6 +29036,37 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _youtube = __webpack_require__(217);
+
+var _youtube2 = _interopRequireDefault(_youtube);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Hero = function Hero() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "youtube-video block" },
+		_react2.default.createElement(_youtube2.default, null)
+	);
+};
+
+exports.default = Hero;
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tmargin-top: 2em;\n\tiframe {\n\t\twidth: 65vw;\n\t\theight: 35vw;\n\t\tframe-border: 0;\n\t\tmargin: 0 auto;\n\t}\n"], ["\n\tdisplay: flex;\n\tmargin-top: 2em;\n\tiframe {\n\t\twidth: 65vw;\n\t\theight: 35vw;\n\t\tframe-border: 0;\n\t\tmargin: 0 auto;\n\t}\n"]);
@@ -29043,11 +29075,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = __webpack_require__(217);
+var _styledComponents = __webpack_require__(218);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _recent_video_item = __webpack_require__(223);
+var _recent_video_item = __webpack_require__(224);
 
 var _recent_video_item2 = _interopRequireDefault(_recent_video_item);
 
@@ -29148,7 +29180,7 @@ var Youtube = function (_React$Component) {
 exports.default = Youtube;
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29160,15 +29192,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withTheme", function() { return wrapWithTheme; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerStyleSheet", function() { return ServerStyleSheet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetManager", function() { return StyleSheetManager; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_is_plain_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_stylis__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__);
 
 
@@ -30895,10 +30927,10 @@ var styled = _styled(StyledComponent, constructWithOptions);
 
 /* harmony default export */ __webpack_exports__["default"] = (styled);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(218)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(219)(module)))
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -30928,7 +30960,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30941,7 +30973,7 @@ module.exports = function(originalModule) {
 
 
 
-var isObject = __webpack_require__(220);
+var isObject = __webpack_require__(221);
 
 function isObjectObject(o) {
   return isObject(o) === true
@@ -30972,7 +31004,7 @@ module.exports = function isPlainObject(o) {
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30991,7 +31023,7 @@ module.exports = function isObject(val) {
 
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -32605,7 +32637,7 @@ module.exports = function isObject(val) {
 
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32662,7 +32694,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32685,7 +32717,7 @@ var RecentVideoItem = function RecentVideoItem(props) {
 exports.default = RecentVideoItem;
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32705,6 +32737,7 @@ var About = function About() {
 	return _react2.default.createElement(
 		"div",
 		{ className: "block" },
+		_react2.default.createElement("div", { className: "header-space" }),
 		_react2.default.createElement(
 			"div",
 			{ className: "tile is-ancestor" },
@@ -32721,7 +32754,7 @@ var About = function About() {
 							"article",
 							{ className: "tile is-child" },
 							_react2.default.createElement(
-								"p",
+								"div",
 								{ className: "subtitle" },
 								"As an athlete, actor, and broadcast personality, Brandon London is well on his way to becoming the next triple threat in the industry. Known as the \u201CCultured Athlete\u201D, London combines his talent and charisma on and off the football field. After being signed to the NY Giants in 2006 as a free agent, London acquired his first SuperBowl ring."
 							)
@@ -32729,9 +32762,9 @@ var About = function About() {
 						_react2.default.createElement(
 							"article",
 							{ className: "tile is-child notification is-warning" },
-							_react2.default.createElement("p", { className: "title" }),
+							_react2.default.createElement("div", { className: "title" }),
 							_react2.default.createElement(
-								"p",
+								"div",
 								{ className: "title" },
 								"\u201CBrandon London is a tall drink of personality. He is a generous host with a genius brand\u201D -Marki Costello"
 							)
@@ -32754,7 +32787,7 @@ var About = function About() {
 						"article",
 						{ className: "tile is-child" },
 						_react2.default.createElement(
-							"p",
+							"div",
 							{ className: "subtitle" },
 							"From NY, he then headed to the Miami Dolphins as a reserve receiver. Mainly used as Special Teams contributor, he also made his mark at Wide Receiver posting a team high of 4 catches in the first round playoffs vs. the Baltimore Ravens. In 2010, London signed with the Canadian Football League\u2019s Montreal Alouettes and won a Grey Cup Championship (equivalent to the NFL\u2019s SuperBowl). He is one of 6 players to win both a Super Bowl and Grey Cup championship."
 						),
@@ -32766,68 +32799,50 @@ var About = function About() {
 					{ className: "tile is_parent level" },
 					_react2.default.createElement(
 						"div",
-						{ className: "tile is_child is-4 level-left" },
+						{ className: "tile is_child is-5 level-left" },
 						_react2.default.createElement("img", { src: window.images.smiling })
 					),
-					_react2.default.createElement("div", { className: "tile is_child is_1" }),
 					_react2.default.createElement(
 						"div",
-						{ className: "tile is_child is-7 level-right" },
+						{ className: "tile is_child is-7 level-right", style: { padding: "0 0 0 0.8em" } },
 						_react2.default.createElement(
-							"p",
+							"div",
 							{ className: "subtitle" },
 							_react2.default.createElement(
 								"div",
 								null,
 								_react2.default.createElement(
-									"p",
+									"div",
 									{ className: "subtitle" },
 									"Originally from Richmond, Virginia, Brandon grew up learning about football firsthand from his father, who is a respected college football coach at the University of Virginia. Upon high school graduation, Brandon played football and studied sociology at the University of Massachusetts. While at UMass, he broke records in career catches and touchdowns. In 2008, Brandon appeared on BET\u2019s \u201CRip the Runway\u201D hosted by Sean \u201CDiddy\u201D Combs."
 								),
 								_react2.default.createElement(
-									"p",
+									"div",
 									{ className: "subtitle" },
 									"It was there that Brandon discovered his passion to act and host, aside from his natural athletic talent. With an irresistible charm, unforgettable personality and business savvy that rivals entertainment industry veterans; Brandon London is becoming one of the most sought after personalities on the red carpet."
 								),
 								_react2.default.createElement(
-									"p",
+									"div",
 									{ className: "subtitle" },
 									"Upon arriving in Los Angeles in 2013 during his off season, Brandon joined entertainment series, AfterBuzzTV created by Maria Menounos (Extra TV) as a weekly co-host summarizing events that occur on NBC\u2019s hit series, Revolution and BET's 'The Game.'"
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "subtitle" },
+									"Launching his own series \u201CJersey Off, Suit On\u201D exemplifies his persona as a football star and entertainer. This series allows the viewer to learn about fashion, music, and football from \u201CThe Cultured Athlete\u201D himself."
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "subtitle" },
+									"For the past 5 years, London has taken his on field knowledge to train and help mentor many of the top high school football players along the east and west coast, Brandon is committed to using his celebrity status for more than red carpets and exclusive events. He is committed to empowering the youth and encourage them to follow their dreams as a positive role model."
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "subtitle" },
+									"Brandon is well on his way to becoming the next leading multimedia brand and he is very clear that his passion isn\u2019t solely about making money it\u2019s about making history!"
 								)
 							)
 						)
-					)
-				),
-				_react2.default.createElement(
-					"div",
-					{ className: "tile is_parent" },
-					_react2.default.createElement(
-						"div",
-						{ className: "tile is_child is-9" },
-						_react2.default.createElement(
-							"div",
-							null,
-							_react2.default.createElement(
-								"p",
-								{ className: "subtitle" },
-								"Launching his own series \u201CJersey Off, Suit On\u201D exemplifies his persona as a football star and entertainer. This series allows the viewer to learn about fashion, music, and football from \u201CThe Cultured Athlete\u201D himself."
-							),
-							_react2.default.createElement(
-								"p",
-								{ className: "subtitle" },
-								"For the past 5 years, London has taken his on field knowledge to train and help mentor many of the top high school football players along the east and west coast, Brandon is committed to using his celebrity status for more than red carpets and exclusive events. He is committed to empowering the youth and encourage them to follow their dreams as a positive role model."
-							),
-							_react2.default.createElement(
-								"p",
-								{ className: "subtitle" },
-								"Brandon is well on his way to becoming the next leading multimedia brand and he is very clear that his passion isn\u2019t solely about making money it\u2019s about making history!"
-							)
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "tile is_child is_3" },
-						_react2.default.createElement("img", { src: window.images.cheese, alt: "" })
 					)
 				)
 			)
@@ -32838,7 +32853,7 @@ var About = function About() {
 exports.default = About;
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32920,7 +32935,7 @@ var LondonAthletic = function LondonAthletic() {
 exports.default = LondonAthletic;
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32939,112 +32954,124 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Contact = function Contact() {
   return _react2.default.createElement(
     "div",
-    { className: "contact-wrapper" },
+    { className: "block" },
     _react2.default.createElement("div", { className: "header-space" }),
     _react2.default.createElement(
       "div",
-      { className: "contact-text" },
+      {
+        className: "title block",
+        style: {
+          textAlign: "center",
+          textTransform: "uppercase"
+        }
+      },
+      "Management"
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "contact-text columns" },
       _react2.default.createElement(
         "div",
-        null,
-        "Management"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Babette Perry"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Innovative Artists (LA)"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Email: Babette.Perry@IALA.com"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Website: ",
+        { className: "column" },
         _react2.default.createElement(
-          "a",
-          { href: "http://www.InovativeArtists.com\u200B" },
-          "Innovative Artists"
+          "p",
+          { className: "title is-primary" },
+          "Babette Perry"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Head of Alternative TV/Broadcasting"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Innovative Artists (LA)"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Email: Babette.Perry@IALA.com"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Website:",
+          " ",
+          _react2.default.createElement(
+            "a",
+            { href: "http://www.InovativeArtists.com\u200B" },
+            "Innovative Artists"
+          )
         )
       ),
-      _react2.default.createElement("br", null),
       _react2.default.createElement(
         "div",
-        null,
-        "Marki Costello"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "CMEG TALENT | Owner/President"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Twitter: @cmegtalent"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "\u200BEmail: clients@cmeg.com"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Website: ",
+        { className: "column" },
         _react2.default.createElement(
-          "a",
-          { href: "http://cmeg.com" },
-          "CMEG"
+          "p",
+          { className: "title is-info" },
+          "Marki Costello"
         ),
-        "\u200B"
-      ),
-      _react2.default.createElement("br", null),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Simona Sheinkman"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Vice President/Head Booker"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "MMG- Model, Talent & Celebrity Management"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "T-212-253-8353 ext 223"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "C-917-501-6085"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Email: Simona@nymmg.com"
-      ),
-      _react2.default.createElement(
-        "div",
-        null,
-        "Website: x",
         _react2.default.createElement(
-          "a",
-          { href: "http://nymmg.com" },
-          "NYMMG"
+          "p",
+          null,
+          "CMEG TALENT | Owner/President"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Twitter: @cmegtalent"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "\u200BEmail: clients@cmeg.com"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Website: ",
+          _react2.default.createElement(
+            "a",
+            { href: "http://cmeg.com" },
+            "CMEG"
+          ),
+          "\u200B"
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "column" },
+        _react2.default.createElement(
+          "p",
+          { className: "title is-primary" },
+          "Simona Sheinkman"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Vice President/Head Booker"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "MMG- Model, Talent & Celebrity Management"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Email: Simona@nymmg.com"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Website: ",
+          _react2.default.createElement(
+            "a",
+            { href: "http://nymmg.com" },
+            "NYMMG"
+          )
         )
       )
     )
@@ -33052,72 +33079,6 @@ var Contact = function Contact() {
 };
 
 exports.default = Contact;
-
-/***/ }),
-/* 227 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _youtube = __webpack_require__(216);
-
-var _youtube2 = _interopRequireDefault(_youtube);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Hero = function Hero() {
-	return _react2.default.createElement(
-		"div",
-		{ className: "youtube-video block" },
-		_react2.default.createElement(
-			"section",
-			{ "class": "hero is-fullheight" },
-			_react2.default.createElement(
-				"div",
-				{ "class": "hero-body" },
-				_react2.default.createElement(
-					"div",
-					{ "class": "container columns level" },
-					_react2.default.createElement(
-						"div",
-						{ className: "column level-left" },
-						_react2.default.createElement(
-							"div",
-							{ className: "flex content" },
-							_react2.default.createElement(
-								"p",
-								{ className: "title is-2" },
-								"the cultured athlete"
-							),
-							_react2.default.createElement(
-								"p",
-								{ className: "subtitle is-4" },
-								"CURATING THE SPORTS LIFESTYLE EXPERIENCE!"
-							)
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "column level-right" },
-						_react2.default.createElement("img", { src: window.images.smiling })
-					)
-				)
-			)
-		),
-		_react2.default.createElement(_youtube2.default, null)
-	);
-};
-
-exports.default = Hero;
 
 /***/ })
 /******/ ]);

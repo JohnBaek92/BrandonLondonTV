@@ -7,12 +7,13 @@ class Landing extends React.Component {
 	constructor(props) {
 		super(props);
   }
-  
-  
+
+
 
 	render() {
 		return (
 			<div className="container">
+  			<div className="header-space"></div>
 				<Hero />
 				<div className="block social-embed columns">
 					<div className="column">
@@ -24,7 +25,8 @@ class Landing extends React.Component {
 							options={{
 								username: "BrandonLondonTV",
 								height: "70vh",
-								theme: "dark"
+								theme: "dark",
+                chrome: "noscrollbar"
 							}}
 						/>
 					</div>

@@ -9,9 +9,9 @@ export default class Instagram extends React.Component {
     }
 
     parse(res){
-        
+
         let data = res.data
-        
+
     }
 
 
@@ -24,13 +24,13 @@ export default class Instagram extends React.Component {
 					accessToken:
 						"30442803.892eb7a.27a523a44f654c2195dc56cb307c590f",
 					sortBy: "most-recent",
-					template: '<a class="photo-insta" href="{{link}}"><img src="{{image}}" /></a>',
+					// template: '<a class="photo-insta" href="{{link}}"><img src="{{image}}" /></a>',
 					// success: this.parse
 				});
         feed.run();
         return null
     }
-        
+
 
     render(){
         this.getFeed()
