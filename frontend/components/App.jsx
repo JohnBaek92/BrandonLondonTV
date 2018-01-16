@@ -8,6 +8,7 @@ import Press from "./press";
 import Blog from "./blog";
 import LondonAthletic from "./london_athletic";
 import Contact from "./contact";
+import Entertainment from "./entertainment";
 
 const App = () => (
 	<div className="Site">
@@ -21,6 +22,7 @@ const App = () => (
 			<Route exact path="/blog" component={Blog} />
 			<Route exact path="/london-athletic" component={LondonAthletic} />
 			<Route exact path="/contact" component={Contact} />
+			<Route exact path="/entertainment" component={Entertainment} />
 		</div>
 		<Footer />
 	</div>
