@@ -11,10 +11,10 @@ class Press extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
-				<p className="title is-uppercase has-text-weight-bold">In the News</p>
+			<div className="block is-uppercase has-text-weight-bold">
+				<p className="title ">In the News</p>
 				<div className="block columns is-multiline">
-					{Array.from({ length: 8 }).map(el => <Tile />)}
+					{Array.from({ length: 7 }).map(el => <Tile />)}
 				</div>
 			</div>
 		);
@@ -40,7 +40,7 @@ const Tile = () => (
 		class="column is-3 tile is-child notification news-tile"
 		style={news}
 	>
-		<figure class="image is-1by1">
+		<figure class="image is-4by3">
 			<img src="https://bulma.io/images/placeholders/640x480.png" />
 			<div className="subtext" style={thingy}>
 				<p className="subtitle">
