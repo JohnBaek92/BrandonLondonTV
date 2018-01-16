@@ -21493,7 +21493,7 @@ exports.default = Root;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _react = __webpack_require__(0);
@@ -21518,6 +21518,10 @@ var _about = __webpack_require__(225);
 
 var _about2 = _interopRequireDefault(_about);
 
+var _press = __webpack_require__(228);
+
+var _press2 = _interopRequireDefault(_press);
+
 var _london_athletic = __webpack_require__(226);
 
 var _london_athletic2 = _interopRequireDefault(_london_athletic);
@@ -21529,20 +21533,22 @@ var _contact2 = _interopRequireDefault(_contact);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return _react2.default.createElement(
-    'div',
-    { className: 'Site' },
-    _react2.default.createElement(_header2.default, null),
-    _react2.default.createElement(
-      'div',
-      { className: 'container' },
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _landing2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _about2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/london-athletic', component: _london_athletic2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/contact', component: _contact2.default })
-    ),
-    _react2.default.createElement(_footer2.default, null)
-  );
+	return _react2.default.createElement(
+		"div",
+		{ className: "Site" },
+		_react2.default.createElement(_header2.default, null),
+		_react2.default.createElement("div", { className: "header-space" }),
+		_react2.default.createElement(
+			"div",
+			{ className: "container" },
+			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _landing2.default }),
+			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/about", component: _about2.default }),
+			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/press", component: _press2.default }),
+			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/london-athletic", component: _london_athletic2.default }),
+			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/contact", component: _contact2.default })
+		),
+		_react2.default.createElement(_footer2.default, null)
+	);
 };
 
 exports.default = App;
@@ -25350,7 +25356,6 @@ var Landing = function (_React$Component) {
 			return _react2.default.createElement(
 				"div",
 				{ className: "container" },
-				_react2.default.createElement("div", { className: "header-space" }),
 				_react2.default.createElement(_hero2.default, null),
 				_react2.default.createElement(
 					"div",
@@ -33079,6 +33084,110 @@ var Contact = function Contact() {
 };
 
 exports.default = Contact;
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Press = function (_React$Component) {
+	_inherits(Press, _React$Component);
+
+	function Press() {
+		_classCallCheck(this, Press);
+
+		return _possibleConstructorReturn(this, (Press.__proto__ || Object.getPrototypeOf(Press)).call(this));
+	}
+
+	_createClass(Press, [{
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			console.log("press");
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ className: "container" },
+				_react2.default.createElement(
+					"p",
+					{ className: "title is-uppercase has-text-weight-bold" },
+					"In the News"
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "block columns is-multiline" },
+					Array.from({ length: 8 }).map(function (el) {
+						return _react2.default.createElement(Tile, null);
+					})
+				)
+			);
+		}
+	}]);
+
+	return Press;
+}(_react2.default.Component);
+
+var news = {
+	postition: "relative",
+	overflow: "hidden",
+	transition: "all .5s ease"
+};
+
+var thingy = {
+	position: "absolute",
+	padding: "10px",
+	background: "rgba(0,0,0,.5)",
+	width: "100%",
+	height: "50%"
+};
+
+var Tile = function Tile() {
+	return _react2.default.createElement(
+		"article",
+		{
+			"class": "column is-3 tile is-child notification news-tile",
+			style: news
+		},
+		_react2.default.createElement(
+			"figure",
+			{ "class": "image is-1by1" },
+			_react2.default.createElement("img", { src: "https://bulma.io/images/placeholders/640x480.png" }),
+			_react2.default.createElement(
+				"div",
+				{ className: "subtext", style: thingy },
+				_react2.default.createElement(
+					"p",
+					{ className: "subtitle" },
+					"This Is The Real World, Homie school finished"
+				)
+			)
+		)
+	);
+};
+
+exports.default = Press;
 
 /***/ })
 /******/ ]);
