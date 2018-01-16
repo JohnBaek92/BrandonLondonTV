@@ -21522,6 +21522,10 @@ var _press = __webpack_require__(228);
 
 var _press2 = _interopRequireDefault(_press);
 
+var _blog = __webpack_require__(229);
+
+var _blog2 = _interopRequireDefault(_blog);
+
 var _london_athletic = __webpack_require__(226);
 
 var _london_athletic2 = _interopRequireDefault(_london_athletic);
@@ -21544,6 +21548,7 @@ var App = function App() {
 			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _landing2.default }),
 			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/about", component: _about2.default }),
 			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/press", component: _press2.default }),
+			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/blog", component: _blog2.default }),
 			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/london-athletic", component: _london_athletic2.default }),
 			_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/contact", component: _contact2.default })
 		),
@@ -33129,16 +33134,16 @@ var Press = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				"div",
-				{ className: "container" },
+				{ className: "block is-uppercase has-text-weight-bold" },
 				_react2.default.createElement(
 					"p",
-					{ className: "title is-uppercase has-text-weight-bold" },
+					{ className: "title " },
 					"In the News"
 				),
 				_react2.default.createElement(
 					"div",
 					{ className: "block columns is-multiline" },
-					Array.from({ length: 8 }).map(function (el) {
+					Array.from({ length: 7 }).map(function (el) {
 						return _react2.default.createElement(Tile, null);
 					})
 				)
@@ -33172,7 +33177,7 @@ var Tile = function Tile() {
 		},
 		_react2.default.createElement(
 			"figure",
-			{ "class": "image is-1by1" },
+			{ "class": "image is-4by3" },
 			_react2.default.createElement("img", { src: "https://bulma.io/images/placeholders/640x480.png" }),
 			_react2.default.createElement(
 				"div",
@@ -33188,6 +33193,93 @@ var Tile = function Tile() {
 };
 
 exports.default = Press;
+
+/***/ }),
+/* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Blog = function (_React$Component) {
+	_inherits(Blog, _React$Component);
+
+	function Blog() {
+		_classCallCheck(this, Blog);
+
+		var _this = _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).call(this));
+
+		_this.state = {};
+		return _this;
+	}
+
+	_createClass(Blog, [{
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			var _this2 = this;
+
+			fetch("/posts").then(function (res) {
+				return res.json();
+			}).then(function (foo) {
+				_this2.setState({ posts: foo });
+			});
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			var posts = this.state.posts;
+
+			if (!posts) {
+				return null;
+			}
+			return _react2.default.createElement(
+				"div",
+				{ className: "stuff" },
+				posts.map(function (post) {
+					return _react2.default.createElement(
+						"div",
+						null,
+						_react2.default.createElement(
+							"p",
+							{ className: "title" },
+							post.title
+						),
+						_react2.default.createElement(
+							"p",
+							{ className: "subtitle" },
+							post.body
+						),
+						post.images.map(function (image) {
+							return _react2.default.createElement("img", { src: image.image });
+						})
+					);
+				})
+			);
+		}
+	}]);
+
+	return Blog;
+}(_react2.default.Component);
+
+exports.default = Blog;
 
 /***/ })
 /******/ ]);
