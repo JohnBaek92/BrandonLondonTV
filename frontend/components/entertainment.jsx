@@ -3,8 +3,7 @@ import React from 'react';
 const photoStyle = {width: "350px", height: "350px", objectFit: "cover"};
 
 const Entertainment = () => {
-  return (
-    <section className="entertainment-wrapper">
+  return <section className="entertainment-wrapper">
       <div className="title" style={{ textAlign: "center" }}>
         Photos
       </div>
@@ -23,8 +22,19 @@ const Entertainment = () => {
       <div className="title" style={{ textAlign: "center" }}>
         Videos
       </div>
-    </section>
-  );
+      <div className="columns">
+        <iframe className="column" width="350" height="350" frameBorder="0" src="https://www.youtube.com/embed/E8JlWMXJgqA" />
+        <iframe className="column" width="350" height="350" frameBorder="0" src="https://www.youtube.com/embed/BKXLB4-9sfg" />
+        <iframe className="column" width="350" height="350" frameBorder="0" src="https://www.youtube.com/embed/KLmwpPbTsN0" />
+        <iframe className="column" width="350" height="350" frameBorder="0" src="https://www.youtube.com/embed/rJ_qxnuKADY" />
+      </div>
+      <div className="columns">
+        <iframe className="column" width="350" height="350" frameBorder="0" src="https://www.youtube.com/embed/YbXrdVjzkC4" />
+        <iframe className="column" width="350" height="350" frameBorder="0" src="https://www.youtube.com/embed/AOmHwHWpdKc" />
+        <iframe className="column" width="350" height="350" frameBorder="0" src="https://www.youtube.com/embed/erRJtA8bkVc" />
+        <iframe className="column" width="350" height="350" frameBorder="0" src="https://www.youtube.com/embed/WSmNvV-8uwU" />
+      </div>
+    </section>;
 };
 
 export default Entertainment;

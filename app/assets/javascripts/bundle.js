@@ -33383,6 +33383,22 @@ var Entertainment = function Entertainment() {
       "div",
       { className: "title", style: { textAlign: "center" } },
       "Videos"
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "columns" },
+      _react2.default.createElement("iframe", { className: "column", width: "350", height: "350", frameBorder: "0", src: "https://www.youtube.com/embed/E8JlWMXJgqA" }),
+      _react2.default.createElement("iframe", { className: "column", width: "350", height: "350", frameBorder: "0", src: "https://www.youtube.com/embed/BKXLB4-9sfg" }),
+      _react2.default.createElement("iframe", { className: "column", width: "350", height: "350", frameBorder: "0", src: "https://www.youtube.com/embed/KLmwpPbTsN0" }),
+      _react2.default.createElement("iframe", { className: "column", width: "350", height: "350", frameBorder: "0", src: "https://www.youtube.com/embed/rJ_qxnuKADY" })
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "columns" },
+      _react2.default.createElement("iframe", { className: "column", width: "350", height: "350", frameBorder: "0", src: "https://www.youtube.com/embed/YbXrdVjzkC4" }),
+      _react2.default.createElement("iframe", { className: "column", width: "350", height: "350", frameBorder: "0", src: "https://www.youtube.com/embed/AOmHwHWpdKc" }),
+      _react2.default.createElement("iframe", { className: "column", width: "350", height: "350", frameBorder: "0", src: "https://www.youtube.com/embed/erRJtA8bkVc" }),
+      _react2.default.createElement("iframe", { className: "column", width: "350", height: "350", frameBorder: "0", src: "https://www.youtube.com/embed/WSmNvV-8uwU" })
     )
   );
 };
