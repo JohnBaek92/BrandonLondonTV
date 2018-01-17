@@ -33211,7 +33211,6 @@ var Contact = function Contact() {
   return _react2.default.createElement(
     "div",
     { className: "block" },
-    _react2.default.createElement("div", { className: "header-space" }),
     _react2.default.createElement(
       "div",
       {
@@ -33355,9 +33354,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Entertainment = function Entertainment() {
   return _react2.default.createElement(
-    'div',
-    null,
-    'hello'
+    "section",
+    { className: "entertainment-wrapper" },
+    _react2.default.createElement(
+      "div",
+      { className: "title", style: { textAlign: "center" } },
+      "Photos"
+    ),
+    _react2.default.createElement("div", { className: "columns" })
   );
 };
 

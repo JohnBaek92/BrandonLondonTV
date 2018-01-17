@@ -3,7 +3,6 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="block">
-			<div className="header-space"></div>
       <div
         className="title block"
         style={{
