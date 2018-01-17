@@ -3,19 +3,43 @@ import React from "react";
 class Press extends React.Component {
 	constructor() {
 		super();
+		this.state = {};
+		this.fetchPress = this.fetchPress.bind(this);
 	}
 
 	componentDidMount() {
-		console.log("press");
+		this.fetchPress();
+	}
+
+	fetchPress() {
+		fetch("/pages/1")
+			.then(res => res.json())
+			.then(press => {
+				this.setState({ press });
+			});
+	}
+
+	renderPress() {
+		const { press } = this.state;
+
+		if (!press) {
+			return null;
+		}
+		return press.map(el => <Tile article={el} />);
 	}
 
 	render() {
 		return (
 			<div className="block is-uppercase has-text-weight-bold">
+<<<<<<< HEAD
 				<p className="title">In the News</p>
 				<div className="block columns is-multiline">
 					{Array.from({ length: 8 }).map(el => <Tile />)}
 				</div>
+=======
+				<p className="title ">In the News</p>
+				<div className="block columns is-multiline">{this.renderPress()}</div>
+>>>>>>> 3b8fa7db0c441dd9f2df5a7cdf512edd8b4c9fca
 			</div>
 		);
 	}
@@ -35,20 +59,20 @@ const thingy = {
 	height: "50%"
 };
 
-const Tile = () => (
-	<article
-		class="column is-3 tile is-child notification news-tile"
-		style={news}
-	>
-		<figure class="image is-4by3">
-			<img src="https://bulma.io/images/placeholders/640x480.png" />
-			<div className="subtext" style={thingy}>
-				<p className="subtitle">
-					Working Caption
-				</p>
-			</div>
-		</figure>
-	</article>
-);
+const Tile = ({ article }) => {
+	return (
+		<article
+			className="column is-3 tile is-child notification news-tile"
+			style={news}
+		>
+			<figure className="image is-square">
+				<img className="cover" src={article.image} />
+				<div className="subtext" style={thingy}>
+					<p className="subtitle">{article.title}</p>
+				</div>
+			</figure>
+		</article>
+	);
+};
 
 export default Press;

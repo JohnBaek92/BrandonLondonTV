@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116210025) do
+ActiveRecord::Schema.define(version: 20180116225604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,21 @@ ActiveRecord::Schema.define(version: 20180116210025) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id", using: :btree
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.string   "link",       null: false
+    t.integer  "page_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "page_type",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["page_type"], name: "index_pages_on_page_type", using: :btree
   end
 
   create_table "posts", force: :cascade do |t|
