@@ -14,8 +14,8 @@ let addresses = [
 const Header = () => (
   <div className="header-wrapper">
     <nav className="top-nav">
-      <div className="navbar-item title">
-        <Link className="title is-1 enlarge" style={{ color: "#C3BEAD", letterSpacing: "0.25em" }} to="/">
+      <div className="navbar-item title header-top">
+        <Link className="title is-1 enlarge header-top" style={{ color: "#C3BEAD", letterSpacing: "0.25em" }} to="/">
           BRANDON LONDON
         </Link>
       </div>

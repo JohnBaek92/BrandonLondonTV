@@ -25,7 +25,7 @@ class Press extends React.Component {
 		if (!press) {
 			return null;
 		}
-		return press.map(el => <Tile article={el} />);
+		return press.map((el, idx) => <Tile key={idx} article={el} />);
 	}
 
 	render() {
