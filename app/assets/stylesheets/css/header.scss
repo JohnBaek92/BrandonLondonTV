@@ -21,20 +21,26 @@
 }
 
 .header-space {
-  height: 7.5em;
+  height: 8.25em;
 }
 
 .top-nav {
   display: flex;
   justify-content: center;
-  background: #303E41;
+  background: #231d1d;
 }
 
 .bottom-nav {
-  background: #303E41;
+  background: #231d1d;
   padding-bottom: 0.5em;
 }
 
 .link-color {
-  color: #7a7a7a;
+  color: #C3BEAD;
+}
+
+.navbar-item {
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  position: relative;
 }

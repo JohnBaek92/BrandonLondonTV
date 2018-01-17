@@ -31,15 +31,8 @@ class Press extends React.Component {
 	render() {
 		return (
 			<div className="block is-uppercase has-text-weight-bold">
-<<<<<<< HEAD
-				<p className="title">In the News</p>
-				<div className="block columns is-multiline">
-					{Array.from({ length: 8 }).map(el => <Tile />)}
-				</div>
-=======
-				<p className="title ">In the News</p>
+				<p className="title" style={{textAlign: "center"}}>In the News</p>
 				<div className="block columns is-multiline">{this.renderPress()}</div>
->>>>>>> 3b8fa7db0c441dd9f2df5a7cdf512edd8b4c9fca
 			</div>
 		);
 	}

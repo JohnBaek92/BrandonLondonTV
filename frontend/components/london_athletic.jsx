@@ -9,7 +9,7 @@ const LondonAthletic = () => {
         </iframe>
       </div>
       <div>
-        <div className="london-athletic-text padding-bottom-london-athletic">
+        <div className="london-athletic-text padding-bottom-london-athletic" style={{paddingTop: "2em"}}>
           Through the experience of training for a professional football, Brandon London has positioned himself as one of the top Personal Trainer/Sports Trainers in the nation. With workouts ranging from  off-season sports specific training to fitness bootcamps, London Athletic appeals to all.
         </div>
         <div style={{display: "flex", flexDirection: "column"}}>
@@ -39,7 +39,7 @@ const LondonAthletic = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="block" style={{clear: "both"}}>
         <div className="title is-primary" style={{textTransform: "uppercase", textAlign: "center"}}>Catches Clinics - Pass Game Development - Lineman Work</div>
         <div className="block flex-row-center">
           <iframe width="500px" height="400px" frameBorder="0"
