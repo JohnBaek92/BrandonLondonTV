@@ -25297,13 +25297,23 @@ var Footer = function Footer() {
 			"div",
 			{ className: "container" },
 			_react2.default.createElement(
-				"div",
-				{ className: "content has-text-centered" },
+				"nav",
+				null,
+				_react2.default.createElement("div", { className: "nav-left navbar-item" }),
 				_react2.default.createElement(
-					_reactRouterDom.Link,
-					{ to: "/" },
-					_react2.default.createElement("img", { className: "footer-logo", src: window.images.circle_logo })
-				)
+					"div",
+					{ className: "nav-center" },
+					_react2.default.createElement(
+						_reactRouterDom.Link,
+						{ to: "/" },
+						_react2.default.createElement("img", {
+							className: "footer-logo",
+							style: { height: "13em", width: "13em" },
+							src: window.images.circle_logo
+						})
+					)
+				),
+				_react2.default.createElement("div", { className: "nav-right navbar-item" })
 			)
 		)
 	);
