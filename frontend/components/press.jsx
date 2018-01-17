@@ -49,8 +49,7 @@ const thingy = {
 	textAlign: "center",
 	background: "rgba(0,0,0,.5)",
 	width: "100%",
-	height: "60%",
-	display: "flex"
+	height: "90%",
 };
 
 const Tile = ({ article }) => {
@@ -62,7 +61,7 @@ const Tile = ({ article }) => {
 			<figure className="tile is-child image is-square">
 				<img className="cover" src={article.image} />
 				<div className="subtext" style={thingy}>
-					<p className="subtitle" style={{color: "white", fontSize: "1.2em", alignSelf: "center"}}>{article.title}</p>
+					<a href={article.link} style={{display: "flex", height:"100%"}} target="_blank"><p className="subtitle" style={{color: "white", fontSize: "1.2em", alignSelf: "center"}}>{article.title}</p></a>
 				</div>
 			</figure>
 		</article>
