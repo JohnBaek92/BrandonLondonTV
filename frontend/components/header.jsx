@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 let addresses = [
 	{ name: "About", link: "about" },
 	{ name: "Entertainment", link: "entertainment" },
-	{ name: "Jersey Of Suit On", link: "joso" },
+	{ name: "Jersey Off Suit On", link: "joso" },
 	{ name: "Blog", link: "blog" },
 	{ name: "London Athletic", link: "london-athletic" },
 	{ name: "Press", link: "press" },

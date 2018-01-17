@@ -25228,7 +25228,7 @@ var _reactRouterDom = __webpack_require__(18);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link: "entertainment" }, { name: "Jersey Of Suit On", link: "joso" }, { name: "Blog", link: "blog" }, { name: "London Athletic", link: "london-athletic" }, { name: "Press", link: "press" }, { name: "Contact", link: "contact" }];
+var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link: "entertainment" }, { name: "Jersey Off Suit On", link: "joso" }, { name: "Blog", link: "blog" }, { name: "London Athletic", link: "london-athletic" }, { name: "Press", link: "press" }, { name: "Contact", link: "contact" }];
 
 var Header = function Header() {
 	return _react2.default.createElement(
@@ -32909,13 +32909,13 @@ var Press = function (_React$Component) {
 				{ className: "block is-uppercase has-text-weight-bold" },
 				_react2.default.createElement(
 					"p",
-					{ className: "title " },
+					{ className: "title" },
 					"In the News"
 				),
 				_react2.default.createElement(
 					"div",
 					{ className: "block columns is-multiline" },
-					Array.from({ length: 7 }).map(function (el) {
+					Array.from({ length: 8 }).map(function (el) {
 						return _react2.default.createElement(Tile, null);
 					})
 				)
@@ -33352,6 +33352,8 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var photoStyle = { width: "350px", height: "350px", objectFit: "cover" };
+
 var Entertainment = function Entertainment() {
   return _react2.default.createElement(
     "section",
@@ -33361,7 +33363,27 @@ var Entertainment = function Entertainment() {
       { className: "title", style: { textAlign: "center" } },
       "Photos"
     ),
-    _react2.default.createElement("div", { className: "columns" })
+    _react2.default.createElement(
+      "div",
+      { className: "columns" },
+      _react2.default.createElement("img", { className: "column", style: photoStyle, src: window.images.e1 }),
+      _react2.default.createElement("img", { className: "column", style: photoStyle, src: window.images.e2 }),
+      _react2.default.createElement("img", { className: "column", style: photoStyle, src: window.images.e3 }),
+      _react2.default.createElement("img", { className: "column", style: photoStyle, src: window.images.e4 })
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "columns" },
+      _react2.default.createElement("img", { className: "column", style: photoStyle, src: window.images.e5 }),
+      _react2.default.createElement("img", { className: "column", style: photoStyle, src: window.images.e6 }),
+      _react2.default.createElement("img", { className: "column", style: photoStyle, src: window.images.e7 }),
+      _react2.default.createElement("img", { className: "column", style: photoStyle, src: window.images.e8 })
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "title", style: { textAlign: "center" } },
+      "Videos"
+    )
   );
 };
 
