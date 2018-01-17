@@ -12,9 +12,9 @@ class Press extends React.Component {
 	render() {
 		return (
 			<div className="block is-uppercase has-text-weight-bold">
-				<p className="title ">In the News</p>
+				<p className="title">In the News</p>
 				<div className="block columns is-multiline">
-					{Array.from({ length: 7 }).map(el => <Tile />)}
+					{Array.from({ length: 8 }).map(el => <Tile />)}
 				</div>
 			</div>
 		);
