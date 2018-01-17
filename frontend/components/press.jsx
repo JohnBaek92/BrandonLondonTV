@@ -32,7 +32,7 @@ class Press extends React.Component {
 		return (
 			<div className="block is-uppercase has-text-weight-bold">
 				<p className="title" style={{textAlign: "center"}}>In the News</p>
-				<div className="block columns is-multiline">{this.renderPress()}</div>
+				<div className="tile is-ancestor press-tile" style={{display: "flex", justifyContent: "center"}}>{this.renderPress()}</div>
 			</div>
 		);
 	}
@@ -41,27 +41,28 @@ class Press extends React.Component {
 const news = {
 	postition: "relative",
 	overflow: "hidden",
-	transition: "all .5s ease"
+	transition: "all .5s ease",
 };
 
 const thingy = {
 	position: "absolute",
-	padding: "10px",
+	textAlign: "center",
 	background: "rgba(0,0,0,.5)",
 	width: "100%",
-	height: "50%"
+	height: "60%",
+	display: "flex"
 };
 
 const Tile = ({ article }) => {
 	return (
 		<article
-			className="column is-3 tile is-child notification news-tile"
+			className="tile is-3 is-parent news-tile"
 			style={news}
 		>
-			<figure className="image is-square">
+			<figure className="tile is-child image is-square">
 				<img className="cover" src={article.image} />
 				<div className="subtext" style={thingy}>
-					<p className="subtitle">{article.title}</p>
+					<p className="subtitle" style={{color: "white", fontSize: "1.2em", alignSelf: "center"}}>{article.title}</p>
 				</div>
 			</figure>
 		</article>

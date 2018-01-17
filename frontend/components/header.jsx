@@ -15,7 +15,7 @@ const Header = () => (
   <div className="header-wrapper">
     <nav className="top-nav">
       <div className="navbar-item title header-top">
-        <Link className="title is-1 enlarge header-top" style={{ color: "#C3BEAD", letterSpacing: "0.25em" }} to="/">
+        <Link className="title is-1 header-top" to="/">
           BRANDON LONDON
         </Link>
       </div>
