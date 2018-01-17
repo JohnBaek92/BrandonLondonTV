@@ -12,18 +12,20 @@ let addresses = [
 ];
 
 const Header = () => (
-	<div className="header-wrapper">
+  <div className="header-wrapper">
     <nav className="top-nav">
       <div className="navbar-item title">
-        <Link className="title is-3" to="/">BRANDON LONDON</Link>
+        <Link className="title is-3" style={{ color: "#949596" }} to="/">
+          BRANDON LONDON
+        </Link>
       </div>
     </nav>
-		<nav className="bottom-nav">
-			<div className="nav-center">
-				{addresses.map(address => NavBarItem(address))}
-			</div>
-		</nav>
-	</div>
+    <nav className="bottom-nav">
+      <div className="nav-center">
+        {addresses.map(address => NavBarItem(address))}
+      </div>
+    </nav>
+  </div>
 );
 
 const NavBarItem = item => (

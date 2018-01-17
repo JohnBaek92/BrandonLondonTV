@@ -25217,7 +25217,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -25231,46 +25231,46 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var addresses = [{ name: "About", link: "about" }, { name: "Entertainment", link: "entertainment" }, { name: "Jersey Off Suit On", link: "joso" }, { name: "Blog", link: "blog" }, { name: "London Athletic", link: "london-athletic" }, { name: "Press", link: "press" }, { name: "Contact", link: "contact" }];
 
 var Header = function Header() {
-	return _react2.default.createElement(
-		"div",
-		{ className: "header-wrapper" },
-		_react2.default.createElement(
-			"nav",
-			{ className: "top-nav" },
-			_react2.default.createElement(
-				"div",
-				{ className: "navbar-item title" },
-				_react2.default.createElement(
-					_reactRouterDom.Link,
-					{ className: "title is-3", to: "/" },
-					"BRANDON LONDON"
-				)
-			)
-		),
-		_react2.default.createElement(
-			"nav",
-			{ className: "bottom-nav" },
-			_react2.default.createElement(
-				"div",
-				{ className: "nav-center" },
-				addresses.map(function (address) {
-					return NavBarItem(address);
-				})
-			)
-		)
-	);
+  return _react2.default.createElement(
+    "div",
+    { className: "header-wrapper" },
+    _react2.default.createElement(
+      "nav",
+      { className: "top-nav" },
+      _react2.default.createElement(
+        "div",
+        { className: "navbar-item title" },
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { className: "title is-3", style: { color: "#949596" }, to: "/" },
+          "BRANDON LONDON"
+        )
+      )
+    ),
+    _react2.default.createElement(
+      "nav",
+      { className: "bottom-nav" },
+      _react2.default.createElement(
+        "div",
+        { className: "nav-center" },
+        addresses.map(function (address) {
+          return NavBarItem(address);
+        })
+      )
+    )
+  );
 };
 
 var NavBarItem = function NavBarItem(item) {
-	return _react2.default.createElement(
-		"div",
-		{ className: "navbar-item", key: item.name },
-		_react2.default.createElement(
-			_reactRouterDom.Link,
-			{ className: "link-color", to: "/" + item.link },
-			item.name
-		)
-	);
+  return _react2.default.createElement(
+    "div",
+    { className: "navbar-item", key: item.name },
+    _react2.default.createElement(
+      _reactRouterDom.Link,
+      { className: "link-color", to: "/" + item.link },
+      item.name
+    )
+  );
 };
 
 exports.default = Header;
