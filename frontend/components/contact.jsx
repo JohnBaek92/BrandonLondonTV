@@ -1,27 +1,21 @@
 import React from "react";
 
+
 const Contact = () => {
-  return (
-    <div className="block">
-			<div className="header-space"></div>
-      <div
-        className="title block"
-        style={{
-          textAlign: "center",
-          textTransform: "uppercase"
-        }}
-      >
+  return <div className="block" style={{ display: "flex", flexDirection: "column" }}>
+      <div className="title block" style={{ textAlign: "center", textTransform: "uppercase", width: "100%" }}>
         Management
       </div>
-      <div className="contact-text columns">
-        <div className="column">
+      <div className="columns" style={{ lineHeight: "2.5em", textAlign: "center", justifySelf: "center", alignSelf: "center", width: "100%"}}>
+        <div className="column flex">
           <p className="title is-primary">Babette Perry</p>
           <p>Head of Alternative TV/Broadcasting</p>
           <p>Innovative Artists (LA)</p>
           <p>Email: Babette.Perry@IALA.com</p>
           <p>
-            Website:{" "}
-            <a href="http://www.InovativeArtists.com​">Innovative Artists</a>
+            Website: <a href="http://www.InovativeArtists.com​">
+              Innovative Artists
+            </a>
           </p>
         </div>
         <div className="column">
@@ -43,8 +37,9 @@ const Contact = () => {
           </p>
         </div>
       </div>
-    </div>
-  );
+      <div className="image-banner"></div>
+
+    </div>;
 };
 
 export default Contact;

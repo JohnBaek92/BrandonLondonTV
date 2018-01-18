@@ -18,25 +18,34 @@
   border-bottom: 1px solid black;
   position: fixed;
   z-index: 10;
-  background: whitesmoke;
 }
 
 .header-space {
-  height: 7.5em;
-  margin-top: 1em;
+  height: 8.25em;
 }
 
 .top-nav {
   display: flex;
   justify-content: center;
-  background: whitesmoke;
+  background: #231d1d;
 }
 
 .bottom-nav {
-  background: whitesmoke;
+  background: #231d1d;
   padding-bottom: 0.5em;
 }
 
 .link-color {
-  color: #7a7a7a;
+  color: #C3BEAD;
+}
+
+.navbar-item {
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.header-top {
+  color: #C3BEAD;
+  letter-spacing: 0.25em;
 }

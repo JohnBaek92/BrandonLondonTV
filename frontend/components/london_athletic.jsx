@@ -3,14 +3,13 @@ import React from 'react';
 const LondonAthletic = () => {
   return(
     <div className="london-athletics-wrapper">
-      <div className="header-space"></div>
       <div className="london-athletic-video-wrapper">
         <iframe className="london-athletic-video" width="700px" height="380px" frameBorder="0"
           src="https://www.youtube.com/embed/qUNDomDbYtI">
         </iframe>
       </div>
       <div>
-        <div className="london-athletic-text padding-bottom-london-athletic">
+        <div className="london-athletic-text padding-bottom-london-athletic" style={{paddingTop: "2em"}}>
           Through the experience of training for a professional football, Brandon London has positioned himself as one of the top Personal Trainer/Sports Trainers in the nation. With workouts ranging from  off-season sports specific training to fitness bootcamps, London Athletic appeals to all.
         </div>
         <div style={{display: "flex", flexDirection: "column"}}>
@@ -40,7 +39,7 @@ const LondonAthletic = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="block" style={{clear: "both"}}>
         <div className="title is-primary" style={{textTransform: "uppercase", textAlign: "center"}}>Catches Clinics - Pass Game Development - Lineman Work</div>
         <div className="block flex-row-center">
           <iframe width="500px" height="400px" frameBorder="0"

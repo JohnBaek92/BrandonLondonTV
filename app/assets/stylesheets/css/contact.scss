@@ -2,3 +2,12 @@
   margin-top: 2%;
   margin-left: 2%;
 }
+
+.image-banner {
+  height: 45vh;
+  // width: 100vw;
+  background-image: image_url("running.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 25%;
+}
