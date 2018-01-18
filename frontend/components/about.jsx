@@ -18,7 +18,7 @@ const About = () => {
               </article>
             </div>
             <div className="tile is-parent">
-              <figure className="image">
+              <figure className="image" style={{ display: "-webkit-inline-box", objectFit: "cover"}}>
                 <img style={{ marginTop: "1em" }} src={window.images.about_football} />
               </figure>
             </div>
