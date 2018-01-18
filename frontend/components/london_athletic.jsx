@@ -75,6 +75,6 @@ const LondonAthletic = () => {
       </div>
     </div>
   );
-}
+};
 
 export default LondonAthletic;

@@ -2,7 +2,7 @@ import React from "react";
 import { Timeline } from "react-twitter-widgets";
 import Instagram from "./instagram_feed";
 import Hero from "./hero";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 class Landing extends React.Component {
 	constructor(props) {
@@ -20,8 +20,14 @@ class Landing extends React.Component {
             <Instagram />
           </div>
         </div>
+        <div style={{display: "flex", flexDirection: "column"}}>
+          <div style={{textAlign: "center", fontSize: "3em"}}>When The Game Ends</div>
+          <div style={{textAlign: "center", fontSize: "3em"}}>The Lifestyle Begins</div>
+        </div>
         <div style={{ background: "#030331" }}>
-          <Link to="/joso"><img src={window.images.joso_yellow} style={{ width: "25%", display: "block", margin: "0 auto" }} /></Link>
+          <Link to="/joso">
+            <img src={window.images.joso_yellow} style={{ width: "25%", display: "block", margin: "0 auto" }} />
+          </Link>
         </div>
       </div>;
 	}
