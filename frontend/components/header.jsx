@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 let addresses = [
 	{ name: "About", link: "about" },
-	{ name: "Entertainment", link: "entertainment" },
+	{ name: "Recent Work", link: "recent-work" },
 	{ name: "Jersey Off Suit On", link: "joso" },
 	{ name: "Blog", link: "blog" },
 	{ name: "London Athletic", link: "london-athletic" },
@@ -15,8 +15,8 @@ const Header = () => (
   <div className="header-wrapper">
     <nav className="top-nav">
       <div className="navbar-item title header-top">
-        <Link className="title is-1 header-top" to="/">
-          BRANDON LONDON
+        <Link className="title is-0 header-top" to="/">
+          BRANDON LONDON 
         </Link>
       </div>
     </nav>
