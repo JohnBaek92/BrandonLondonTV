@@ -7,6 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'aws-sdk'
 gem 'rails', '~> 5.0.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
@@ -33,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "figaro"
 gem 'rails_12factor'
 gem 'paperclip'
 
