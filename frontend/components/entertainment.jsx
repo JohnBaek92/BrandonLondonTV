@@ -4,7 +4,7 @@ const photoStyle = {width: "15%", height: "15%"};
 
 const Entertainment = () => {
   return <section className="entertainment-wrapper">
-      <div className="title" style={{ textAlign: "center" }}>
+      <div className="title text-center">
         Photos
       </div>
       <div className="columns">
@@ -19,14 +19,14 @@ const Entertainment = () => {
         <img className="column" style={photoStyle} src={window.images.e7} />
         <img className="column" style={photoStyle} src={window.images.e8} />
       </div>
-      <div className="title" style={{ textAlign: "center" }}>
+      <div className="title text-center">
         Videos
       </div>
       <div className="columns">
         <iframe className="column" allowFullScreen="true" width="20%" height="20%" frameBorder="0" src="https://www.youtube.com/embed/E8JlWMXJgqA" />
         <iframe className="column" allowFullScreen="true" width="20%" height="20%" frameBorder="0" src="https://www.youtube.com/embed/BKXLB4-9sfg" />
         <iframe className="column" allowFullScreen="true" width="20%" height="20%" frameBorder="0" src="https://www.youtube.com/embed/KLmwpPbTsN0" />
-        <iframe className="column" width="20%" height="20%" frameBorder="0" src="https://www.youtube.com/embed/rJ_qxnuKADY" />
+        <iframe className="column" allowFullScreen="true" width="20%" height="20%" frameBorder="0" src="https://www.youtube.com/embed/rJ_qxnuKADY" />
       </div>
       <div className="columns">
         <iframe className="column" allowFullScreen="true" width="20%" height="20%" frameBorder="0" src="https://www.youtube.com/embed/YbXrdVjzkC4" />
