@@ -17,7 +17,6 @@ const Footer = () => {
             <Link to="/">
               <img
                 className="footer-logo"
-                style={{ height: "13em", width: "13em" }}
                 src={window.images.circle_logo}
               />
             </Link>
