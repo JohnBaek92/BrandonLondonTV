@@ -31,37 +31,22 @@ class Press extends React.Component {
 	render() {
 		return (
 			<div className="block is-uppercase has-text-weight-bold">
-				<p className="title" style={{textAlign: "center"}}>In the News</p>
-				<div className="tile is-ancestor press-tile" style={{display: "flex", justifyContent: "center"}}>{this.renderPress()}</div>
+				<p className="title text-center">In the News</p>
+				<div className="tile is-ancestor press-tile flex-justify-center">{this.renderPress()}</div>
 			</div>
 		);
 	}
 }
 
-const news = {
-	postition: "relative",
-	overflow: "hidden",
-	transition: "all .5s ease",
-};
-
-const thingy = {
-	position: "absolute",
-	textAlign: "center",
-	background: "rgba(0,0,0,.5)",
-	width: "100%",
-	height: "90%",
-};
-
 const Tile = ({ article }) => {
 	return (
 		<article
 			className="tile is-3 is-parent news-tile"
-			style={news}
 		>
 			<figure className="tile is-child image is-square">
 				<img className="cover" src={article.image} />
-				<div className="subtext" style={thingy}>
-					<a href={article.link} style={{display: "flex", height:"100%"}} target="_blank"><p className="subtitle" style={{color: "white", fontSize: "1.2em", alignSelf: "center"}}>{article.title}</p></a>
+				<div className="subtext transition-photo">
+					<a href={article.link} target="_blank"><p className="subtitle transition-text">{article.title}</p></a>
 				</div>
 			</figure>
 		</article>

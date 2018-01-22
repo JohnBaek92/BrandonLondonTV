@@ -1,5 +1,7 @@
 .news-tile {
 	overflow: hidden;
+	position: relative;
+	transition: all .5s ease;
 }
 
 .subtext {
@@ -33,4 +35,25 @@
 .press-tile {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.transition-photo {
+	position: absolute;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 90%;
+}
+
+.transition-text {
+	display: flex;
+	height: 100%;
+	color: white;
+	font-size: 1.2em;
+	align-self: center;
+}
+
+.flex-justify-center {
+	display: flex;
+	justify-content: center;
 }
