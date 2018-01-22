@@ -79,3 +79,38 @@
 .paddify {
   padding-right: 1em;
 }
+
+.padding-top {
+  padding-top: 1em;
+}
+
+.about-brandon-quote {
+  display: flex;
+  background-color: #611224;
+  color: rgb(195, 190, 173);
+}
+
+.align-center {
+  align-self: center;
+}
+
+.brandon-photo-about {
+  display: -webkit-inline-box;
+  object-fit: cover;
+}
+
+.margin-top-1em {
+  margin-top: 1em;
+}
+
+.margin-bottom-1em {
+  margin-bottom: 1em;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.about-photo-text-padding {
+  padding: 0 0 0 0.8em;
+}
