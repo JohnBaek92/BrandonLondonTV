@@ -20,13 +20,13 @@ class Landing extends React.Component {
             <Instagram />
           </div>
         </div>
-        <div style={{display: "flex", flexDirection: "column"}}>
-          <div style={{textAlign: "center", fontSize: "3em"}}>When The Game Ends</div>
-          <div style={{textAlign: "center", fontSize: "3em"}}>The Lifestyle Begins</div>
+        <div ckassName="joso-text-formatting" >
+          <div className="joso-text">When The Game Ends</div>
+          <div className="joso-text">The Lifestyle Begins</div>
         </div>
-        <div style={{ background: "#030331" }}>
+        <div className="joso-landing-background">
           <Link to="/joso">
-            <img src={window.images.joso_yellow} style={{ width: "25%", display: "block", margin: "0 auto" }} />
+            <img src={window.images.joso_yellow} className="joso-photo-landing" />
           </Link>
         </div>
       </div>;
