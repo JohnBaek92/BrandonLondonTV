@@ -12,3 +12,22 @@
 .joso-link {
   background-color: $joso-hero
 }
+.joso-text {
+  text-align: center;
+  font-size: 3em;
+}
+
+.joso-landing-background {
+  background: #030331;
+}
+
+.joso-photo-landing {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+
+.joso-text-formatting {
+  display: flex;
+  flex-direction: column;
+}

@@ -7,19 +7,19 @@ const About = () => {
           <div className="tile">
             <div className="tile is-parent is-vertical">
               <article className="tile is-child">
-                <div className="subtitle" style={{ paddingTop: "1em" }}>
+                <div className="subtitle padding-top">
                   As an athlete, actor, and broadcast personality, Brandon London is well on his way to becoming the next triple threat in the industry. Known as the “Cultured Athlete”, London combines his talent and charisma on and off the football field. After being signed to the NY Giants in 2006 as a free agent, London acquired his first SuperBowl ring.
                 </div>
               </article>
-              <article className="tile is-child notification is-warning quote-tile">
-                <div className="title" style={{ alignSelf: "center" }}>
+              <article className="tile is-child notification is-warning about-brandon-quote">
+                <div className="title align-center">
                   “Brandon London is a tall drink of personality. He is a generous host with a genius brand” -Marki Costello
                 </div>
               </article>
             </div>
             <div className="tile is-parent">
-              <figure className="image" style={{ display: "-webkit-inline-box", objectFit: "cover" }}>
-                <img style={{ marginTop: "1em" }} src={window.images.about_football} />
+              <figure className="image brandon-photo-about">
+                <img className="margin-top-1em" src={window.images.about_football} />
               </figure>
             </div>
           </div>
@@ -38,11 +38,11 @@ const About = () => {
               <div className="content" />
             </article>
           </div>
-          <div className="tile is_parent level" style={{ marginBottom: "1em" }}>
+          <div className="tile is_parent level margin-bottom-1em">
             <div className="tile is_child is-5 level-left">
-              <img style={{ objectFit: "contain" }} src={window.images.smiling} />
+              <img className="object-fit-contain" src={window.images.smiling} />
             </div>
-            <div className="tile is_child is-7 level-right" style={{ padding: "0 0 0 0.8em" }}>
+            <div className="tile is_child is-7 level-right about-photo-text-padding">
               <div className="subtitle">
                 <div>
                   <div className="subtitle">
