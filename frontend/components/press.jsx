@@ -38,13 +38,15 @@ class Press extends React.Component {
 	}
 }
 
+const swapURL = link => link.replace("s3-us-east-1", "s3");
+
 const Tile = ({ article }) => {
 	return (
 		<article
 			className="tile is-3 is-parent news-tile"
 		>
 			<figure className="tile is-child image is-square">
-				<img className="cover" src={article.image} />
+				<img className="cover" src={swapURL(article.image)} />
 				<div className="subtext transition-photo">
 					<a href={article.link} target="_blank"><p className="subtitle transition-text">{article.title}</p></a>
 				</div>

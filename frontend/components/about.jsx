@@ -18,7 +18,7 @@ const About = () => {
               </article>
             </div>
             <div className="tile is-parent">
-              <figure className="image brandon-photo-about">
+              <figure className="image brandon-photo-about tile is-3by2">
                 <img className="margin-top-1em" src={window.images.about_football} />
               </figure>
             </div>

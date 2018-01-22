@@ -1,42 +1,19 @@
 import React from "react";
 
 const LondonAthletic = () => {
-<<<<<<< HEAD
-  return (
-    <div className="london-athletics-wrapper">
-      <div className="london-athletic-video-wrapper">
-        <iframe
-          className="london-athletic-video"
-          width="700px"
-          height="380px"
-          frameBorder="0"
-          src="https://www.youtube.com/embed/qUNDomDbYtI"
-        />
-      </div>
-      <div>
-        <div
-          className="london-athletic-text padding-bottom-london-athletic"
-          style={{ paddingTop: "2em" }}
-        >
-=======
   return <div className="london-athletics-wrapper">
       <div className="london-athletic-video-wrapper">
         <iframe className="london-athletic-video" width="700px" height="380px" frameBorder="0" src="https://www.youtube.com/embed/qUNDomDbYtI" />
       </div>
       <div>
         <div className="london-athletic-text padding-bottom-london-athletic padding-top-2em">
->>>>>>> 64b262b03ed700c701bd26802e0ba0eb9ebdde8d
           Through the experience of training for a professional football,
           Brandon London has positioned himself as one of the top Personal
           Trainer/Sports Trainers in the nation. With workouts ranging from
           off-season sports specific training to fitness bootcamps, London
           Athletic appeals to all.
         </div>
-<<<<<<< HEAD
-        <div style={{ display: "flex", flexDirection: "column" }}>
-=======
         <div className="flex-direction-col">
->>>>>>> 64b262b03ed700c701bd26802e0ba0eb9ebdde8d
           <div className="padding-bottom-london-athletic">
             • Strength & Conditioning for Athletes
           </div>
@@ -77,7 +54,7 @@ const LondonAthletic = () => {
         </div>
       </div>
       <div>
-        <div className="title is-primary uppercase-center margin-top-0.5">
+        <div className="title is-primary uppercase-center margin-top-point-5">
           High School-NCAA-Pro Athletes Trained
         </div>
         <div className="block flex-row-center">
