@@ -2,11 +2,11 @@ import React from "react";
 
 
 const Contact = () => {
-  return <div className="block" style={{ display: "flex", flexDirection: "column" }}>
-      <div className="title block" style={{ textAlign: "center", textTransform: "uppercase", width: "100%" }}>
+  return <div className="block flex-direction-col">
+      <div className="title block management-word">
         Management
       </div>
-      <div className="columns" style={{ lineHeight: "2.5em", textAlign: "center", justifySelf: "center", alignSelf: "center", width: "100%"}}>
+      <div className="columns contact-info">
         <div className="column flex">
           <p className="title is-primary">Babette Perry</p>
           <p>Head of Alternative TV/Broadcasting</p>
