@@ -11,14 +11,14 @@ const About = () => {
                   As an athlete, actor, and broadcast personality, Brandon London is well on his way to becoming the next triple threat in the industry. Known as the “Cultured Athlete”, London combines his talent and charisma on and off the football field. After being signed to the NY Giants in 2006 as a free agent, London acquired his first SuperBowl ring.
                 </div>
               </article>
-              <article className="tile is-child notification is-warning" style={{ display: "flex", backgroundColor: "#611224", color: "rgb(195, 190, 173)" }}>
+              <article className="tile is-child notification is-warning quote-tile">
                 <div className="title" style={{ alignSelf: "center" }}>
                   “Brandon London is a tall drink of personality. He is a generous host with a genius brand” -Marki Costello
                 </div>
               </article>
             </div>
             <div className="tile is-parent">
-              <figure className="image" style={{ display: "-webkit-inline-box", objectFit: "cover"}}>
+              <figure className="image" style={{ display: "-webkit-inline-box", objectFit: "cover" }}>
                 <img style={{ marginTop: "1em" }} src={window.images.about_football} />
               </figure>
             </div>

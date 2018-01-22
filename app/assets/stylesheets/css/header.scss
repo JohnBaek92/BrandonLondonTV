@@ -27,16 +27,16 @@
 .top-nav {
   display: flex;
   justify-content: center;
-  background: #231d1d;
+  background: $header-color;
 }
 
 .bottom-nav {
-  background: #231d1d;
+  background: $header-color;
   padding-bottom: 0.5em;
 }
 
 .link-color {
-  color: #C3BEAD;
+  color: $default-header;
 }
 
 .navbar-item {
@@ -46,6 +46,6 @@
 }
 
 .header-top {
-  color: #C3BEAD;
+  color: $default-header;
   letter-spacing: 0.25em;
 }
