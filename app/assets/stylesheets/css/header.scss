@@ -18,10 +18,13 @@
   border-bottom: 1px solid black;
   position: fixed;
   z-index: 10;
+  border-bottom: 5px solid $blood-red;
 }
 
 .header-space {
   height: 9.25em;
+  // padding: 1em;
+  // background-color: $blood-red
 }
 
 .top-nav {
@@ -48,4 +51,19 @@
 .header-top {
   color: $default-header;
   letter-spacing: 0.25em;
+}
+
+.social-tag-header {
+  padding: 0 11px;
+  color: $default-header;
+  &:hover {
+    color: lighten($default-header, 15);
+  }
+  &:last-child {
+    padding-right: 7%;
+  }
+}
+
+i.is-size-4 {
+  font-size: 1.5em;
 }

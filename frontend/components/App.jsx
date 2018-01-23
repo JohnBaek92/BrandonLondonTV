@@ -15,6 +15,7 @@ const App = () => (
 		<Header />
 		<div className="header-space" />
 
+
 		<div className="container Site-content">
 			<Route exact path="/" component={LandingPage} />
 			<Route exact path="/about" component={About} />

@@ -32,7 +32,7 @@ class Landing extends React.Component {
             <Instagram />
           </div>
         </div>
-        <div ckassName="joso-text-formatting" >
+        <div className="joso-text-formatting" >
           <div className="joso-text">When The Game Ends</div>
           <div className="joso-text">The Lifestyle Begins</div>
         </div>

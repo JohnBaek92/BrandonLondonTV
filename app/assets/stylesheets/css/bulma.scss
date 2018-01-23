@@ -157,7 +157,7 @@ a {
 }
 
 a:hover {
-  color: $smokey-white;
+  color: lighten($default-color,15);
 }
 
 code {
