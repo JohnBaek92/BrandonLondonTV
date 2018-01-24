@@ -79,6 +79,11 @@
 .paddify {
   padding-right: 1em;
 }
+.quote-tile {
+  display: flex !important;
+  background-color: #611224 !important;
+  color: rgb(195, 190, 173) !important;
+}
 
 .padding-top {
   padding-top: 1em;
@@ -99,6 +104,10 @@
   object-fit: cover;
 }
 
+.box-shadow {
+  box-shadow: 0px 5px 7px 0px rgba(10, 10, 10, 0.9);
+}
+
 .margin-top-1em {
   margin-top: 1em;
 }
@@ -107,8 +116,9 @@
   margin-bottom: 1em;
 }
 
-.object-fit-contain {
-  object-fit: contain;
+.object-fit-cover-height-auto {
+  object-fit: cover;
+  height: auto;
 }
 
 .about-photo-text-padding {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const LondonAthletic = () => {
   return <div className="london-athletics-wrapper">
@@ -54,7 +54,7 @@ const LondonAthletic = () => {
         </div>
       </div>
       <div>
-        <div className="title is-primary uppercase-center margin-top-0.5">
+        <div className="title is-primary uppercase-center margin-top-point-5">
           High School-NCAA-Pro Athletes Trained
         </div>
         <div className="block flex-row-center">

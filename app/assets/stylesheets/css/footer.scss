@@ -1,20 +1,40 @@
 .footer {
   width: 100%;
   margin: 0 auto;
-  background: #231d1d;
+  background: $header-color;
   margin-top: 1em;
 }
 
 .footer-wrapper {
   border-top: 1px solid black;
-  background: #231d1d;
+  background: $header-color;
 }
 
 .Site {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  &:before {
+    //change wallpaper here
+    content: " ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+    background-image: image_url("_G9A9638.jpg");
+    background-repeat: no-repeat;
+    background-position: 20% -12%;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
 }
+
 .Site-content {
   flex: 1 0 auto;
   width: 100%;
@@ -35,7 +55,7 @@
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  border: 3px solid rgb(22, 20, 20);
+  border: 3px solid lighten($header-color, 15%);
   align-self: center;
   display: flex;
   justify-content: center;
@@ -43,7 +63,10 @@
 
 .social-tag i {
   align-self: center;
-  color: #8d8d95;
+  color: lighten($header-color, 15%);
+  &:hover {
+    color: darken($header-color, 15%);
+  }
 }
 
 .middle-centered {

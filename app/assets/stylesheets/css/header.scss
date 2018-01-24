@@ -18,25 +18,29 @@
   border-bottom: 1px solid black;
   position: fixed;
   z-index: 10;
+  border-bottom: 5px solid $blood-red;
 }
 
 .header-space {
   height: 9.25em;
+  margin-bottom: 2vh;
+  // padding: 1em;
+  // background-color: $blood-red
 }
 
 .top-nav {
   display: flex;
   justify-content: center;
-  background: #231d1d;
+  background: $header-color;
 }
 
 .bottom-nav {
-  background: #231d1d;
+  background: $header-color;
   padding-bottom: 0.5em;
 }
 
 .link-color {
-  color: #C3BEAD;
+  color: $default-header;
 }
 
 .navbar-item {
@@ -46,6 +50,21 @@
 }
 
 .header-top {
-  color: #C3BEAD;
+  color: $default-header;
   letter-spacing: 0.25em;
+}
+
+.social-tag-header {
+  padding: 0 11px;
+  color: $default-header;
+  &:hover {
+    color: lighten($default-header, 15);
+  }
+  &:last-child {
+    padding-right: 7%;
+  }
+}
+
+i.is-size-4 {
+  font-size: 1.5em;
 }

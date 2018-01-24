@@ -142,7 +142,7 @@ pre {
 }
 
 body {
-  color: #4a4a4a;
+  color: $default-color;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -157,11 +157,11 @@ a {
 }
 
 a:hover {
-  color: whitesmoke;
+  color: lighten($default-header,15);
 }
 
 code {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #ff3860;
   font-size: 0.8em;
   font-weight: normal;
@@ -200,8 +200,8 @@ strong {
 }
 
 pre {
-  background-color: whitesmoke;
-  color: #4a4a4a;
+  background-color: $smokey-white;
+  color: $default-color;
   font-size: 0.8em;
   white-space: pre;
   word-wrap: normal;
@@ -548,7 +548,7 @@ a.has-text-black:hover, a.has-text-black:focus {
 }
 
 .has-text-light {
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 a.has-text-light:hover, a.has-text-light:focus {
@@ -666,11 +666,14 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 .box {
-  background-color: white;
+  background-color: #e4e1e1;
   border-radius: 5px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0px 5px 7px 0px rgba(10, 10, 10, 0.5);
   display: block;
   padding: 1.25rem;
+  &:hover{
+    box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.8)
+  }
 }
 
 .box:not(:last-child) {
@@ -771,7 +774,7 @@ a.box:active {
 }
 
 .button:active, .button.is-active {
-  border-color: #4a4a4a;
+  border-color: $default-color;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: #363636;
 }
@@ -779,12 +782,12 @@ a.box:active {
 .button.is-link {
   background-color: transparent;
   border-color: transparent;
-  color: #4a4a4a;
+  color: $default-color;
   text-decoration: underline;
 }
 
 .button.is-link:hover, .button.is-link.is-hovered, .button.is-link:focus, .button.is-link.is-focused, .button.is-link:active, .button.is-link.is-active {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #363636;
 }
 
@@ -979,7 +982,7 @@ a.box:active {
 }
 
 .button.is-light {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-color: transparent;
   color: #363636;
 }
@@ -1004,14 +1007,14 @@ a.box:active {
 }
 
 .button.is-light[disabled] {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-color: transparent;
   box-shadow: none;
 }
 
 .button.is-light.is-inverted {
   background-color: #363636;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-light.is-inverted:hover {
@@ -1022,7 +1025,7 @@ a.box:active {
   background-color: #363636;
   border-color: transparent;
   box-shadow: none;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-light.is-loading:after {
@@ -1031,25 +1034,25 @@ a.box:active {
 
 .button.is-light.is-outlined {
   background-color: transparent;
-  border-color: whitesmoke;
-  color: whitesmoke;
+  border-color: $smokey-white;
+  color: $smokey-white;
 }
 
 .button.is-light.is-outlined:hover, .button.is-light.is-outlined:focus {
-  background-color: whitesmoke;
-  border-color: whitesmoke;
+  background-color: $smokey-white;
+  border-color: $smokey-white;
   color: #363636;
 }
 
 .button.is-light.is-outlined.is-loading:after {
-  border-color: transparent transparent whitesmoke whitesmoke !important;
+  border-color: transparent transparent $smokey-white $smokey-white !important;
 }
 
 .button.is-light.is-outlined[disabled] {
   background-color: transparent;
-  border-color: whitesmoke;
+  border-color: $smokey-white;
   box-shadow: none;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-light.is-inverted.is-outlined {
@@ -1060,7 +1063,7 @@ a.box:active {
 
 .button.is-light.is-inverted.is-outlined:hover, .button.is-light.is-inverted.is-outlined:focus {
   background-color: #363636;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-light.is-inverted.is-outlined[disabled] {
@@ -1073,26 +1076,26 @@ a.box:active {
 .button.is-dark {
   background-color: #363636;
   border-color: transparent;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-dark:hover, .button.is-dark.is-hovered {
   background-color: #2f2f2f;
   border-color: transparent;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-dark:focus, .button.is-dark.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.25);
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-dark:active, .button.is-dark.is-active {
   background-color: #292929;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-dark[disabled] {
@@ -1102,7 +1105,7 @@ a.box:active {
 }
 
 .button.is-dark.is-inverted {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #363636;
 }
 
@@ -1111,14 +1114,14 @@ a.box:active {
 }
 
 .button.is-dark.is-inverted[disabled] {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-color: transparent;
   box-shadow: none;
   color: #363636;
 }
 
 .button.is-dark.is-loading:after {
-  border-color: transparent transparent whitesmoke whitesmoke !important;
+  border-color: transparent transparent $smokey-white $smokey-white !important;
 }
 
 .button.is-dark.is-outlined {
@@ -1130,7 +1133,7 @@ a.box:active {
 .button.is-dark.is-outlined:hover, .button.is-dark.is-outlined:focus {
   background-color: #363636;
   border-color: #363636;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-dark.is-outlined.is-loading:after {
@@ -1146,20 +1149,20 @@ a.box:active {
 
 .button.is-dark.is-inverted.is-outlined {
   background-color: transparent;
-  border-color: whitesmoke;
-  color: whitesmoke;
+  border-color: $smokey-white;
+  color: $smokey-white;
 }
 
 .button.is-dark.is-inverted.is-outlined:hover, .button.is-dark.is-inverted.is-outlined:focus {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #363636;
 }
 
 .button.is-dark.is-inverted.is-outlined[disabled] {
   background-color: transparent;
-  border-color: whitesmoke;
+  border-color: $smokey-white;
   box-shadow: none;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .button.is-primary {
@@ -1673,7 +1676,7 @@ a.box:active {
 }
 
 .button.is-static {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-color: #dbdbdb;
   color: #7a7a7a;
   box-shadow: none;
@@ -1688,7 +1691,7 @@ input[type="submit"].button {
 }
 
 .content {
-  color: #4a4a4a;
+  color: $default-color;
 }
 
 .content:not(:last-child) {
@@ -1763,7 +1766,7 @@ input[type="submit"].button {
 }
 
 .content blockquote {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-left: 5px solid #dbdbdb;
   padding: 1.25em 1.5em;
 }
@@ -1821,7 +1824,7 @@ input[type="submit"].button {
 }
 
 .content table tr:hover {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
 }
 
 .content table thead td,
@@ -1915,8 +1918,8 @@ input[type="submit"].button {
 
 .input[disabled],
 .textarea[disabled] {
-  background-color: whitesmoke;
-  border-color: whitesmoke;
+  background-color: $smokey-white;
+  border-color: $smokey-white;
   box-shadow: none;
   color: #7a7a7a;
 }
@@ -1958,7 +1961,7 @@ input[type="submit"].button {
 
 .input.is-light,
 .textarea.is-light {
-  border-color: whitesmoke;
+  border-color: $smokey-white;
 }
 
 .input.is-dark,
@@ -2135,8 +2138,8 @@ input[type="submit"].button {
 }
 
 .select select[disabled] {
-  background-color: whitesmoke;
-  border-color: whitesmoke;
+  background-color: $smokey-white;
+  border-color: $smokey-white;
   box-shadow: none;
   color: #7a7a7a;
 }
@@ -2166,7 +2169,7 @@ input[type="submit"].button {
 }
 
 .select select[disabled]:hover {
-  border-color: whitesmoke;
+  border-color: $smokey-white;
 }
 
 .select:hover:after {
@@ -2182,7 +2185,7 @@ input[type="submit"].button {
 }
 
 .select.is-light select {
-  border-color: whitesmoke;
+  border-color: $smokey-white;
 }
 
 .select.is-dark select {
@@ -2292,7 +2295,7 @@ input[type="submit"].button {
 }
 
 .help.is-light {
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .help.is-dark {
@@ -2767,7 +2770,7 @@ input[type="submit"].button {
 }
 
 .notification {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-radius: 3px;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   position: relative;
@@ -2814,13 +2817,13 @@ input[type="submit"].button {
 }
 
 .notification.is-light {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #363636;
 }
 
 .notification.is-dark {
   background-color: #363636;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .notification.is-primary {
@@ -2869,11 +2872,11 @@ input[type="submit"].button {
 }
 
 .progress::-webkit-progress-value {
-  background-color: #4a4a4a;
+  background-color: $default-color;
 }
 
 .progress::-moz-progress-bar {
-  background-color: #4a4a4a;
+  background-color: $default-color;
 }
 
 .progress.is-white::-webkit-progress-value {
@@ -2893,11 +2896,11 @@ input[type="submit"].button {
 }
 
 .progress.is-light::-webkit-progress-value {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
 }
 
 .progress.is-light::-moz-progress-bar {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
 }
 
 .progress.is-dark::-webkit-progress-value {
@@ -3043,16 +3046,16 @@ input[type="submit"].button {
 }
 
 .table.is-striped tbody tr:not(.is-selected):nth-child(even):hover {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
 }
 
 .tag {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-radius: 290486px;
-  color: #4a4a4a;
+  color: $default-color;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3083,13 +3086,13 @@ input[type="submit"].button {
 }
 
 .tag.is-light {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #363636;
 }
 
 .tag.is-dark {
   background-color: #363636;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .tag.is-primary {
@@ -3397,7 +3400,7 @@ input[type="submit"].button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-radius: 290486px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3499,7 +3502,7 @@ input[type="submit"].button {
 .card {
   background-color: white;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  color: #4a4a4a;
+  color: $default-color;
   max-width: 100%;
   position: relative;
 }
@@ -3749,13 +3752,13 @@ input[type="submit"].button {
 
 .menu-list a {
   border-radius: 2px;
-  color: #4a4a4a;
+  color: $default-color;
   display: block;
   padding: 0.5em 0.75em;
 }
 
 .menu-list a:hover {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #00d1b2;
 }
 
@@ -3786,7 +3789,7 @@ input[type="submit"].button {
 }
 
 .message {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-radius: 3px;
   font-size: 1rem;
 }
@@ -3828,12 +3831,12 @@ input[type="submit"].button {
 }
 
 .message.is-light .message-header {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #363636;
 }
 
 .message.is-light .message-body {
-  border-color: whitesmoke;
+  border-color: $smokey-white;
   color: #505050;
 }
 
@@ -3843,7 +3846,7 @@ input[type="submit"].button {
 
 .message.is-dark .message-header {
   background-color: #363636;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .message.is-dark .message-body {
@@ -3925,7 +3928,7 @@ input[type="submit"].button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #4a4a4a;
+  background-color: $default-color;
   border-radius: 3px 3px 0 0;
   color: #fff;
   display: -webkit-box;
@@ -3966,7 +3969,7 @@ input[type="submit"].button {
 .message-body {
   border: 1px solid #dbdbdb;
   border-radius: 3px;
-  color: #4a4a4a;
+  color: $default-color;
   padding: 1em 1.25em;
 }
 
@@ -4114,7 +4117,7 @@ input[type="submit"].button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4199,7 +4202,7 @@ input[type="submit"].button {
 }
 
 .nav-toggle span {
-  background-color: #4a4a4a;
+  background-color: $default-color;
   display: block;
   height: 1px;
   left: 50%;
@@ -4228,7 +4231,7 @@ input[type="submit"].button {
 }
 
 .nav-toggle:hover {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
 }
 
 .nav-toggle.is-active span {
@@ -4727,7 +4730,7 @@ a.nav-item.is-tab.is-active {
 }
 
 .panel-heading {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-radius: 3px 3px 0 0;
   color: #363636;
   font-size: 1.25em;
@@ -4756,12 +4759,12 @@ a.nav-item.is-tab.is-active {
 }
 
 .panel-tabs a.is-active {
-  border-bottom-color: #4a4a4a;
+  border-bottom-color: $default-color;
   color: #363636;
 }
 
 .panel-list a {
-  color: #4a4a4a;
+  color: $default-color;
 }
 
 .panel-list a:hover {
@@ -4816,7 +4819,7 @@ label.panel-block {
 
 a.panel-block:hover,
 label.panel-block:hover {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
 }
 
 .panel-icon {
@@ -4867,7 +4870,7 @@ label.panel-block:hover {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #dbdbdb;
-  color: #4a4a4a;
+  color: $default-color;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4959,7 +4962,7 @@ label.panel-block:hover {
 }
 
 .tabs.is-boxed a:hover {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-bottom-color: #dbdbdb;
 }
 
@@ -4984,7 +4987,7 @@ label.panel-block:hover {
 }
 
 .tabs.is-toggle a:hover {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   border-color: #b5b5b5;
   z-index: 2;
 }
@@ -6063,7 +6066,7 @@ label.panel-block:hover {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
-    width: 20%;
+    width: 24%;
   }
   .tile.is-4 {
     -webkit-box-flex: 0;
@@ -6427,7 +6430,7 @@ label.panel-block:hover {
 }
 
 .hero.is-light {
-  background-color: whitesmoke;
+  background-color: $smokey-white;
   color: #363636;
 }
 
@@ -6455,7 +6458,7 @@ label.panel-block:hover {
 
 @media screen and (max-width: 768px) {
   .hero.is-light .nav-menu {
-    background-color: whitesmoke;
+    background-color: $smokey-white;
   }
 }
 
@@ -6494,18 +6497,18 @@ label.panel-block:hover {
 .hero.is-light .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover {
   background-color: #363636;
   border-color: #363636;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .hero.is-light.is-bold {
-  background-image: -webkit-linear-gradient(309deg, #dfd8d8 0%, whitesmoke 71%, white 100%);
-  background-image: linear-gradient(141deg, #dfd8d8 0%, whitesmoke 71%, white 100%);
+  background-image: -webkit-linear-gradient(309deg, #dfd8d8 0%, $smokey-white 71%, white 100%);
+  background-image: linear-gradient(141deg, #dfd8d8 0%, $smokey-white 71%, white 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-light.is-bold .nav-menu {
-    background-image: -webkit-linear-gradient(309deg, #dfd8d8 0%, whitesmoke 71%, white 100%);
-    background-image: linear-gradient(141deg, #dfd8d8 0%, whitesmoke 71%, white 100%);
+    background-image: -webkit-linear-gradient(309deg, #dfd8d8 0%, $smokey-white 71%, white 100%);
+    background-image: linear-gradient(141deg, #dfd8d8 0%, $smokey-white 71%, white 100%);
   }
 }
 
@@ -6526,7 +6529,7 @@ label.panel-block:hover {
 
 .hero.is-dark {
   background-color: #363636;
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .hero.is-dark a:not(.button),
@@ -6535,7 +6538,7 @@ label.panel-block:hover {
 }
 
 .hero.is-dark .title {
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .hero.is-dark .subtitle {
@@ -6544,7 +6547,7 @@ label.panel-block:hover {
 
 .hero.is-dark .subtitle a:not(.button),
 .hero.is-dark .subtitle strong {
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .hero.is-dark .nav {
@@ -6565,11 +6568,11 @@ label.panel-block:hover {
 .hero.is-dark a.nav-item:hover, .hero.is-dark a.nav-item.is-active,
 .hero.is-dark .nav-item a:not(.button):hover,
 .hero.is-dark .nav-item a:not(.button).is-active {
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .hero.is-dark .tabs a {
-  color: whitesmoke;
+  color: $smokey-white;
   opacity: 0.9;
 }
 
@@ -6582,7 +6585,7 @@ label.panel-block:hover {
 }
 
 .hero.is-dark .tabs.is-boxed a, .hero.is-dark .tabs.is-toggle a {
-  color: whitesmoke;
+  color: $smokey-white;
 }
 
 .hero.is-dark .tabs.is-boxed a:hover, .hero.is-dark .tabs.is-toggle a:hover {
@@ -6590,8 +6593,8 @@ label.panel-block:hover {
 }
 
 .hero.is-dark .tabs.is-boxed li.is-active a, .hero.is-dark .tabs.is-boxed li.is-active a:hover, .hero.is-dark .tabs.is-toggle li.is-active a, .hero.is-dark .tabs.is-toggle li.is-active a:hover {
-  background-color: whitesmoke;
-  border-color: whitesmoke;
+  background-color: $smokey-white;
+  border-color: $smokey-white;
   color: #363636;
 }
 
@@ -6609,13 +6612,13 @@ label.panel-block:hover {
 
 @media screen and (max-width: 768px) {
   .hero.is-dark .nav-toggle span {
-    background-color: whitesmoke;
+    background-color: $smokey-white;
   }
   .hero.is-dark .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
   .hero.is-dark .nav-toggle.is-active span {
-    background-color: whitesmoke;
+    background-color: $smokey-white;
   }
   .hero.is-dark .nav-menu .nav-item {
     border-top-color: rgba(245, 245, 245, 0.2);

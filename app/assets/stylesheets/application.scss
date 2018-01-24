@@ -10,8 +10,18 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
- @import "css/*";
+ @import "sass/utilities/_all";
+ @import "css/css_reset.scss";
+ @import "css/bulma.scss";
+ @import "css/about.scss";
+ @import "css/header.scss";
+ @import "css/blog.scss";
+ @import "css/footer.scss";
+ @import "css/insta.scss";
+ @import "css/contact.scss";
+ @import "css/landing_page.scss";
+ @import "css/london_athletic.scss";
+ @import "css/press.scss";

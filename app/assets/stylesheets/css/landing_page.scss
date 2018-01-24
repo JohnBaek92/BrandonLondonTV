@@ -9,13 +9,16 @@
   margin-top: 5%;
 }
 
+.joso-link {
+  background-color: $joso-hero
+}
 .joso-text {
   text-align: center;
   font-size: 3em;
 }
 
 .joso-landing-background {
-  background: #030331;
+  background: $joso-hero;
 }
 
 .joso-photo-landing {
