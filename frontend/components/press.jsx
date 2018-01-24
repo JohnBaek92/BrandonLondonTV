@@ -31,7 +31,7 @@ class Press extends React.Component {
 	render() {
 		return (
 			<div className="block is-uppercase has-text-weight-bold">
-				<p className="title text-center">In the News</p>
+				<p className="title has-text-centered">In the News</p>
 				<div className="tile is-ancestor press-tile flex-justify-center">{this.renderPress()}</div>
 			</div>
 		);

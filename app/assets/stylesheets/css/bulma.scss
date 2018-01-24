@@ -157,7 +157,7 @@ a {
 }
 
 a:hover {
-  color: lighten($default-color,15);
+  color: lighten($default-header,15);
 }
 
 code {
@@ -666,11 +666,14 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 .box {
-  background-color: white;
+  background-color: #e4e1e1;
   border-radius: 5px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0px 5px 7px 0px rgba(10, 10, 10, 0.5);
   display: block;
   padding: 1.25rem;
+  &:hover{
+    box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.8)
+  }
 }
 
 .box:not(:last-child) {
