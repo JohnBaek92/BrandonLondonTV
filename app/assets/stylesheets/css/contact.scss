@@ -10,6 +10,18 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: 25%;
+  // opacity: 0.83;
+  // &:before{
+  //   content: " ";
+  //   position: relative;
+  //   top: 0;
+  //   bottom: 0;
+  //   width: 100%;
+  //   z-index: -1;
+  //   opacity: 1;
+  //   height: 100%;
+  //   background-color: $site-background;
+  // }
 }
 
 .management-word {
