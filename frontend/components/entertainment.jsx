@@ -22,9 +22,9 @@ const Entertainment = () => {
       <div className="title has-text-centered">
         Videos
       </div>
-      <div className="columns">
-        <iframe className="column" allowFullScreen="true" width="40%" height="60%" frameBorder="0" src="https://www.youtube.com/embed/E8JlWMXJgqA" />
-        <iframe className="column" allowFullScreen="true" width="40%" height="60%" frameBorder="0" src="https://www.youtube.com/embed/BKXLB4-9sfg" />
+      <div className="columns" style={{height: "35vh"}}>
+        <iframe className="column" allowFullScreen="true" width="40%" height="auto" frameBorder="0" src="https://www.youtube.com/embed/E8JlWMXJgqA" />
+        <iframe className="column" allowFullScreen="true" width="40%" height="auto" frameBorder="0" src="https://www.youtube.com/embed/BKXLB4-9sfg" />
       </div>
       <div className="columns">
         <iframe className="column" allowFullScreen="true" width="40%" height="60%" frameBorder="0" src="https://www.youtube.com/embed/KLmwpPbTsN0" />
