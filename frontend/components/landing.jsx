@@ -33,8 +33,7 @@ class Landing extends React.Component {
           </div>
         </div>
         <div className="joso-text-formatting" >
-          <div className="joso-text">When The Game Ends</div>
-          <div className="joso-text">The Lifestyle Begins</div>
+          <div className="joso-text">When The Game Ends, The Lifestyle Begins</div>
         </div>
         <div className="joso-landing-background">
           <Link to="/joso">
