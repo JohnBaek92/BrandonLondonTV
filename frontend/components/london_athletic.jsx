@@ -1,10 +1,17 @@
 import React from "react";
 
 const LondonAthletic = () => {
-  return <div className="london-athletics-wrapper">
+  return (
+    <div className="london-athletics-wrapper">
       <div className="box">
         <div className="london-athletic-video-wrapper">
-          <iframe className="london-athletic-video" width="700px" height="380px" frameBorder="0" src="https://www.youtube.com/embed/qUNDomDbYtI" />
+          <iframe
+            className="london-athletic-video"
+            width="700px"
+            height="380px"
+            frameBorder="0"
+            src="https://www.youtube.com/embed/qUNDomDbYtI"
+          />
         </div>
         <div>
           <div className="london-athletic-text padding-bottom-london-athletic">
@@ -47,12 +54,34 @@ const LondonAthletic = () => {
           Catches Clinics - Pass Game Development - Lineman Work
         </div>
         <div className="block flex-row-center">
-          <iframe width="500px" height="400px" frameBorder="0" src="https://www.youtube.com/embed/wk5GSPw_zX8" />
-          <iframe className="padding-left" width="500px" height="400px" frameBorder="0" src="https://www.youtube.com/embed/G7-pGlG1DB0" />
+          <iframe
+            width="500px"
+            height="400px"
+            frameBorder="0"
+            src="https://www.youtube.com/embed/wk5GSPw_zX8"
+          />
+          <iframe
+            className="padding-left"
+            width="500px"
+            height="400px"
+            frameBorder="0"
+            src="https://www.youtube.com/embed/G7-pGlG1DB0"
+          />
         </div>
         <div className="block flex-row-center">
-          <iframe width="500px" height="400px" frameBorder="0" src="https://www.youtube.com/embed/aAT5wsRrjFs" />
-          <iframe className="padding-left" width="500px" height="400px" frameBorder="0" src="https://www.youtube.com/embed/r3xmEm75MUE" />
+          <iframe
+            width="500px"
+            height="400px"
+            frameBorder="0"
+            src="https://www.youtube.com/embed/aAT5wsRrjFs"
+          />
+          <iframe
+            className="padding-left"
+            width="500px"
+            height="400px"
+            frameBorder="0"
+            src="https://www.youtube.com/embed/r3xmEm75MUE"
+          />
         </div>
       </div>
       <div className="box">
@@ -61,16 +90,29 @@ const LondonAthletic = () => {
         </div>
         <div className="block flex-row-center">
           <img className="highschool-photos" src={window.images.coleman} />
-          <img className="padding-left highschool-photos" src={window.images.dubois} />
-          <img className="highschool-photos padding-left" src={window.images.fitzpatrick} />
+          <img
+            className="padding-left highschool-photos"
+            src={window.images.dubois}
+          />
+          <img
+            className="highschool-photos padding-left"
+            src={window.images.fitzpatrick}
+          />
         </div>
         <div className="block flex-row-center">
           <img className="highschool-photos" src={window.images.kg_gray} />
-          <img className="padding-left highschool-photos" src={window.images.lewis} />
-          <img className="padding-left highschool-photos" src={window.images.vassel} />
+          <img
+            className="padding-left highschool-photos"
+            src={window.images.lewis}
+          />
+          <img
+            className="padding-left highschool-photos"
+            src={window.images.vassel}
+          />
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default LondonAthletic;
