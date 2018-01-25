@@ -55,7 +55,7 @@
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  border: 3px solid lighten($header-color, 15%);
+  border: 3px solid $default-header;
   align-self: center;
   display: flex;
   justify-content: center;
@@ -63,9 +63,10 @@
 
 .social-tag i {
   align-self: center;
-  color: lighten($header-color, 15%);
+  // color: lighten($header-color, 15%);
+  color: $default-header;
   &:hover {
-    color: darken($header-color, 15%);
+    color: lighten($default-header, 15);
   }
 }
 
