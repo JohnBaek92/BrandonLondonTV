@@ -55,13 +55,19 @@
 }
 
 .social-tag-header {
-  padding: 0 11px;
   color: $default-header;
+  padding-right: 5%;
+  display: flex;
   &:hover {
     color: lighten($default-header, 15);
   }
   &:last-child {
     padding-right: 7%;
+  }
+  a {
+    color: $default-header;
+    align-self: flex-start;
+    padding: 0.5rem 0;
   }
 }
 

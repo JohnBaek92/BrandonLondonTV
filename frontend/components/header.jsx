@@ -27,16 +27,36 @@ const Header = () => (
       </div>
       <div className="nav-right">
         <div className="social-tag-header">
-          <i className="fa is-size-4 fa-facebook" />
+          <a
+            href="https://www.facebook.com/BrandonLondonTv/"
+            target="_blank"
+          >
+            <i className="fa is-size-4 fa-facebook" />
+          </a>
         </div>
         <div className="social-tag-header">
-          <i className="fa is-size-4 fa-twitter" />
+          <a
+            href="https://twitter.com/brandonlondontv"
+            target="_blank"
+          >
+            <i className="fa is-size-4 fa-twitter" />
+          </a>
         </div>
         <div className="social-tag-header">
-          <i className="fa is-size-4 fa-youtube" />
+          <a
+            href="https://www.youtube.com/user/TheCulturedAthlete"
+            target="_blank"
+          >
+            <i className="fa is-size-4 fa-youtube" />
+          </a>
         </div>
         <div className="social-tag-header">
-          <i className="fa is-size-4 fa-instagram" />
+          <a
+            href="https://www.instagram.com/brandonlondontv/"
+            target="_blank"
+          >
+            <i className="fa is-size-4 fa-instagram" />
+          </a>
         </div>
       </div>
     </nav>

@@ -2,36 +2,39 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  return (
-    <footer className="footer">
+  return <footer className="footer">
       <div className="container">
         <nav>
           <div className="nav-left navbar-item" />
           <div className="nav-center middle-centered">
             <div className="social-tag">
-              <i className="fa fa-3x fa-facebook" />
+              <a className="social-tag" href="https://www.facebook.com/BrandonLondonTv/" target="_blank">
+                <i className="fa fa-3x fa-facebook" />
+              </a>
             </div>
             <div className="social-tag">
-              <i className="fa fa-3x fa-twitter" />
+              <a className="social-tag" href="https://twitter.com/brandonlondontv" target="_blank">
+                <i className="fa fa-3x fa-twitter" />
+              </a>
             </div>
             <Link to="/">
-              <img
-                className="footer-logo"
-                src={window.images.circle_logo}
-              />
+              <img className="footer-logo" src={window.images.circle_logo} />
             </Link>
             <div className="social-tag">
-              <i className="fa fa-3x fa-youtube" />
+              <a className="social-tag" href="https://www.youtube.com/user/TheCulturedAthlete" target="_blank">
+                <i className="fa fa-3x fa-youtube" />
+              </a>
             </div>
             <div className="social-tag">
-              <i className="fa fa-3x fa-instagram" />
+              <a className="social-tag" href="https://www.instagram.com/brandonlondontv/" target="_blank">
+                <i className="fa fa-3x fa-instagram" />
+              </a>
             </div>
           </div>
           <div className="nav-right navbar-item" />
         </nav>
       </div>
-    </footer>
-  );
+    </footer>;
 };
 
 export default Footer;
