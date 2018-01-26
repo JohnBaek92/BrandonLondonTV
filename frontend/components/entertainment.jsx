@@ -43,7 +43,7 @@ class Entertainment extends React.PureComponent {
 
   changeHeight(row, idx, link, e) {
     const newState = Object.assign({}, this.state);
-    if(this.state.prevVideo) {
+    if (this.state.prevVideo) {
       this.state.prevVideo.pauseVideo();
     }
     newState.top = "15vh";
@@ -79,61 +79,101 @@ class Entertainment extends React.PureComponent {
             height: "100%",
             width: "100%"
           }}
-          onPlay={(e) => this.changeHeight(row, idx, link, e)}
+          onPlay={e => this.changeHeight(row, idx, link, e)}
         />
       </div>
     );
   }
 
-  openModal(){
-      return(
-        <div className="modal-body" onClick={this.closeModal}>
-          <div className="modal-content">
-            <img src={this.state.picture} />
-          </div>
+  openModal() {
+    return (
+      <div className="modal-body" onClick={this.closeModal}>
+        <div className="modal-content">
+          <img src={this.state.picture} />
         </div>
-      );
+      </div>
+    );
   }
 
-  openModalState(image){
-    this.setState({openModal: true, picture: image});
+  openModalState(image) {
+    this.setState({ openModal: true, picture: image });
   }
 
   closeModal() {
-    this.setState({openModal: false});
+    this.setState({ openModal: false });
   }
 
   render() {
-    return <section className="entertainment-wrapper">
+    return (
+      <section className="entertainment-wrapper">
         {this.state.openModal ? this.openModal() : null}
         <div className="title has-text-centered">Photos</div>
         <div className="columns">
-          <img className="column" onClick={() => this.openModalState(window.images.e1)} style={photoStyle} src={window.images.e1} />
-          <img className="column" onClick={() => this.openModalState(window.images.e5)} style={photoStyle} src={window.images.e5} />
-          <img className="column" onClick={() => this.openModalState(window.images.e3)} style={photoStyle} src={window.images.e3} />
-          <img className="column" onClick={() => this.openModalState(window.images.e4)} style={photoStyle} src={window.images.e4} />
+          <img
+            className="column"
+            onClick={() => this.openModalState(window.images.e1)}
+            style={photoStyle}
+            src={window.images.e1}
+          />
+          <img
+            className="column"
+            onClick={() => this.openModalState(window.images.e5)}
+            style={photoStyle}
+            src={window.images.e5}
+          />
+          <img
+            className="column"
+            onClick={() => this.openModalState(window.images.e3)}
+            style={photoStyle}
+            src={window.images.e3}
+          />
+          <img
+            className="column"
+            onClick={() => this.openModalState(window.images.e4)}
+            style={photoStyle}
+            src={window.images.e4}
+          />
         </div>
         <div className="columns">
-          <img className="column" onClick={() => this.openModalState(window.images.e2)} style={photoStyle} src={window.images.e2} />
-          <img className="column" onClick={() => this.openModalState(window.images.e6)} style={photoStyle} src={window.images.e6} />
-          <img className="column" onClick={() => this.openModalState(window.images.e7)} style={photoStyle} src={window.images.e7} />
-          <img className="column" onClick={() => this.openModalState(window.images.e8)} style={photoStyle} src={window.images.e8} />
+          <img
+            className="column"
+            onClick={() => this.openModalState(window.images.e2)}
+            style={photoStyle}
+            src={window.images.e2}
+          />
+          <img
+            className="column"
+            onClick={() => this.openModalState(window.images.e6)}
+            style={photoStyle}
+            src={window.images.e6}
+          />
+          <img
+            className="column"
+            onClick={() => this.openModalState(window.images.e7)}
+            style={photoStyle}
+            src={window.images.e7}
+          />
+          <img
+            className="column"
+            onClick={() => this.openModalState(window.images.e8)}
+            style={photoStyle}
+            src={window.images.e8}
+          />
         </div>
         <div className="title has-text-centered">Videos</div>
         <div className="columns" style={{ height: this.state.top }}>
           {this.videos.slice(0, 2).map(link => this.makeVideo(link, "top"))}
         </div>
         <div className="columns" style={{ height: this.state.middle }}>
-          {this.videos
-            .slice(2, 4)
-            .map(link => this.makeVideo(link, "middle"))}
+          {this.videos.slice(2, 4).map(link => this.makeVideo(link, "middle"))}
         </div>
         <div className="columns" style={{ height: this.state.bottom }}>
           {this.videos
             .slice(4, 8)
             .map((link, idx) => this.makeVideo(link, "bottom", idx))}
         </div>
-      </section>;
+      </section>
+    );
   }
 }
 
