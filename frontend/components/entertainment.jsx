@@ -1,12 +1,14 @@
 import React from "react";
 import Youtube from "react-youtube";
 
-const photoStyle = { width: "15%", height: "15%" };
+const photoStyle = { width: "15%", height: "15%", cursor: "pointer" };
 
 class Entertainment extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
+      openModal: false,
+      picture: null,
       prevVideo: null,
       top: "35vh",
       middle: "25vh",
@@ -35,6 +37,8 @@ class Entertainment extends React.PureComponent {
     ];
     this.changeHeight = this.changeHeight.bind(this);
     this.makeVideo = this.makeVideo.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   changeHeight(row, idx, link, e) {
@@ -81,36 +85,55 @@ class Entertainment extends React.PureComponent {
     );
   }
 
+  openModal(){
+      return(
+        <div className="modal-body" onClick={this.closeModal}>
+          <div className="modal-content">
+            <img src={this.state.picture} />
+          </div>
+        </div>
+      );
+  }
+
+  openModalState(image){
+    this.setState({openModal: true, picture: image});
+  }
+
+  closeModal() {
+    this.setState({openModal: false});
+  }
+
   render() {
-    return (
-      <section className="entertainment-wrapper">
+    return <section className="entertainment-wrapper">
+        {this.state.openModal ? this.openModal() : null}
         <div className="title has-text-centered">Photos</div>
         <div className="columns">
-          <img className="column" style={photoStyle} src={window.images.e1} />
-          <img className="column" style={photoStyle} src={window.images.e5} />
-          <img className="column" style={photoStyle} src={window.images.e3} />
-          <img className="column" style={photoStyle} src={window.images.e4} />
+          <img className="column" onClick={() => this.openModalState(window.images.e1)} style={photoStyle} src={window.images.e1} />
+          <img className="column" onClick={() => this.openModalState(window.images.e2)} style={photoStyle} src={window.images.e5} />
+          <img className="column" onClick={() => this.openModalState(window.images.e3)} style={photoStyle} src={window.images.e3} />
+          <img className="column" onClick={() => this.openModalState(window.images.e4)} style={photoStyle} src={window.images.e4} />
         </div>
         <div className="columns">
-          <img className="column" style={photoStyle} src={window.images.e2} />
-          <img className="column" style={photoStyle} src={window.images.e6} />
-          <img className="column" style={photoStyle} src={window.images.e7} />
-          <img className="column" style={photoStyle} src={window.images.e8} />
+          <img className="column" onClick={() => this.openModalState(window.images.e5)} style={photoStyle} src={window.images.e2} />
+          <img className="column" onClick={() => this.openModalState(window.images.e6)} style={photoStyle} src={window.images.e6} />
+          <img className="column" onClick={() => this.openModalState(window.images.e7)} style={photoStyle} src={window.images.e7} />
+          <img className="column" onClick={() => this.openModalState(window.images.e8)} style={photoStyle} src={window.images.e8} />
         </div>
         <div className="title has-text-centered">Videos</div>
         <div className="columns" style={{ height: this.state.top }}>
           {this.videos.slice(0, 2).map(link => this.makeVideo(link, "top"))}
         </div>
         <div className="columns" style={{ height: this.state.middle }}>
-          {this.videos.slice(2, 4).map(link => this.makeVideo(link, "middle"))}
+          {this.videos
+            .slice(2, 4)
+            .map(link => this.makeVideo(link, "middle"))}
         </div>
         <div className="columns" style={{ height: this.state.bottom }}>
           {this.videos
             .slice(4, 8)
             .map((link, idx) => this.makeVideo(link, "bottom", idx))}
         </div>
-      </section>
-    );
+      </section>;
   }
 }
 
