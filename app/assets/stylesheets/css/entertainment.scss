@@ -7,11 +7,15 @@ div.columns {
     display: block;
     width: 80%;
     max-width: 700px;
+    max-height: 700px;
     z-index: 10000000000001;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .modal-body {
-    display: block;
     position: fixed; /* Stay in place */
     z-index: 100000; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -19,7 +23,7 @@ div.columns {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: scroll; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
