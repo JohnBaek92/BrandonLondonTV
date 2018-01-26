@@ -47,8 +47,8 @@
 }
 
 .footer-logo {
-  height: 13em;
-  width: 13em;
+  height: 3.5em;
+  width: 10em;
 }
 
 .social-tag {
@@ -59,15 +59,24 @@
   align-self: center;
   display: flex;
   justify-content: center;
+  i {
+    align-self: center;
+    // color: lighten($header-color, 15%);
+    color: $default-header;
+    &:hover {
+      color: lighten($default-header, 15);
+    }
+  }
+
+  a {
+    align-self: center;
+  }
 }
 
-.social-tag i {
-  align-self: center;
-  // color: lighten($header-color, 15%);
-  color: $default-header;
-  &:hover {
-    color: lighten($default-header, 15);
-  }
+.med {
+  height: 200px;
+  width: 200px;
+  border: 8px solid $default-header;
 }
 
 .middle-centered {
