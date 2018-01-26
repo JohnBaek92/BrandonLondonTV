@@ -7,6 +7,7 @@ class Entertainment extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
+      prevVideo: null,
       top: "35vh",
       middle: "25vh",
       bottom: "15vh",
@@ -36,8 +37,11 @@ class Entertainment extends React.PureComponent {
     this.makeVideo = this.makeVideo.bind(this);
   }
 
-  changeHeight(row, idx, link) {
+  changeHeight(row, idx, link, e) {
     const newState = Object.assign({}, this.state);
+    if(this.state.prevVideo) {
+      this.state.prevVideo.pauseVideo();
+    }
     newState.top = "15vh";
     newState.middle = "15vh";
     newState.bottom = "15vh";
@@ -53,13 +57,14 @@ class Entertainment extends React.PureComponent {
       "WSmNvV-8uwU": false
     };
     newState.videos[link] = true;
-    // this.setState(newState);
+    newState.prevVideo = e.target;
     this.setState(newState);
   }
 
   makeVideo(link, row, idx) {
     let active = "column";
-    if (this.state.videos[link]) {
+    let videoSrc = this.state.videos[link];
+    if (videoSrc) {
       active = "column is-three-quarters";
     }
     return (
@@ -68,13 +73,9 @@ class Entertainment extends React.PureComponent {
           videoId={link}
           opts={{
             height: "100%",
-            width: "100%",
-            playerVars: {
-              // https://developers.google.com/youtube/player_parameters
-              autoplay: 0
-            }
+            width: "100%"
           }}
-          onPlay={() => this.changeHeight(row, idx, link)}
+          onPlay={(e) => this.changeHeight(row, idx, link, e)}
         />
       </div>
     );
