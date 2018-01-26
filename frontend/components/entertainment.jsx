@@ -9,7 +9,17 @@ class Entertainment extends React.PureComponent {
     this.state = {
       top: "35vh",
       middle: "25vh",
-      bottom: "15vh"
+      bottom: "15vh",
+      videos: {
+        E8JlWMXJgqA: false,
+        "BKXLB4-9sfg": false,
+        KLmwpPbTsN0: false,
+        rJ_qxnuKADY: false,
+        YbXrdVjzkC4: false,
+        AOmHwHWpdKc: false,
+        erRJtA8bkVc: false,
+        "WSmNvV-8uwU": false
+      }
     };
 
     this.videos = [
@@ -26,20 +36,34 @@ class Entertainment extends React.PureComponent {
     this.makeVideo = this.makeVideo.bind(this);
   }
 
-  changeHeight(row) {
+  changeHeight(row, idx, link) {
     const newState = Object.assign({}, this.state);
     newState.top = "15vh";
     newState.middle = "15vh";
     newState.bottom = "15vh";
     newState[row] = "50vh";
-    debugger
+    newState.videos = {
+      E8JlWMXJgqA: false,
+      "BKXLB4-9sfg": false,
+      KLmwpPbTsN0: false,
+      rJ_qxnuKADY: false,
+      YbXrdVjzkC4: false,
+      AOmHwHWpdKc: false,
+      erRJtA8bkVc: false,
+      "WSmNvV-8uwU": false
+    };
+    newState.videos[link] = true;
     // this.setState(newState);
     this.setState(newState);
   }
 
-  makeVideo(link, row) {
+  makeVideo(link, row, idx) {
+    let active = "column";
+    if (this.state.videos[link]) {
+      active = "column is-three-quarters";
+    }
     return (
-      <div className="column" key={link}>
+      <div className={active} key={link}>
         <Youtube
           videoId={link}
           opts={{
@@ -50,7 +74,7 @@ class Entertainment extends React.PureComponent {
               autoplay: 0
             }
           }}
-          onPlay={() => this.changeHeight(row)}
+          onPlay={() => this.changeHeight(row, idx, link)}
         />
       </div>
     );
@@ -80,7 +104,9 @@ class Entertainment extends React.PureComponent {
           {this.videos.slice(2, 4).map(link => this.makeVideo(link, "middle"))}
         </div>
         <div className="columns" style={{ height: this.state.bottom }}>
-          {this.videos.slice(4, 8).map(link => this.makeVideo(link, "bottom"))}
+          {this.videos
+            .slice(4, 8)
+            .map((link, idx) => this.makeVideo(link, "bottom", idx))}
         </div>
       </section>
     );
