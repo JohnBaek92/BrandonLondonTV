@@ -109,12 +109,12 @@ class Entertainment extends React.PureComponent {
         <div className="title has-text-centered">Photos</div>
         <div className="columns">
           <img className="column" onClick={() => this.openModalState(window.images.e1)} style={photoStyle} src={window.images.e1} />
-          <img className="column" onClick={() => this.openModalState(window.images.e2)} style={photoStyle} src={window.images.e5} />
+          <img className="column" onClick={() => this.openModalState(window.images.e5)} style={photoStyle} src={window.images.e5} />
           <img className="column" onClick={() => this.openModalState(window.images.e3)} style={photoStyle} src={window.images.e3} />
           <img className="column" onClick={() => this.openModalState(window.images.e4)} style={photoStyle} src={window.images.e4} />
         </div>
         <div className="columns">
-          <img className="column" onClick={() => this.openModalState(window.images.e5)} style={photoStyle} src={window.images.e2} />
+          <img className="column" onClick={() => this.openModalState(window.images.e2)} style={photoStyle} src={window.images.e2} />
           <img className="column" onClick={() => this.openModalState(window.images.e6)} style={photoStyle} src={window.images.e6} />
           <img className="column" onClick={() => this.openModalState(window.images.e7)} style={photoStyle} src={window.images.e7} />
           <img className="column" onClick={() => this.openModalState(window.images.e8)} style={photoStyle} src={window.images.e8} />
