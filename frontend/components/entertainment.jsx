@@ -36,12 +36,13 @@ class Entertainment extends React.PureComponent {
     this.makeVideo = this.makeVideo.bind(this);
   }
 
-  changeHeight(row, idx, link) {
+  changeHeight(row, idx, link, e) {
+    debugger;
     const newState = Object.assign({}, this.state);
     newState.top = "15vh";
     newState.middle = "15vh";
     newState.bottom = "15vh";
-    newState[row] = "50vh";
+    newState[row] = "60vh";
     newState.videos = {
       E8JlWMXJgqA: false,
       "BKXLB4-9sfg": false,
@@ -59,25 +60,32 @@ class Entertainment extends React.PureComponent {
 
   makeVideo(link, row, idx) {
     let active = "column";
-    if (this.state.videos[link]) {
+    let playing = this.state.videos[link];
+
+    let player = (
+      <Youtube
+        videoId={link}
+        opts={{ height: "100%", width: "100%", playerVars: { autoplay: 0 } }}
+        onStateChange={e => this.handleChange(row, idx, link, e, playing)}
+      />
+    );
+    if (playing) {
       active = "column is-three-quarters";
+    } else {
+      player.pauseVideo();
     }
     return (
       <div className={active} key={link}>
-        <Youtube
-          videoId={link}
-          opts={{
-            height: "100%",
-            width: "100%",
-            playerVars: {
-              // https://developers.google.com/youtube/player_parameters
-              autoplay: 0
-            }
-          }}
-          onPlay={() => this.changeHeight(row, idx, link)}
-        />
+        {player}
       </div>
     );
+  }
+
+  handleChange(row, idx, link, event, boolean) {
+    if (event.data === 1 && boolean) {
+      debugger;
+      this.changeHeight(row, idx, link, event);
+    }
   }
 
   render() {
