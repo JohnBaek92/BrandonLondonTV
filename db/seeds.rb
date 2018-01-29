@@ -17,25 +17,30 @@ press = Page.create({page_type: "Press"})
 
 links = [
     {
+        title: "Eye Opener’ closes to make room for brand-new ‘morning’ (update)",
+        link: "http://www.star-telegram.com/entertainment/tv/article156700024.html",
+        image: "http://www.star-telegram.com/entertainment/tv/tfjdmm/picture156700014/alternates/LANDSCAPE_1140/Morning%20dose2"
+    },
+    {
+        title: "Landon Collins' Giants charity softball game rosters announced",
+        link: "http://www.nj.com/giants/index.ssf/2017/05/landon_collins_giants_charity_softball_game_roster.html",
+        image: "http://image.nj.com/home/njo-media/width960/img/njcom_photos/photo/2017/05/25/-43d46740736d3c8e.JPG"
+    },
+    {
         title: "FootBallGamePlan - Brandon London's Event - Being Multi-Layered - May 27, 2015",
         link: "https://www.youtube.com/watch?v=DH0enkzKWJY&feature=youtu.be",
         image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/6778593.jpg"
 
     },
     {
+        title: "Roster evaluation and Brandon London interview | Talk Is Cheap",
+        link: "http://www.nj.com/giants/index.ssf/2016/08/listen_roster_evaluation_and_brandon_london_interv.html",
+        image: "https://i1.sndcdn.com/artworks-000157146755-4qfqb1-t500x500.jpg"
+    },
+    {
         title: "The Top 10 Sexiest Montreal Alouettes Players",
         link: "https://www.mtlblog.com/best-of-mtl/the-10-most-drool-worthy-players-on-the-montreal-alouettes",
         image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/246071.jpg"
-    },
-    {
-        title: "Montreal Alouettes - Brandon London Announces Retirement - June 3, 2015",
-        link: "http://en.montrealalouettes.com/article/brandon-london-announces-retirement",
-        image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/7619840.jpg"
-    },
-    {
-        title: "Boomtown Fitness & Media - Art for Culture - May 29, 2015",
-        link: "http://boomtownfm.com/2015/05/29/art-for-culture/",
-        image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/7553785.jpg"
     },
     {
         title: "Canada.com - Montreal Alouettes receiver Brandon London announces CFL retirement - June 3, 2015",
@@ -51,11 +56,6 @@ links = [
         title: "Montreal Gazette - The Snap: London's retirement caught Higgins by surprise - June 4, 2015",
         link: "http://montrealgazette.com/sports/football/cfl/montreal-alouettes/the-snap-londons-retirement-caught-higgins-by-surprise",
         image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/6353431.jpg"
-    },
-    {
-        title: "Sports Media 101 - Ex-New York Giants WR Brandon London announces retirement from Football - June 5, 2015",
-        link: "http://www.sportsmedia101.com/newyorkgiants/2015/06/05/ex-new-york-giants-wr-brandon-london-announces-his-retirement-from-football/",
-        image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/6275422.jpg"
     },
 ]
 links.each do |link|
