@@ -4,6 +4,7 @@ import Header from "./header";
 import Footer from "./footer";
 import LandingPage from "./landing";
 import About from "./about";
+import Joso from "./joso";
 import Press from "./press";
 import Blog from "./blog";
 import LondonAthletic from "./london_athletic";
@@ -19,6 +20,7 @@ const App = () => (
 		<div className="container Site-content">
 			<Route exact path="/" component={LandingPage} />
 			<Route exact path="/about" component={About} />
+			<Route exact path="/joso" component={Joso} />
 			<Route exact path="/press" component={Press} />
 			<Route exact path="/blog" component={Blog} />
 			<Route exact path="/london-athletic" component={LondonAthletic} />

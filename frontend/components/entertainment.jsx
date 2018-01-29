@@ -49,7 +49,7 @@ class Entertainment extends React.PureComponent {
     newState.top = "15vh";
     newState.middle = "15vh";
     newState.bottom = "15vh";
-    newState[row] = "60vh";
+    newState[row] = "50vh";
     newState.videos = {
       E8JlWMXJgqA: false,
       "BKXLB4-9sfg": false,
@@ -70,8 +70,6 @@ class Entertainment extends React.PureComponent {
     let videoSrc = this.state.videos[link];
     if (videoSrc) {
       active = "column is-three-quarters";
-    } else {
-      player.pauseVideo();
     }
     return (
       <div className={active} key={link}>

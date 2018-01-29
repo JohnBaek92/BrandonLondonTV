@@ -1,4 +1,5 @@
 import React from "react";
+import UnderConstruction from "./under_construction";
 
 class Blog extends React.Component {
   constructor() {
@@ -17,14 +18,15 @@ class Blog extends React.Component {
   }
 
   render() {
-    const { posts } = this.state;
-    if (!posts) {
-      return null;
-    }
-    let bar = Array.from({ length: 8 });
+    // const { posts } = this.state;
+    // if (!posts) {
+    //   return null;
+    // }
+    // let bar = Array.from({ length: 8 });
     return (
       <div className="container">
-        {bar.map((post, idx) => <BlogPost key={idx} post={post} />)}
+        <UnderConstruction />
+        {/* {bar.map((post, idx) => <BlogPost key={idx} post={post} />)} */}
       </div>
     );
   }
