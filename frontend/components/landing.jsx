@@ -9,6 +9,10 @@ class Landing extends React.Component {
     super(props);
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="container">
@@ -32,12 +36,17 @@ class Landing extends React.Component {
             <Instagram />
           </div>
         </div>
-        <div className="joso-text-formatting" >
-          <div className="joso-text">When The Game Ends, The Lifestyle Begins</div>
+        <div className="joso-text-formatting">
+          <div className="joso-text">
+            When The Game Ends, The Lifestyle Begins
+          </div>
         </div>
         <div className="joso-landing-background">
           <Link to="/joso">
-            <img src={window.images.joso_yellow} className="joso-photo-landing" />
+            <img
+              src={window.images.joso_yellow}
+              className="joso-photo-landing"
+            />
           </Link>
         </div>
       </div>

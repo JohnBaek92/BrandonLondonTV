@@ -7,6 +7,10 @@ class Blog extends React.Component {
     this.state = {};
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     fetch("/posts")
       .then(res => {

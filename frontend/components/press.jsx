@@ -11,6 +11,10 @@ class Press extends React.Component {
     this.fetchPress();
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   fetchPress() {
     fetch("/pages/1")
       .then(res => res.json())
@@ -28,14 +32,16 @@ class Press extends React.Component {
     return press.map((el, idx) => <Tile key={idx} article={el} />);
   }
 
-	render() {
-		return (
-			<div className="block is-uppercase has-text-weight-bold">
-				<p className="title has-text-centered">In the News</p>
-				<div className="tile is-ancestor press-tile flex-justify-center">{this.renderPress()}</div>
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className="block is-uppercase has-text-weight-bold">
+        <p className="title has-text-centered">In the News</p>
+        <div className="tile is-ancestor press-tile flex-justify-center">
+          {this.renderPress()}
+        </div>
+      </div>
+    );
+  }
 }
 
 const swapURL = link => link.replace("s3-us-east-1", "s3");
