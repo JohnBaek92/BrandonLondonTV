@@ -24,6 +24,7 @@
     "react-router-dom": "^4.2.2",
     "react-twitter-widgets": "^1.7.1",
     "react-youtube": "^7.5.0",
+    "soundcloud": "^3.3.0",
     "styled-components": "^2.4.0",
     "webpack": "^3.10.0"
   },
