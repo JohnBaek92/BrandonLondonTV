@@ -73,10 +73,27 @@
   }
 }
 
-.med {
+#footer-logo {
+  border-radius: 50%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  i {
+    align-self: center;
+    color: $default-header;
+    &:hover {
+      color: lighten($default-header, 15);
+    }
+  }
+
+  a {
+    align-self: center;
+  }
   height: 200px;
   width: 200px;
   border: 8px solid $default-header;
+}
+.med {
 }
 
 .middle-centered {
