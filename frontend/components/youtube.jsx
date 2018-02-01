@@ -23,6 +23,7 @@ export default class Youtube extends React.Component {
     this.onSearchResponse = this.onSearchResponse.bind(this);
     this.parseVideo = this.parseVideo.bind(this);
   }
+  
   componentDidMount() {
     window.gapi.load("client", () => {
       window.gapi.client.load("youtube", "v3", this.onYouTubeApiLoad);
