@@ -1,10 +1,14 @@
 import React from "react";
+<<<<<<< HEAD
 var SC = require("soundcloud");
+=======
+>>>>>>> facdbe0002284e8faa9a3c6f1fa8ed4426aa9025
 
 class Joso extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+<<<<<<< HEAD
       recentJOSO: [],
       videos: []
     };
@@ -14,6 +18,11 @@ class Joso extends React.Component {
     this.renderVideos = this.renderVideos.bind(this);
   }
 
+=======
+      recentJOSO: []
+    };
+  }
+>>>>>>> facdbe0002284e8faa9a3c6f1fa8ed4426aa9025
   componentWillMount() {
     window.gapi.load("client", () => {
       window.gapi.client.load("youtube", "v3", this.onYouTubeApiLoad);
@@ -65,20 +74,29 @@ class Joso extends React.Component {
         </div>
         <div className="columns">
           <div className="column youtube-joso">
+<<<<<<< HEAD
             {/*
             <iframe> 
+=======
+            <iframe
+>>>>>>> facdbe0002284e8faa9a3c6f1fa8ed4426aa9025
               width="560"
               height="400"
               src="https://www.youtube.com/embed/rJ_qxnuKADY?list=PLqtmVPBck9G7ZoZ_4eEJ8tl_EoFlETZho"
               frameborder="0"
               allow="autoplay; encrypted-media"
               allowfullscreen
+<<<<<<< HEAD
             />  */}
             {this.renderVideos()}
+=======
+            />
+>>>>>>> facdbe0002284e8faa9a3c6f1fa8ed4426aa9025
           </div>
           <div className="column sc-joso">
             <iframe
               width="100%"
+<<<<<<< HEAD
               height="166"
               scrolling="no"
               frameBorder="no"
@@ -92,6 +110,13 @@ class Joso extends React.Component {
               frameBorder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/388488576&amp;color=%23FFD046&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
+=======
+              height="400"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/388488576&amp;color=%23ff5500&amp;auto_play=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"
+>>>>>>> facdbe0002284e8faa9a3c6f1fa8ed4426aa9025
             />
           </div>
         </div>
