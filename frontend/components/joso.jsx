@@ -1,14 +1,9 @@
 import React from "react";
-<<<<<<< HEAD
-var SC = require("soundcloud");
-=======
->>>>>>> facdbe0002284e8faa9a3c6f1fa8ed4426aa9025
 
 class Joso extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-<<<<<<< HEAD
       recentJOSO: [],
       videos: []
     };
@@ -18,11 +13,6 @@ class Joso extends React.Component {
     this.renderVideos = this.renderVideos.bind(this);
   }
 
-=======
-      recentJOSO: []
-    };
-  }
->>>>>>> facdbe0002284e8faa9a3c6f1fa8ed4426aa9025
   componentWillMount() {
     window.gapi.load("client", () => {
       window.gapi.client.load("youtube", "v3", this.onYouTubeApiLoad);
@@ -47,7 +37,6 @@ class Joso extends React.Component {
 
   onSearchResponse(response) {
     const videos = response.items;
-    debugger
     this.setState({ videos });
   }
 
@@ -58,13 +47,19 @@ class Joso extends React.Component {
         key={idx}
         width="560"
         height="400"
-        src={`https://www.youtube.com/embed/${video.snippet.resourceId.videoId}`}
+        src={`https://www.youtube.com/embed/${
+          video.snippet.resourceId.videoId
+        }`}
         frameBorder="0"
         allow="autoplay; encrypted-media"
         allowFullScreen
       />
     ));
   }
+
+  // <div className="column youtube-joso">
+  //   {this.renderVideos()}
+  // </div>
 
   render() {
     return (
@@ -73,19 +68,7 @@ class Joso extends React.Component {
           When The Game Ends, The Lifestyle Begins
         </div>
         <div className="columns">
-          <div className="column youtube-joso">
-            {/*
-            <iframe> 
-              width="560"
-              height="400"
-              src="https://www.youtube.com/embed/rJ_qxnuKADY?list=PLqtmVPBck9G7ZoZ_4eEJ8tl_EoFlETZho"
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-            />  */}
-            {this.renderVideos()}
-          </div>
-          <div className="column sc-joso">
+          <div className="column sc-joso is-two-thirds centered">
             <iframe
               width="100%"
               height="166"
