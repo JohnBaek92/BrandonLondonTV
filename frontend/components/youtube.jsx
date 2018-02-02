@@ -5,7 +5,7 @@ import RecentVideoItem from "./recent_video_item";
 const Video = styled.ul`
   display: flex;
   iframe {
-    width: 65vw;
+    width: 100%;
     height: 35vw;
     frame-border: 0;
     margin: 0 auto;
