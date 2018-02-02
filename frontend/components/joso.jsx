@@ -67,7 +67,7 @@ class Joso extends React.Component {
         <div className="title is-size-2 has-text-weight-bold has-text-centered">
           When The Game Ends, The Lifestyle Begins
         </div>
-        <div className="columns">
+        <div className="columns is-mobile">
           <div className="column sc-joso is-two-thirds centered">
             <iframe
               width="100%"
