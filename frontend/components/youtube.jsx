@@ -4,7 +4,6 @@ import styled from "styled-components";
 import RecentVideoItem from "./recent_video_item";
 const Video = styled.ul`
   display: flex;
-  margin-top: 2em;
   iframe {
     width: 65vw;
     height: 35vw;
@@ -68,6 +67,6 @@ export default class Youtube extends React.Component {
   }
 
   render() {
-    return <div className="youtube-video">{this.renderVideo()}</div>;
+    return <div className="youtube-video column is-two-thirds">{this.renderVideo()}</div>;
   }
 }
