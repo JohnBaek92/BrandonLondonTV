@@ -102,6 +102,11 @@
 .brandon-photo-about {
   display: -webkit-inline-box;
   object-fit: cover;
+
+  @include mobile {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .box-shadow {
