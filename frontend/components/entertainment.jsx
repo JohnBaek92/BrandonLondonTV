@@ -112,7 +112,7 @@ class Entertainment extends React.PureComponent {
       <section className="entertainment-wrapper">
         {this.state.openModal ? this.openModal() : null}
         <div className="title has-text-centered">Photos</div>
-        <div className="columns">
+        <div className="columns is-mobile">
           <img
             className="column"
             onClick={() => this.openModalState(window.images.e1)}
@@ -138,7 +138,7 @@ class Entertainment extends React.PureComponent {
             src={window.images.e4}
           />
         </div>
-        <div className="columns">
+        <div className="columns is-mobile">
           <img
             className="column"
             onClick={() => this.openModalState(window.images.e2)}
@@ -165,13 +165,13 @@ class Entertainment extends React.PureComponent {
           />
         </div>
         <div className="title has-text-centered">Videos</div>
-        <div className="columns" style={{ height: this.state.top }}>
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
           {this.videos.slice(0, 2).map(link => this.makeVideo(link, "top"))}
         </div>
-        <div className="columns" style={{ height: this.state.middle }}>
+        <div className="columns is-mobile" style={{ height: this.state.middle }}>
           {this.videos.slice(2, 4).map(link => this.makeVideo(link, "middle"))}
         </div>
-        <div className="columns" style={{ height: this.state.bottom }}>
+        <div className="columns is-mobile" style={{ height: this.state.bottom }}>
           {this.videos
             .slice(4, 8)
             .map((link, idx) => this.makeVideo(link, "bottom", idx))}
