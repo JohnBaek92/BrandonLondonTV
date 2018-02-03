@@ -56,12 +56,12 @@ class Blog extends React.Component {
           You have arrived in Arizona…
         </h2>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b2} style={{ width: "33%", cursor: "default" }} />
-          <img className="column" src={window.images.b3} style={{ width: "33%", cursor: "default" }} />
+          <img className="column" src={window.images.b2} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column" src={window.images.b3} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b4} style={{ width: "33%", cursor: "default" }} />
-          <img className="column" src={window.images.b5} style={{ width: "33%", cursor: "default" }} />
+          <img className="column" src={window.images.b4} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column" src={window.images.b5} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div>
           I can’t remember the name of the resort we stayed at but I
@@ -145,12 +145,12 @@ class Blog extends React.Component {
           GAME TIME!
         </h2>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b12} style={{ width: "33%", cursor: "default" }} />
-          <img className="column" src={window.images.b13} style={{ width: "33%", cursor: "default" }} />
+          <img className="column" src={window.images.b12} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column" src={window.images.b13} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b14} style={{ width: "33%", cursor: "default" }} />
-          <img className="column" src={window.images.b15} style={{ width: "33%", cursor: "default" }} />
+          <img className="column" src={window.images.b14} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column" src={window.images.b15} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div>
           I remember seeing Alicia Keys and becoming a ‘fanboy’, running up
@@ -163,8 +163,8 @@ class Blog extends React.Component {
         </div>
         <br />
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b16} style={{ width: "33%", cursor: "default" }} />
-          <img className="column" src={window.images.b17} style={{ width: "33%", cursor: "default" }} />
+          <img className="column" src={window.images.b16} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column" src={window.images.b17} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <br />
         <div>
@@ -181,16 +181,16 @@ class Blog extends React.Component {
           PARTY TIME!
         </h2>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b18} style={{ width: "33%", cursor: "default" }} />
-          <img className="column" src={window.images.b19} style={{ width: "33%", cursor: "default" }} />
+          <img className="column" src={window.images.b18} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column" src={window.images.b19} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b20} style={{ width: "33%", cursor: "default" }} />
-          <img className="column" src={window.images.b21} style={{ width: "33%", cursor: "default" }} />
+          <img className="column" src={window.images.b20} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column" src={window.images.b21} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b22} style={{ width: "33%", cursor: "default" }} />
-          <img className="column" src={window.images.b23} style={{ width: "33%", cursor: "default" }} />
+          <img className="column" src={window.images.b22} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column" src={window.images.b23} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div>
           I remember going back to the team hotel briefly to celebrate with
