@@ -5,6 +5,11 @@
 .sc-joso {
   width: 40%;
   margin: 0 auto;
+  @include mobile {
+    width: 100%;
+    margin: 0 auto;
+
+  } 
 }
 
 // .youtube-joso {

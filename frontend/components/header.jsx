@@ -11,64 +11,97 @@ let addresses = [
   { name: "Contact", link: "contact" }
 ];
 
-const Header = () => (
-  <div className="header-wrapper">
-    <nav className="top-nav">
-      <div className="navbar-item title header-top">
-        <Link className="title is-0 header-top" to="/">
-          BRANDON LONDON
-        </Link>
+let socialTags = [
+  { name: "facebook", link: "https://www.facebook.com/BrandonLondonTv/" },
+  { name: "twitter", link: "https://twitter.com/brandonlondontv" },
+  { name: "instagram", link: "https://www.instagram.com/brandonlondontv/" },
+  { name: "youtube", link: "https://www.youtube.com/user/TheCulturedAthlete" }
+];
+
+class Header extends React.Component {
+  componentDidMount() {
+    this.burgerActions();
+  }
+
+  burgerActions() {
+    // Get all "navbar-burger" elements
+    var $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll(".navbar-burger"),
+      0
+    );
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+      // Add a click event on each of them
+      $navbarBurgers.forEach(function($el) {
+        $el.addEventListener("click", function() {
+          // Get the target from the "data-target" attribute
+          var target = $el.dataset.target;
+          var $target = document.getElementById(target);
+
+          // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+          $el.classList.toggle("is-active");
+          $target.classList.toggle("is-active");
+        });
+      });
+    }
+  }
+
+  closeMenu() {
+    let button = document.querySelector(".navbar-burger");
+    let target = document.getElementById(button.dataset.target);
+    button.classList.remove("is-active");
+    target.classList.remove("is-active");
+  }
+
+  render() {
+    return (
+      <div className="header-wrapper">
+        <nav className="top-nav">
+          <div className="navbar-brand">
+            <Link className="navbar-item title is-0 header-top" to="/">
+              BRANDON LONDON
+            </Link>
+            <div className="navbar-burger" data-target="navbar-links">
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+        </nav>
+        <nav className="bottom-nav nav">
+          <div id="navbar-links" className="navbar-menu">
+            <div className="navbar-start">
+              {addresses.map(address =>
+                NavBarItem(address, this.closeMenu.bind(this))
+              )}
+            </div>
+            <div className="navbar-end">
+              {socialTags.map(tag =>
+                SocialLinks(tag, this.closeMenu.bind(this))
+              )}
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
-    <nav className="bottom-nav nav">
-      <div className="nav-left" />
-      <div className="nav-center">
-        {addresses.map(address => NavBarItem(address))}
-      </div>
-      <div className="nav-right">
-        <div className="social-tag-header">
-          <a
-            href="https://www.facebook.com/BrandonLondonTv/"
-            target="_blank"
-          >
-            <i className="fa is-size-4 fa-facebook" />
-          </a>
-        </div>
-        <div className="social-tag-header">
-          <a
-            href="https://twitter.com/brandonlondontv"
-            target="_blank"
-          >
-            <i className="fa is-size-4 fa-twitter" />
-          </a>
-        </div>
-        <div className="social-tag-header">
-          <a
-            href="https://www.youtube.com/user/TheCulturedAthlete"
-            target="_blank"
-          >
-            <i className="fa is-size-4 fa-youtube" />
-          </a>
-        </div>
-        <div className="social-tag-header">
-          <a
-            href="https://www.instagram.com/brandonlondontv/"
-            target="_blank"
-          >
-            <i className="fa is-size-4 fa-instagram" />
-          </a>
-        </div>
-      </div>
-    </nav>
+    );
+  }
+}
+
+const SocialLinks = (item, cb) => (
+  <div className="navbar-item">
+    <a href={item.link} target="_blank">
+      <i className={"fa is-size-4 fa-" + item.name} onClick={() => cb()} />
+    </a>
   </div>
 );
 
-const NavBarItem = item => (
-  <div className="navbar-item" key={item.name}>
-    <Link className="link-color" to={`/${item.link}`}>
+const NavBarItem = (item, cb) => (
+  <li className="navbar-item" key={item.name}>
+    <Link className="link-color" onClick={() => cb()} to={`/${item.link}`}>
       {item.name}
     </Link>
-  </div>
+  </li>
 );
 
 export default Header;
