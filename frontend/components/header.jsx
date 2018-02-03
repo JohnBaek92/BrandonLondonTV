@@ -59,7 +59,7 @@ class Header extends React.Component {
       <div className="header-wrapper">
         <nav className="top-nav">
           <div className="navbar-brand">
-            <Link className="navbar-item title is-0 header-top" to="/">
+            <Link className="navbar-item title is-0 header-top" to="/" style={{marginBottom: "0"}}>
               BRANDON LONDON
             </Link>
             <div className="navbar-burger" data-target="navbar-links">

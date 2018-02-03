@@ -5,12 +5,6 @@ class LondonAthletic extends React.Component {
     window.scrollTo(0, 0);
   }
   render() {
-<<<<<<< HEAD
-    return <div className="london-athletics-wrapper">
-        <div className="box">
-          <div className="london-athletic-video-wrapper">
-            <iframe className="london-athletic-video" width="700px" height="380px" frameBorder="0" src="https://www.youtube.com/embed/qUNDomDbYtI" />
-=======
     return (
       <div className="london-athletics-wrapper">
         <div className="box columns">
@@ -22,7 +16,6 @@ class LondonAthletic extends React.Component {
                 frameBorder="1"
                 src="https://www.youtube.com/embed/qUNDomDbYtI"
               />
->>>>>>> 9064b2f656cf7c85abb6b0bffea792123e388bb3
           </div>
           <div className="column">
             <div className="london-athletic-text padding-bottom-london-athletic">
@@ -64,15 +57,6 @@ class LondonAthletic extends React.Component {
           <div className="title is-primary uppercase-center columns is-mobile">
             Catches Clinics - Pass Game Development - Lineman Work
           </div>
-<<<<<<< HEAD
-          <div className="block flex-row-center">
-            <iframe width="500px" height="400px" frameBorder="0" src="https://www.youtube.com/embed/wk5GSPw_zX8" />
-            <iframe className="padding-left" width="500px" height="400px" frameBorder="0" src="https://www.youtube.com/embed/G7-pGlG1DB0" />
-          </div>
-          <div className="block flex-row-center">
-            <iframe width="500px" height="400px" frameBorder="0" src="https://www.youtube.com/embed/aAT5wsRrjFs" />
-            <iframe className="padding-left" width="500px" height="400px" frameBorder="0" src="https://www.youtube.com/embed/r3xmEm75MUE" />
-=======
           <div className="column">
             <div className="block flex-row-center">
               <iframe
@@ -104,7 +88,6 @@ class LondonAthletic extends React.Component {
               frameBorder="1"
               src="https://www.youtube.com/embed/r3xmEm75MUE"
             />
->>>>>>> 9064b2f656cf7c85abb6b0bffea792123e388bb3
           </div>
         </div>
         <div className="box">
@@ -122,8 +105,8 @@ class LondonAthletic extends React.Component {
             <img className="padding-left highschool-photos" src={window.images.vassel} />
           </div>
         </div>
-      </div>;
-  }
+      </div>
+    )}
 }
 
 export default LondonAthletic;
