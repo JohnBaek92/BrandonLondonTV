@@ -16,14 +16,14 @@ class Landing extends React.Component {
     return (
       <div className="container">
         <Hero />
-        <div className="block social-embed columns">
+         {/* <div className="block social-embed columns">
 
           
-            {/* <div className="column">
+          <div className="column">
             <Instagram />
-          </div> */}
+          </div> 
           
-        </div>
+        </div> */}
         <div className="joso-text-formatting">
           <div className="joso-text">
             When The Game Ends, The Lifestyle Begins
