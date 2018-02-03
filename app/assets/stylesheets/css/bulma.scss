@@ -3289,6 +3289,9 @@ input[type="submit"].button {
 
 .title.is-0 {
   font-size: 4rem;
+  @include mobile {
+    font-size: 1rem;
+  }
 }
 
 .title.is-1 {
@@ -4318,6 +4321,7 @@ input[type="submit"].button {
   width: 3.25rem;
 }
 
+
 .nav-toggle span {
   background-color: $default-color;
   display: block;
@@ -4559,10 +4563,10 @@ a.nav-item.is-tab.is-active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 3.25rem;
   position: relative;
   text-align: center;
   z-index: 10;
+  transition: height 0.5s ease;
 }
 
 .nav > .container {
