@@ -29,7 +29,7 @@ class About extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent">
-                <figure className="image brandon-photo-about tile is-3by2 box-shadow">
+                <figure className="image tile is-3by2 box-shadow">
                   <img src={window.images.about_football} />
                 </figure>
               </div>

@@ -38,9 +38,14 @@
 .Site-content {
   flex: 1 0 auto;
   width: 100%;
+<<<<<<< HEAD
+  @include mobile {
+    width: 100%;
+=======
 
   @include mobile{
     padding: 0 5%;
+>>>>>>> 2b19b4cc2983943b7b0a6e1dc3b87f3017c01160
   }
 }
 .Site-content:after {
@@ -50,14 +55,9 @@
   visibility: hidden;
 }
 
-.footer-logo {
-  height: 3.5em;
-  width: 10em;
-}
-
 .social-tag {
-  height: 120px;
-  width: 120px;
+  height: 8vw;
+  width: 8vw;
   border-radius: 50%;
   border: 3px solid $default-header;
   align-self: center;
@@ -74,6 +74,12 @@
 
   a {
     align-self: center;
+  }
+  @include mobile {
+    border: 1px solid $default-header;
+    .fa-3x {
+      font-size: 1em !important;
+    }
   }
 }
 
@@ -93,11 +99,21 @@
   a {
     align-self: center;
   }
-  height: 200px;
-  width: 200px;
+  height: 15vw;
+  width: 15vw;
   border: 8px solid $default-header;
-}
-.med {
+  @include mobile {
+    border: 4px solid $default-header;
+  }
+
+  .footer-logo {
+    height: 3.5em;
+    width: 10em;
+    @include mobile {
+      height: 1.5em;
+      width: 3em;
+    }
+  }
 }
 
 .middle-centered {
