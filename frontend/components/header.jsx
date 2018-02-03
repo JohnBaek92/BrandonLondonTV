@@ -71,12 +71,13 @@ class Header extends React.Component {
         </nav>
         <nav className="bottom-nav nav">
           <div id="navbar-links" className="navbar-menu">
+            <div className="nav-left" />
             <div className="navbar-start">
               {addresses.map(address =>
                 NavBarItem(address, this.closeMenu.bind(this))
               )}
             </div>
-            <div className="navbar-end">
+            <div className="nav-right">
               {socialTags.map(tag =>
                 SocialLinks(tag, this.closeMenu.bind(this))
               )}
