@@ -8,7 +8,7 @@
 
 puts ENV['s3_bucket']
 
-post = Post.create({title: "My First Post", body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque cumque dolores rem libero temporibus impedit neque. Ad at eius unde assumenda a nam ab laudantium quam, recusandae eveniet, beatae nostrum?"})
+post = Post.create({title: "10 Years Later... My Top Moments From Super Bowl 42", body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque cumque dolores rem libero temporibus impedit neque. Ad at eius unde assumenda a nam ab laudantium quam, recusandae eveniet, beatae nostrum?"})
 
 Image.create({imageable_type: "Post", imageable_id: post.id, image: "https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season20/season20_ep28_ss01.jpg"})
 Image.create({imageable_type: "Post", imageable_id: post.id, image: "http://digimon-adventure.net/images/character/gabumon.png"})
@@ -70,3 +70,4 @@ links.each do |link|
         image: link[:image]
     })
 end
+
