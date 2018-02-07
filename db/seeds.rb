@@ -1,74 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies =Movie.create([{ name: 'Star Wars'], { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+press =Page.create({page_type: "Press"})
 
-
-# post =Post.create({title: "10 Years Later... My Top Moments From Super Bowl 42", body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque cumque dolores rem libero temporibus impedit neque. Ad at eius unde assumenda a nam ab laudantium quam, recusandae eveniet, beatae nostrum?"])
-
-# press =Page.create({page_type: "Press"})
-
-# links =[
-#     {
-#         title: "Eye Opener’ closes to make room for brand-new ‘morning’ (update)",
-#         link: "http://www.star-telegram.com/entertainment/tv/article156700024.html",
-#         image: "https://i.imgur.com/ZPheA08.jpg"
-#    },
-#     {
-#         title: "Landon Collins' Giants charity softball game rosters announced",
-#         link: "http://www.nj.com/giants/index.ssf/2017/05/landon_collins_giants_charity_softball_game_roster.html",
-#         image: "http://image.nj.com/home/njo-media/width960/img/njcom_photos/photo/2017/05/25/-43d46740736d3c8e.JPG"
-#     },
-#     {
-#         title: "FootBallGamePlan - Brandon London's Event - Being Multi-Layered - May 27, 2015",
-#         link: "https://www.youtube.com/watch?v=DH0enkzKWJY&feature=youtu.be",
-#         image: "http://s3.amazonaws.com/brandonlondontv/images/images/000/000/005/original/6778593.jpg?1517252117"
-
-#     },
-#     {
-#         title: "Roster evaluation and Brandon London interview | Talk Is Cheap",
-#         link: "http://www.nj.com/giants/index.ssf/2016/08/listen_roster_evaluation_and_brandon_london_interv.html",
-#         image: "https://i.imgur.com/RSmV4Rl.jpg"
-#     },
-#     {
-#         title: "The Top 10 Sexiest Montreal Alouettes Players",
-#         link: "https://www.mtlblog.com/best-of-mtl/the-10-most-drool-worthy-players-on-the-montreal-alouettes",
-#         image: "http://s3.amazonaws.com/brandonlondontv/images/images/000/000/007/original/246071.jpg?1517252117"
-#     },
-#     {
-#         title: "Canada.com - Montreal Alouettes receiver Brandon London announces CFL retirement - June 3, 2015",
-#         link: "http://o.canada.com/sports/montreal-alouettes-receiver-brandon-london-announces-cfl-retirement",
-#         image: "http://s3.amazonaws.com/brandonlondontv/images/images/000/000/008/original/8018075.jpg?1517252118"
-#     },
-#     {
-#         title: "L'Etage Magazine - Catches Clinic by Brandon London  - May 19, 2015",
-#         link: "http://www.letagemagazine.com/catches-clinic-by-brandon-london/",
-#         image: "http://s3.amazonaws.com/brandonlondontv/images/images/000/000/009/original/7760789.jpg?1517252118"
-#     },
-#     {
-#         title: "Montreal Gazette - The Snap: London's retirement caught Higgins by surprise - June 4, 2015",
-#         link: "http://montrealgazette.com/sports/football/cfl/montreal-alouettes/the-snap-londons-retirement-caught-higgins-by-surprise",
-#         image: "http://s3.amazonaws.com/brandonlondontv/images/images/000/000/010/original/6353431.jpg?1517252119"
-#     },
-# ]
-# links.each do |link|
-#     a =Link.create({
-#         title: link[:title],
-#         link: link[:link],
-#         page_id: press.id
-#     })
-#     Image.create({
-#         imageable_id: a.id,
-#         imageable_type: a.class.to_s,
-#         image: link[:image]
-#     })
-# end
 
 Blog.create({
-    :content=> [["title","10 Years Later..."],
+    content: [
+        ["title","10 Years Later..."],
         ["title2","My Top Moments From Super Bowl 42!"],
         ["image","https://i.imgur.com/uQu83S6.jpg"],
         ["subtitle","Has it been 10 years?"],
@@ -114,4 +49,59 @@ Blog.create({
             ["text","All in all. Thank you once again to the game of FOOTBALL for allowing me to not only live but be apart some of my brothers dreams!"],
         ]
 })
+links = [
+    {
+        title: "Eye Opener’ closes to make room for brand-new ‘morning’ (update)",
+        link: "http://www.star-telegram.com/entertainment/tv/article156700024.html",
+        image: "https://i.imgur.com/ZPheA08.jpg"
+    },
+    {
+        title: "Landon Collins' Giants charity softball game rosters announced",
+        link: "http://www.nj.com/giants/index.ssf/2017/05/landon_collins_giants_charity_softball_game_roster.html",
+        image: "https://i.imgur.com/on8QI8Q.jpg"
+    },
+    {
+        title: "FootBallGamePlan - Brandon London's Event - Being Multi-Layered - May 27, 2015",
+        link: "https://www.youtube.com/watch?v=DH0enkzKWJY&feature=youtu.be",
+        image: "https://i.imgur.com/6vwAmWs.jpg"
+
+    },
+    {
+        title: "Roster evaluation and Brandon London interview | Talk Is Cheap",
+        link: "http://www.nj.com/giants/index.ssf/2016/08/listen_roster_evaluation_and_brandon_london_interv.html",
+        image: "https://i.imgur.com/RSmV4Rl.jpg"
+    },
+    {
+        title: "The Top 10 Sexiest Montreal Alouettes Players",
+        link: "https://www.mtlblog.com/best-of-mtl/the-10-most-drool-worthy-players-on-the-montreal-alouettes",
+        image: "https://i.imgur.com/ciJivcz.jpg"
+    },
+    {
+        title: "Canada.com - Montreal Alouettes receiver Brandon London announces CFL retirement - June 3, 2015",
+        link: "http://o.canada.com/sports/montreal-alouettes-receiver-brandon-london-announces-cfl-retirement",
+        image: "https://i.imgur.com/olt5ztV.jpg"
+    },
+    {
+        title: "L'Etage Magazine - Catches Clinic by Brandon London  - May 19, 2015",
+        link: "http://www.letagemagazine.com/catches-clinic-by-brandon-london/",
+        image: "https://i.imgur.com/indi584.jpg"
+    },
+    {
+        title: "Montreal Gazette - The Snap: London's retirement caught Higgins by surprise - June 4, 2015",
+        link: "http://montrealgazette.com/sports/football/cfl/montreal-alouettes/the-snap-londons-retirement-caught-higgins-by-surprise",
+        image: "https://i.imgur.com/yykJn5P.jpg"
+    },
+]
+links.each do |link|
+    a = Link.create({
+        title: link[:title],
+        link: link[:link],
+        page_id: press.id
+    })
+    Image.create({
+        imageable_id: a.id,
+        imageable_type: a.class.to_s,
+        image: link[:image]
+    })
+end
 

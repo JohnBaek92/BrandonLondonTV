@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for about.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> about.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+&nbsp;
+class About extends React.Component {
+  // componentWillMount() {
+  //   window.scrollTo(0, 0);
+  // }
+  render() {
+    return (
+      &lt;div className="block"&gt;
+        &lt;div className="tile is-ancestor"&gt;
+          &lt;div className="tile is-vertical is-12"&gt;
+            &lt;div className="tile"&gt;
+              &lt;div className="tile is-parent is-vertical"&gt;
+                &lt;article className="tile is-child"&gt;
+                  &lt;div className="subtitle padding-top box"&gt;
+                    As an athlete, actor, and broadcast personality, Brandon
+                    London is well on his way to becoming the next triple threat
+                    in the industry. Known as the “Cultured Athlete”, London
+                    combines his talent and charisma on and off the football
+                    field. After being signed to the NY Giants in 2006 as a free
+                    agent, London acquired his first SuperBowl ring.
+                  &lt;/div&gt;
+                &lt;/article&gt;
+                &lt;article className="tile is-child notification is-warning about-brandon-quote box"&gt;
+                  &lt;div className="title align-center"&gt;
+                    “Brandon London is a tall drink of personality. He is a
+                    generous host with a genius brand” -Marki Costello
+                  &lt;/div&gt;
+                &lt;/article&gt;
+              &lt;/div&gt;
+              &lt;div className="tile is-parent"&gt;
+                &lt;figure className="image tile is-3by2 box-shadow"&gt;
+                  &lt;img src={"https://i.imgur.com/g7unEg8.jpg"} /&gt;
+                &lt;/figure&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div className="tile is-parent"&gt;
+              &lt;article className="tile is-child"&gt;
+                &lt;div className="subtitle box"&gt;
+                  From NY, he then headed to the Miami Dolphins as a reserve
+                  receiver. Mainly used as Special Teams contributor, he also
+                  made his mark at Wide Receiver posting a team high of 4
+                  catches in the first round playoffs vs. the Baltimore Ravens.
+                  In 2010, London signed with the Canadian Football League’s
+                  Montreal Alouettes and won a Grey Cup Championship (equivalent
+                  to the NFL’s SuperBowl). He is one of 6 players to win both a
+                  Super Bowl and Grey Cup championship.
+                &lt;/div&gt;
+                &lt;div className="content" /&gt;
+              &lt;/article&gt;
+            &lt;/div&gt;
+            &lt;div className="tile is_parent level margin-bottom-1em box"&gt;
+              &lt;div className="tile is_child is-5 level-left"&gt;
+                &lt;img
+                  className="object-fit-cover-height-auto"
+                  src={"https://i.imgur.com/ooqC6Q3.jpg"}
+                /&gt;
+              &lt;/div&gt;
+              &lt;div className="tile is_child is-7 level-right about-photo-text-padding"&gt;
+                &lt;div className="subtitle"&gt;
+                  &lt;div&gt;
+                    &lt;div className="subtitle"&gt;
+                      Originally from Richmond, Virginia, Brandon grew up
+                      learning about football firsthand from his father, who is
+                      a respected college football coach at the University of
+                      Virginia. Upon high school graduation, Brandon played
+                      football and studied sociology at the University of
+                      Massachusetts. While at UMass, he broke records in career
+                      catches and touchdowns. In 2008, Brandon appeared on BET’s
+                      “Rip the Runway” hosted by Sean “Diddy” Combs.
+                    &lt;/div&gt;
+&nbsp;
+                    &lt;div className="subtitle"&gt;
+                      It was there that Brandon discovered his passion to act
+                      and host, aside from his natural athletic talent. With an
+                      irresistible charm, unforgettable personality and business
+                      savvy that rivals entertainment industry veterans; Brandon
+                      London is becoming one of the most sought after
+                      personalities on the red carpet.
+                    &lt;/div&gt;
+                    &lt;div className="subtitle"&gt;
+                      Upon arriving in Los Angeles in 2013 during his off
+                      season, Brandon joined entertainment series, AfterBuzzTV
+                      created by Maria Menounos (Extra TV) as a weekly co-host
+                      summarizing events that occur on NBC’s hit series,
+                      Revolution and BET's 'The Game.'
+                    &lt;/div&gt;
+                    &lt;div className="subtitle"&gt;
+                      Launching his own series “Jersey Off, Suit On” exemplifies
+                      his persona as a football star and entertainer. This
+                      series allows the viewer to learn about fashion, music,
+                      and football from “The Cultured Athlete” himself.
+                    &lt;/div&gt;
+                    &lt;div className="subtitle"&gt;
+                      For the past 5 years, London has taken his on field
+                      knowledge to train and help mentor many of the top high
+                      school football players along the east and west coast,
+                      Brandon is committed to using his celebrity status for
+                      more than red carpets and exclusive events. He is
+                      committed to empowering the youth and encourage them to
+                      follow their dreams as a positive role model.
+                    &lt;/div&gt;
+                    &lt;div className="subtitle"&gt;
+                      Brandon is well on his way to becoming the next leading
+                      multimedia brand and he is very clear that his passion
+                      isn’t solely about making money it’s about making history!
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+export default About;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 07 2018 07:20:07 GMT-0500 (EST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

@@ -1,9 +1,6 @@
 import React from "react";
 
 class LondonAthletic extends React.Component {
-  componentWillMount() {
-    window.scrollTo(0, 0);
-  }
   render() {
     return (
       <div className="london-athletics-wrapper">
