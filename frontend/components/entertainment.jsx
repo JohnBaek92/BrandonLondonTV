@@ -165,8 +165,8 @@ class Entertainment extends React.PureComponent {
           />
         </div>
         <div className="title has-text-centered">Videos</div>
-        <div className="columns is-mobile" style={{ height: this.state.top }}>
-          {this.videos.slice(0, 2).map(link => this.makeVideo(link, "top"))}
+        <div className="columns is-mobile" style={{ height: this.state.middle }}>
+          {this.videos.slice(0, 2).map(link => this.makeVideo(link, "middle"))}
         </div>
         <div className="columns is-mobile" style={{ height: this.state.middle }}>
           {this.videos.slice(2, 4).map(link => this.makeVideo(link, "middle"))}
