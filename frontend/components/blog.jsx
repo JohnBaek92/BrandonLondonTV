@@ -56,12 +56,12 @@ class Blog extends React.Component {
           You have arrived in Arizona…
         </h2>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b2} style={{ width: "33%", cursor: "default", opacity: "1" }} />
-          <img className="column" src={window.images.b3} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column is-one-third-mobile" src={window.images.b2} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column is-one-third-mobile" src={window.images.b3} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div className="columns is-mobile">
-          <img className="column" src={window.images.b4} style={{ width: "33%", cursor: "default", opacity: "1" }} />
-          <img className="column" src={window.images.b5} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column is-one-third-mobile" src={window.images.b4} style={{ width: "33%", cursor: "default", opacity: "1" }} />
+          <img className="column is-one-third-mobile" src={window.images.b5} style={{ width: "33%", cursor: "default", opacity: "1" }} />
         </div>
         <div>
           I can’t remember the name of the resort we stayed at but I
