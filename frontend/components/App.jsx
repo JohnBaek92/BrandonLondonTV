@@ -7,6 +7,7 @@ import About from "./about";
 import Joso from "./joso";
 import Press from "./press";
 import Blog from "./blog";
+import BlogShow from "./blog_show";
 import LondonAthletic from "./london_athletic";
 import Contact from "./contact";
 import RecentWork from "./entertainment";
@@ -23,6 +24,7 @@ const App = () => (
 			<Route exact path="/joso" component={Joso} />
 			<Route exact path="/press" component={Press} />
 			<Route exact path="/blog" component={Blog} />
+			<Route exact path="/blog/:id" component={BlogShow} />
 			<Route exact path="/london-athletic" component={LondonAthletic} />
 			<Route exact path="/contact" component={Contact} />
 			<Route exact path="/recent-work" component={RecentWork} />
