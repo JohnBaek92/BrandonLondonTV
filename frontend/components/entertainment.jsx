@@ -171,10 +171,15 @@ class Entertainment extends React.PureComponent {
         <div className="columns is-mobile" style={{ height: this.state.middle }}>
           {this.videos.slice(2, 4).map(link => this.makeVideo(link, "middle"))}
         </div>
-        <div className="columns is-mobile" style={{ height: this.state.bottom }}>
+        <div className="columns is-mobile" style={{ height: this.state.middle }}>
           {this.videos
-            .slice(4, 8)
-            .map((link, idx) => this.makeVideo(link, "bottom", idx))}
+            .slice(4, 6)
+            .map((link, idx) => this.makeVideo(link, "middle", idx))}
+        </div>
+        <div className="columns is-mobile" style={{ height: this.state.middle }}>
+          {this.videos
+            .slice(6, 8)
+            .map((link, idx) => this.makeVideo(link, "middle", idx))}
         </div>
       </section>
     );
