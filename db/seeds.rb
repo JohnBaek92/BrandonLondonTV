@@ -19,43 +19,43 @@ links = [
     {
         title: "Eye Opener’ closes to make room for brand-new ‘morning’ (update)",
         link: "http://www.star-telegram.com/entertainment/tv/article156700024.html",
-        image: "http://www.star-telegram.com/entertainment/tv/tfjdmm/picture156700014/alternates/LANDSCAPE_1140/Morning%20dose2"
+        image: "https://i.imgur.com/ZPheA08.jpg"
     },
     {
         title: "Landon Collins' Giants charity softball game rosters announced",
         link: "http://www.nj.com/giants/index.ssf/2017/05/landon_collins_giants_charity_softball_game_roster.html",
-        image: "http://image.nj.com/home/njo-media/width960/img/njcom_photos/photo/2017/05/25/-43d46740736d3c8e.JPG"
+        image: "https://i.imgur.com/on8QI8Q.jpg"
     },
     {
         title: "FootBallGamePlan - Brandon London's Event - Being Multi-Layered - May 27, 2015",
         link: "https://www.youtube.com/watch?v=DH0enkzKWJY&feature=youtu.be",
-        image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/6778593.jpg"
+        image: "https://i.imgur.com/6vwAmWs.jpg"
 
     },
     {
         title: "Roster evaluation and Brandon London interview | Talk Is Cheap",
         link: "http://www.nj.com/giants/index.ssf/2016/08/listen_roster_evaluation_and_brandon_london_interv.html",
-        image: "https://i1.sndcdn.com/artworks-000157146755-4qfqb1-t500x500.jpg"
+        image: "https://i.imgur.com/RSmV4Rl.jpg"
     },
     {
         title: "The Top 10 Sexiest Montreal Alouettes Players",
         link: "https://www.mtlblog.com/best-of-mtl/the-10-most-drool-worthy-players-on-the-montreal-alouettes",
-        image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/246071.jpg"
+        image: "https://i.imgur.com/ciJivcz.jpg"
     },
     {
         title: "Canada.com - Montreal Alouettes receiver Brandon London announces CFL retirement - June 3, 2015",
         link: "http://o.canada.com/sports/montreal-alouettes-receiver-brandon-london-announces-cfl-retirement",
-        image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/8018075.jpg"
+        image: "https://i.imgur.com/olt5ztV.jpg"
     },
     {
         title: "L'Etage Magazine - Catches Clinic by Brandon London  - May 19, 2015",
         link: "http://www.letagemagazine.com/catches-clinic-by-brandon-london/",
-        image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/7760789.jpg"
+        image: "https://i.imgur.com/indi584.jpg"
     },
     {
         title: "Montreal Gazette - The Snap: London's retirement caught Higgins by surprise - June 4, 2015",
         link: "http://montrealgazette.com/sports/football/cfl/montreal-alouettes/the-snap-londons-retirement-caught-higgins-by-surprise",
-        image: "http://www.brandonlondontv.com/uploads/5/4/7/5/54754123/6353431.jpg"
+        image: "https://i.imgur.com/yykJn5P.jpg"
     },
 ]
 links.each do |link|

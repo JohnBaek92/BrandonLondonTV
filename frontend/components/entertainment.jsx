@@ -41,10 +41,6 @@ class Entertainment extends React.PureComponent {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentWillMount() {
-    window.scrollTo(0, 0);
-  }
-
   changeHeight(row, idx, link, e) {
     const newState = Object.assign({}, this.state);
     if (this.state.prevVideo) {

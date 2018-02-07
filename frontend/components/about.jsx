@@ -1,9 +1,9 @@
 import React from "react";
 
 class About extends React.Component {
-  componentWillMount() {
-    window.scrollTo(0, 0);
-  }
+  // componentWillMount() {
+  //   window.scrollTo(0, 0);
+  // }
   render() {
     return (
       <div className="block">
@@ -30,7 +30,7 @@ class About extends React.Component {
               </div>
               <div className="tile is-parent">
                 <figure className="image tile is-3by2 box-shadow">
-                  <img src={window.images.about_football} />
+                  <img src={"https://i.imgur.com/g7unEg8.jpg"} />
                 </figure>
               </div>
             </div>
@@ -53,7 +53,7 @@ class About extends React.Component {
               <div className="tile is_child is-5 level-left">
                 <img
                   className="object-fit-cover-height-auto"
-                  src={window.images.smiling}
+                  src={"https://i.imgur.com/ooqC6Q3.jpg"}
                 />
               </div>
               <div className="tile is_child is-7 level-right about-photo-text-padding">

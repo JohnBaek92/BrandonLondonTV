@@ -11,10 +11,6 @@ class Press extends React.Component {
     this.fetchPress();
   }
 
-  componentWillMount() {
-    window.scrollTo(0, 0);
-  }
-
   fetchPress() {
     fetch("/pages/1")
       .then(res => res.json())

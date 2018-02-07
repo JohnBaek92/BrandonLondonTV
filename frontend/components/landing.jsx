@@ -8,10 +8,6 @@ class Landing extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
-    window.scrollTo(0, 0);
-  }
-
   render() {
     return (
       <div className="container">
