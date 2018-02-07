@@ -13,22 +13,15 @@ class BlogShow extends React.Component {
         return res.json();
       })
       .then(blog => {
-        debugger;
         this.setState({ blog });
       });
   }
 
   parsePost(posting) {
-    return posting.content.map(el => {
-      debugger;
+    let section = posting.content.map(el => {
       switch (el[0]) {
         case "image":
-          return (
-            <img
-              src={el[1]}
-              style={{ width: "50%", margin: "0 auto", display: "block" }}
-            />
-          );
+          return <img src={el[1]} className="img is-128x128 is-3by2" />;
         case "title":
           return (
             <h1
@@ -53,6 +46,7 @@ class BlogShow extends React.Component {
           return null;
       }
     });
+    return section;
   }
 
   render() {
