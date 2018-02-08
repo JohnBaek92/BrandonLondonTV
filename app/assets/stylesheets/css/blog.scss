@@ -20,20 +20,21 @@
 .makeFlex {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .snippet {
-  width: 300px;
+  width: 15vw;
+  min-width: 250px;
+  height: 20vw;
   margin: 10px;
   border-radius: 3px;
   .content {
     padding: 5px;
     max-height: 100px;
-    scroll: auto
+    overflow: auto;
   }
 }
-
 
 .tags {
   justify-content: flex-end;

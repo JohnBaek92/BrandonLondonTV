@@ -12,7 +12,7 @@ exports[`Joso component should render as expected Renders the Joso correctly 1`]
         "entries": Array [
           Object {
             "hash": "",
-            "key": "hmv729",
+            "key": "0s5v0l",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -26,7 +26,7 @@ exports[`Joso component should render as expected Renders the Joso correctly 1`]
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "hmv729",
+          "key": "0s5v0l",
           "pathname": "/",
           "search": "",
           "state": undefined,

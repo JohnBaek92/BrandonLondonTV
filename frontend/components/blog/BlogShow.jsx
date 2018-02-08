@@ -5,9 +5,14 @@ class BlogShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.fetchBlog = this.fetchBlog.bind(this);
   }
 
   componentDidMount() {
+    this.fetchBlog();
+  }
+
+  fetchBlog() {
     const { props } = this.props;
     let id = props.match.params.id;
     fetch("/blogs/" + id)
@@ -17,7 +22,7 @@ class BlogShow extends React.Component {
       .then(blog => {
         this.setState({ blog });
       })
-      .catch(err => this.setState({ error: err.message }));
+      .catch(err => this.setState({ error: "There Was an Error..." }));
   }
 
   parsePost(posting) {
