@@ -20,12 +20,20 @@
 .makeFlex {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap
 }
 
 .snippet {
-  width: 40%;
+  width: 300px;
   margin: 10px;
+  border-radius: 3px;
+  .content {
+    padding: 5px;
+    max-height: 100px;
+    scroll: auto
+  }
 }
+
 
 .tags {
   justify-content: flex-end;
