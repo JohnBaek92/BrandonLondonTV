@@ -1,6 +1,8 @@
 press =Page.create({page_type: "Press"})
 
 
+
+
 Blog.create({
     content: [
         ["title","10 Years Later..."],
@@ -49,6 +51,16 @@ Blog.create({
             ["text","All in all. Thank you once again to the game of FOOTBALL for allowing me to not only live but be apart some of my brothers dreams!"],
         ]
 })
+
+Blog.create({
+    content: [
+        ["title","I Hate My code"],
+        ["title2","It's so spagetti"],
+        ["image","https://i.imgur.com/uQu83S6.jpg"],
+        ["subtitle","Has it been 10 years?"],
+        ["text","Why doesnt this shit work?"]
+    ]
+    })
 links = [
     {
         title: "Eye Opener’ closes to make room for brand-new ‘morning’ (update)",

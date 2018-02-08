@@ -21,7 +21,7 @@ class BlogShow extends React.Component {
     let section = posting.content.map(el => {
       switch (el[0]) {
         case "image":
-          return <img src={el[1]} className="img is-128x128 is-3by2" />;
+          return <img src={el[1]} className="blog-photo is-3by2" />;
         case "title":
           return (
             <h1
@@ -34,7 +34,7 @@ class BlogShow extends React.Component {
         case "subtitle":
           return (
             <h1
-              className="title is-1 has-text-centered"
+              className="subtitle is-2 has-text-centered"
               style={{ color: "#1b00ff" }}
             >
               {el[1]}
@@ -52,7 +52,7 @@ class BlogShow extends React.Component {
   render() {
     const { blog } = this.state;
     if (!blog) return null;
-    return <div className="box">{this.parsePost(blog)}</div>;
+    return <div className="box blog-posting">{this.parsePost(blog)}</div>;
   }
 }
 
