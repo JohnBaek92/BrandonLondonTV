@@ -1,5 +1,5 @@
 import React from "react";
-import UnderConstruction from "./under_construction";
+import UnderConstruction from "../misc/UnderConstruction";
 
 class Blog extends React.Component {
   constructor() {

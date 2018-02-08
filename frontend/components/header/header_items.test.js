@@ -32,7 +32,7 @@ describe("Social Links renders as expected", () => {
       </MemoryRouter>
     );
     component
-      .find("a")
+      .find("i")
       .first()
       .simulate("click", { button: 0 });
 
@@ -60,7 +60,7 @@ describe("Nav Links renders as expected", () => {
       </MemoryRouter>
     );
     component
-      .find("a")
+      .find("li a")
       .first()
       .simulate("click", { button: 0 });
 

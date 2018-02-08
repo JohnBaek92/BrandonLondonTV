@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const SocialLink = (item, cb) => (
-  <div className="navbar-item">
+  <div className="navbar-item" key={item.name}>
     <a href={item.link} target="_blank">
       <i className={"fa is-size-4 fa-" + item.name} onClick={() => cb()} />
     </a>
