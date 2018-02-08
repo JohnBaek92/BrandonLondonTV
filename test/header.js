@@ -24,7 +24,7 @@ describe("Social tags", () => {
     let wrapper;
     let tags;
     beforeEach(() => {
-        wrapper = render(<Header />);
+        wrapper = mount(<Header />);
         tags = wrapper.find('div.navbar-item')
 
     })

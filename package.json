@@ -21,6 +21,7 @@
     "instafeed.js": "^1.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-twitter-widgets": "^1.7.1",
     "react-youtube": "^7.5.0",
@@ -45,6 +46,11 @@
   "scripts": {
     "postinstall": "webpack",
     "test": "jest ./test/*"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "frontend/**/*"
+    ]
   },
   "keywords": [],
   "author": "",

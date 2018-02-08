@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {SocialLinks, NavBarItem} from './header_items'
 
 let addresses = [
   { name: "About", link: "about" },
@@ -89,20 +90,6 @@ class Header extends React.Component {
   }
 }
 
-const SocialLinks = (item, cb) => (
-  <div className="navbar-item">
-    <a href={item.link} target="_blank">
-      <i className={"fa is-size-4 fa-" + item.name} onClick={() => cb()} />
-    </a>
-  </div>
-);
 
-const NavBarItem = (item, cb) => (
-  <li className="navbar-item" key={item.name}>
-    <Link className="link-color" onClick={() => cb()} to={`/${item.link}`}>
-      {item.name}
-    </Link>
-  </li>
-);
 
 export default Header;
