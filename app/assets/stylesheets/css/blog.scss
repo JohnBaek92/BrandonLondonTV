@@ -1,11 +1,6 @@
 .blog-posting {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  padding: 1.25rem;
+
   text-align: center;
 }
 
@@ -17,17 +12,40 @@
   margin: 5px;
 }
 
+.blog-photo {
+  width: 100%;
+  margin: 10px;
+}
+
+.makeFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+.snippet {
+  width: 300px;
+  margin: 10px;
+  border-radius: 3px;
+  .content {
+    padding: 5px;
+    max-height: 100px;
+    scroll: auto
+  }
+}
+
+
 .tags {
   justify-content: flex-end;
   display: flex;
 }
 
 span.is-light:hover {
-    background-color: #dcdcdc 
+  background-color: #dcdcdc;
 }
 
 .hover-style {
-  color: #03a797
+  color: #03a797;
 }
 
 .hover-style:hover {

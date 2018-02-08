@@ -1,15 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-let addresses = [
-  { name: "About", link: "about" },
-  { name: "Recent Work", link: "recent-work" },
-  { name: "Jersey Off Suit On", link: "joso" },
-  { name: "Blog", link: "blog" },
-  { name: "London Athletic", link: "london-athletic" },
-  { name: "Press", link: "press" },
-  { name: "Contact", link: "contact" }
-];
+import { SocialLink, NavBarItem } from "./header_items";
 
 let socialTags = [
   { name: "facebook", link: "https://www.facebook.com/BrandonLondonTv/" },
@@ -19,27 +10,49 @@ let socialTags = [
 ];
 
 class Header extends React.Component {
+  constructor() {
+    super();
+    this.burgerActions = this.burgerActions.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+  }
   componentDidMount() {
     this.burgerActions();
   }
 
+  addresses() {
+    return [
+      { name: "About", link: "about" },
+      { name: "Recent Work", link: "recent-work" },
+      { name: "Jersey Off Suit On", link: "joso" },
+      { name: "Blog", link: "blog" },
+      { name: "London Athletic", link: "london-athletic" },
+      { name: "Press", link: "press" },
+      { name: "Contact", link: "contact" }
+    ];
+  }
+
+  socialTags() {
+    return [
+      { name: "facebook", link: "https://www.facebook.com/BrandonLondonTv/" },
+      { name: "twitter", link: "https://twitter.com/brandonlondontv" },
+      { name: "instagram", link: "https://www.instagram.com/brandonlondontv/" },
+      {
+        name: "youtube",
+        link: "https://www.youtube.com/user/TheCulturedAthlete"
+      }
+    ];
+  }
+
   burgerActions() {
-    // Get all "navbar-burger" elements
-    var $navbarBurgers = Array.prototype.slice.call(
+    let $navbarBurgers = Array.prototype.slice.call(
       document.querySelectorAll(".navbar-burger"),
       0
     );
-
-    // Check if there are any navbar burgers
     if ($navbarBurgers.length > 0) {
-      // Add a click event on each of them
       $navbarBurgers.forEach(function($el) {
         $el.addEventListener("click", function() {
-          // Get the target from the "data-target" attribute
-          var target = $el.dataset.target;
-          var $target = document.getElementById(target);
-
-          // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+          let target = $el.dataset.target;
+          let $target = document.getElementById(target);
           $el.classList.toggle("is-active");
           $target.classList.toggle("is-active");
         });
@@ -49,9 +62,11 @@ class Header extends React.Component {
 
   closeMenu() {
     let button = document.querySelector(".navbar-burger");
-    let target = document.getElementById(button.dataset.target);
-    button.classList.remove("is-active");
-    target.classList.remove("is-active");
+    if (button) {
+      let target = document.getElementById(button.dataset.target);
+      button.classList.remove("is-active");
+      target.classList.remove("is-active");
+    }
   }
 
   render() {
@@ -59,7 +74,11 @@ class Header extends React.Component {
       <div className="header-wrapper">
         <nav className="top-nav">
           <div className="navbar-brand">
-            <Link className="navbar-item title is-0 header-top" to="/" style={{marginBottom: "0"}}>
+            <Link
+              className="navbar-item title is-0 header-top"
+              to="/"
+              style={{ marginBottom: "0" }}
+            >
               BRANDON LONDON
             </Link>
             <div className="navbar-burger" data-target="navbar-links">
@@ -73,13 +92,13 @@ class Header extends React.Component {
           <div id="navbar-links" className="navbar-menu">
             <div className="nav-left" />
             <div className="navbar-start">
-              {addresses.map(address =>
+              {this.addresses().map(address =>
                 NavBarItem(address, this.closeMenu.bind(this))
               )}
             </div>
             <div className="nav-right">
-              {socialTags.map(tag =>
-                SocialLinks(tag, this.closeMenu.bind(this))
+              {this.socialTags().map(tag =>
+                SocialLink(tag, this.closeMenu.bind(this))
               )}
             </div>
           </div>
@@ -88,21 +107,5 @@ class Header extends React.Component {
     );
   }
 }
-
-const SocialLinks = (item, cb) => (
-  <div className="navbar-item">
-    <a href={item.link} target="_blank">
-      <i className={"fa is-size-4 fa-" + item.name} onClick={() => cb()} />
-    </a>
-  </div>
-);
-
-const NavBarItem = (item, cb) => (
-  <li className="navbar-item" key={item.name}>
-    <Link className="link-color" onClick={() => cb()} to={`/${item.link}`}>
-      {item.name}
-    </Link>
-  </li>
-);
 
 export default Header;

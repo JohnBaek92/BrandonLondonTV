@@ -1,8 +1,8 @@
 import React from "react";
-import Instagram from "./instagram_feed";
+import Instagram from "./InstagramFeed";
 import { Timeline } from "react-twitter-widgets";
 
-import YoutubePlayer from "./youtube.jsx";
+import YoutubePlayer from "../misc/Youtube.jsx";
 
 const Hero = () => (
   <div className="youtube-video block columns">

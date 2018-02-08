@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import RecentVideoItem from "./recent_video_item";
+import RecentVideoItem from "./RecentVideoItem";
 const Video = styled.ul`
   display: flex;
   iframe {
@@ -22,7 +22,7 @@ export default class Youtube extends React.Component {
     this.onSearchResponse = this.onSearchResponse.bind(this);
     this.parseVideo = this.parseVideo.bind(this);
   }
-  
+
   componentDidMount() {
     window.gapi.load("client", () => {
       window.gapi.client.load("youtube", "v3", this.onYouTubeApiLoad);
@@ -67,6 +67,10 @@ export default class Youtube extends React.Component {
   }
 
   render() {
-    return <div className="youtube-video column is-two-thirds">{this.renderVideo()}</div>;
+    return (
+      <div className="youtube-video column is-two-thirds">
+        {this.renderVideo()}
+      </div>
+    );
   }
 }

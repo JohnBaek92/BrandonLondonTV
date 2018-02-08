@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   defaults format: :json do
     resources :posts, only: %i[index]
     resources :pages, only: %i[show]
+    resources :blogs, only: %i[index show]
 end
 
   root 'static_pages#root'

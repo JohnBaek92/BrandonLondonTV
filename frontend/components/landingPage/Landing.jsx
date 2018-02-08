@@ -1,15 +1,11 @@
 import React from "react";
-import Instagram from "./instagram_feed";
-import Hero from "./hero";
+import Instagram from "./InstagramFeed";
+import Hero from "./Hero";
 import { Link } from "react-router-dom";
 
 class Landing extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  componentWillMount() {
-    window.scrollTo(0, 0);
   }
 
   render() {
