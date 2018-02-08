@@ -69,6 +69,14 @@ class Joso extends React.Component {
         </div>
         <div className="columns is-mobile">
           <div className="column sc-joso is-two-thirds centered">
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameBorder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/396193170&amp;color=%23c3bead&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
+          />
             <iframe
               width="100%"
               height="166"
