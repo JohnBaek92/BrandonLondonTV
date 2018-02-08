@@ -1,6 +1,5 @@
 .blog-posting {
   background-color: white;
-
   text-align: center;
 }
 
@@ -10,6 +9,7 @@
 
 .blog-posting img {
   margin: 5px;
+  max-width: 30em;
 }
 
 .blog-photo {
@@ -20,17 +20,19 @@
 .makeFlex {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .snippet {
-  width: 300px;
-  margin: 10px;
+  width: 30em;
+  margin: 1em auto;
+  padding-bottom: 0.3em;
   border-radius: 3px;
   .content {
     padding: 5px;
-    max-height: 100px;
-    scroll: auto
+    scroll: auto;
+    text-align: center;
   }
 }
 
@@ -50,4 +52,12 @@ span.is-light:hover {
 
 .hover-style:hover {
   color: #1b02ff;
+}
+
+.hoverReadMore {
+  background-color: #20238a;
+  color: #fff; 
+  &:hover {
+    background-color: rgba(51, 55, 181, 1);
+  }
 }

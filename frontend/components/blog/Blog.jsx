@@ -1,6 +1,6 @@
 import React from "react";
 import UnderConstruction from "../misc/UnderConstruction";
-import fetch from 'node-fetch'
+import {Link} from "react-router-dom";
 
 class Blog extends React.Component {
   constructor() {
@@ -36,23 +36,40 @@ const makeDate = (date) => {
 
 const BlogSnippet = ({ blog }) => (
   <div className="blog snippet card">
-    <div class="card-image">
-      <figure class="image is-3by2">
+    <div className="card-image">
+      <figure className="image is-3by2">
         <img src={blog.image} alt="" className="image" />
       </figure>
     </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-content">
-          <p class="title is-4">{blog.title}</p>
-          <p class="subtitle is-6">{blog.subtitle}</p>
+    <div className="card-content">
+      <div className="media">
+        <div className="media-content">
+          <p
+            className="title is-2 has-text-centered"
+            style={{ color: "rgb(3, 167, 151)", paddingBottom: "0.2em" }}
+          >
+            {blog.title}
+          </p>
+          <p
+            className="subtitle is-4 has-text-centered"
+            style={{ color: "rgb(27, 0, 255)" }}
+          >
+            {blog.subtitle}
+          </p>
         </div>
       </div>
     </div>
-    <div class="content">
+    <div className="content">
       {blog.blurb}
       <br />
-      <time datetime="2016-1-1">Published: {makeDate(blog.date)}</time>
+      <time dateTime="2016-1-1">Published: {makeDate(blog.date)}</time>
+      <br />
+      <br/>
+      <div
+        className="notification hoverReadMore"
+      >
+        <Link to={`/blog/` + blog.id}>Read More</Link>
+      </div>
     </div>
   </div>
 );
