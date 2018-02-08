@@ -56,9 +56,6 @@ class Joso extends React.Component {
     ));
   }
 
-  // <div className="column youtube-joso">
-  //   {this.renderVideos()}
-  // </div>
 
   render() {
     return (

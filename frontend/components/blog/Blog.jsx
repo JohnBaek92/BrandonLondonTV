@@ -1,5 +1,6 @@
 import React from "react";
 import UnderConstruction from "../misc/UnderConstruction";
+import fetch from 'node-fetch'
 
 class Blog extends React.Component {
   constructor() {
@@ -8,14 +9,15 @@ class Blog extends React.Component {
   }
 
   componentDidMount() {
-    console.log("this is the index page");
     fetch("/blogs")
       .then(res => {
         return res.json();
       })
       .then(blogs => {
         this.setState({ blogs });
-      });
+      })
+      .catch(err => this.setState({ error: err.message }));
+
   }
 
   render() {

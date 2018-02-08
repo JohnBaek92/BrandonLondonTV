@@ -1,20 +1,23 @@
 import React from "react";
+import fetch from "node-fetch";
 
 class BlogShow extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
   }
 
   componentDidMount() {
-    console.log("in the show page");
-    fetch("/blogs/" + this.props.match.params.id)
+    const { props } = this.props;
+    let id = props.match.params.id;
+    fetch("/blogs/" + id)
       .then(res => {
         return res.json();
       })
       .then(blog => {
         this.setState({ blog });
-      });
+      })
+      .catch(err => this.setState({ error: err.message }));
   }
 
   parsePost(posting) {
