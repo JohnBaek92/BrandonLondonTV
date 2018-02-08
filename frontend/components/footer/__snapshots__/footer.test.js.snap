@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should render as expected Renders the Footer correctly 1`] = `
+<MemoryRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "mlhpd0",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "mlhpd0",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Footer>
+      <footer
+        className="footer"
+      >
+        <div
+          className="container"
+        >
+          <nav>
+            <div
+              className="nav-left navbar-item"
+            />
+            <div
+              className="nav-center middle-centered"
+            >
+              <div
+                className="social-tag"
+              >
+                <a
+                  className="social-tag"
+                  href="https://www.facebook.com/BrandonLondonTv/"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-3x fa-facebook"
+                  />
+                </a>
+              </div>
+              <div
+                className="social-tag"
+              >
+                <a
+                  className="social-tag"
+                  href="https://twitter.com/brandonlondontv"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-3x fa-twitter"
+                  />
+                </a>
+              </div>
+              <div
+                id="footer-logo"
+              >
+                <Link
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  replace={false}
+                  to="/"
+                >
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                  >
+                    <img
+                      className="footer-logo"
+                      src="foo"
+                    />
+                  </a>
+                </Link>
+              </div>
+              <div
+                className="social-tag"
+              >
+                <a
+                  className="social-tag"
+                  href="https://www.youtube.com/user/TheCulturedAthlete"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-3x fa-youtube"
+                  />
+                </a>
+              </div>
+              <div
+                className="social-tag"
+              >
+                <a
+                  className="social-tag"
+                  href="https://www.instagram.com/brandonlondontv/"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-3x fa-instagram"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              className="nav-right navbar-item"
+            />
+          </nav>
+        </div>
+      </footer>
+    </Footer>
+  </Router>
+</MemoryRouter>
+`;

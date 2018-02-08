@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Joso component should render as expected Renders the Joso correctly 1`] = `
+<MemoryRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "hmv729",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "hmv729",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Joso>
+      <div>
+        <div
+          className="title is-size-2 has-text-weight-bold has-text-centered"
+        >
+          When The Game Ends, The Lifestyle Begins
+        </div>
+        <div
+          className="columns is-mobile"
+        >
+          <div
+            className="column sc-joso is-two-thirds centered"
+          >
+            <iframe
+              allow="autoplay"
+              frameBorder="no"
+              height="166"
+              scrolling="no"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/392031732&color=%23FFD046&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"
+              width="100%"
+            />
+            <iframe
+              allow="autoplay"
+              frameBorder="no"
+              height="166"
+              scrolling="no"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/388488576&color=%23FFD046&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"
+              width="100%"
+            />
+          </div>
+        </div>
+      </div>
+    </Joso>
+  </Router>
+</MemoryRouter>
+`;

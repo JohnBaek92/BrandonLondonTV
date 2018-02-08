@@ -1,0 +1,388 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entertainment component should render as expected Renders the Entertainment correctly 1`] = `
+<MemoryRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "np7c2q",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "np7c2q",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Entertainment>
+      <section
+        className="entertainment-wrapper"
+      >
+        <div
+          className="title has-text-centered"
+        >
+          Photos
+        </div>
+        <div
+          className="columns is-mobile"
+        >
+          <img
+            className="column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+                "height": "15%",
+                "width": "15%",
+              }
+            }
+          />
+          <img
+            className="column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+                "height": "15%",
+                "width": "15%",
+              }
+            }
+          />
+          <img
+            className="column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+                "height": "15%",
+                "width": "15%",
+              }
+            }
+          />
+          <img
+            className="column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+                "height": "15%",
+                "width": "15%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="columns is-mobile"
+        >
+          <img
+            className="column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+                "height": "15%",
+                "width": "15%",
+              }
+            }
+          />
+          <img
+            className="column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+                "height": "15%",
+                "width": "15%",
+              }
+            }
+          />
+          <img
+            className="column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+                "height": "15%",
+                "width": "15%",
+              }
+            }
+          />
+          <img
+            className="column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+                "height": "15%",
+                "width": "15%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="title has-text-centered"
+        >
+          Videos
+        </div>
+        <div
+          className="columns is-mobile"
+          style={
+            Object {
+              "height": "35vh",
+            }
+          }
+        >
+          <div
+            className="column"
+            key="E8JlWMXJgqA"
+          >
+            <YouTube
+              onEnd={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onPlaybackQualityChange={[Function]}
+              onPlaybackRateChange={[Function]}
+              onReady={[Function]}
+              onStateChange={[Function]}
+              opts={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              videoId="E8JlWMXJgqA"
+            >
+              <span>
+                <div />
+              </span>
+            </YouTube>
+          </div>
+          <div
+            className="column"
+            key="BKXLB4-9sfg"
+          >
+            <YouTube
+              onEnd={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onPlaybackQualityChange={[Function]}
+              onPlaybackRateChange={[Function]}
+              onReady={[Function]}
+              onStateChange={[Function]}
+              opts={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              videoId="BKXLB4-9sfg"
+            >
+              <span>
+                <div />
+              </span>
+            </YouTube>
+          </div>
+        </div>
+        <div
+          className="columns is-mobile"
+          style={
+            Object {
+              "height": "25vh",
+            }
+          }
+        >
+          <div
+            className="column"
+            key="KLmwpPbTsN0"
+          >
+            <YouTube
+              onEnd={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onPlaybackQualityChange={[Function]}
+              onPlaybackRateChange={[Function]}
+              onReady={[Function]}
+              onStateChange={[Function]}
+              opts={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              videoId="KLmwpPbTsN0"
+            >
+              <span>
+                <div />
+              </span>
+            </YouTube>
+          </div>
+          <div
+            className="column"
+            key="rJ_qxnuKADY"
+          >
+            <YouTube
+              onEnd={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onPlaybackQualityChange={[Function]}
+              onPlaybackRateChange={[Function]}
+              onReady={[Function]}
+              onStateChange={[Function]}
+              opts={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              videoId="rJ_qxnuKADY"
+            >
+              <span>
+                <div />
+              </span>
+            </YouTube>
+          </div>
+        </div>
+        <div
+          className="columns is-mobile"
+          style={
+            Object {
+              "height": "15vh",
+            }
+          }
+        >
+          <div
+            className="column"
+            key="YbXrdVjzkC4"
+          >
+            <YouTube
+              onEnd={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onPlaybackQualityChange={[Function]}
+              onPlaybackRateChange={[Function]}
+              onReady={[Function]}
+              onStateChange={[Function]}
+              opts={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              videoId="YbXrdVjzkC4"
+            >
+              <span>
+                <div />
+              </span>
+            </YouTube>
+          </div>
+          <div
+            className="column"
+            key="AOmHwHWpdKc"
+          >
+            <YouTube
+              onEnd={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onPlaybackQualityChange={[Function]}
+              onPlaybackRateChange={[Function]}
+              onReady={[Function]}
+              onStateChange={[Function]}
+              opts={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              videoId="AOmHwHWpdKc"
+            >
+              <span>
+                <div />
+              </span>
+            </YouTube>
+          </div>
+          <div
+            className="column"
+            key="erRJtA8bkVc"
+          >
+            <YouTube
+              onEnd={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onPlaybackQualityChange={[Function]}
+              onPlaybackRateChange={[Function]}
+              onReady={[Function]}
+              onStateChange={[Function]}
+              opts={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              videoId="erRJtA8bkVc"
+            >
+              <span>
+                <div />
+              </span>
+            </YouTube>
+          </div>
+          <div
+            className="column"
+            key="WSmNvV-8uwU"
+          >
+            <YouTube
+              onEnd={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onPlaybackQualityChange={[Function]}
+              onPlaybackRateChange={[Function]}
+              onReady={[Function]}
+              onStateChange={[Function]}
+              opts={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              videoId="WSmNvV-8uwU"
+            >
+              <span>
+                <div />
+              </span>
+            </YouTube>
+          </div>
+        </div>
+      </section>
+    </Entertainment>
+  </Router>
+</MemoryRouter>
+`;

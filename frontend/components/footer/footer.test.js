@@ -4,24 +4,29 @@ import toJson from "enzyme-to-json";
 import Footer from "./Footer";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import { MemoryRouter } from "react-router";
 
 var jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-
-let { document } = new JSDOM("").window;
-global.window = document;
 
 configure({ adapter: new Adapter() });
 
-test("Footer component should render as expected", () => {
-  beforeEach(() => {
-    document = {
-      ...document,
-      images: { circle_logo: "foo", circle_logo2: "foo" }
-    };
-  });
-  const component = mount(<Footer />);
-  const tree = toJson(component);
+describe("Footer component should render as expected", () => {
+  const { JSDOM } = jsdom;
 
-  expect(tree).toMatchSnapshot();
+  let { document } = new JSDOM("").window;
+  let images = { circle_logo: "foo", circle_logo2: "foo" };
+  global.window = {
+    ...document
+  };
+  global.window.images = images;
+  it("Renders the Footer correctly", () => {
+    const component = mount(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    );
+    const tree = toJson(component);
+
+    expect(tree).toMatchSnapshot();
+  });
 });
