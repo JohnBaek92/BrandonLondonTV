@@ -8,6 +8,10 @@ class Blog extends React.Component {
     this.state = {};
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     fetch("/blogs")
       .then(res => {
@@ -17,7 +21,6 @@ class Blog extends React.Component {
         this.setState({ blogs });
       })
       .catch(err => this.setState({ error: err.message }));
-
   }
 
   render() {

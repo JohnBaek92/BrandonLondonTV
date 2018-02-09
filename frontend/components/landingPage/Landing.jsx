@@ -8,11 +8,15 @@ class Landing extends React.Component {
     super(props);
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="container">
         <Hero />
-         {/* <div className="block social-embed columns">
+        {/* <div className="block social-embed columns">
 
           
           <div className="column">

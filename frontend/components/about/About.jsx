@@ -1,9 +1,10 @@
 import React from "react";
 
 class About extends React.Component {
-  // componentWillMount() {
-  //   window.scrollTo(0, 0);
-  // }
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+  
   render() {
     return (
       <div className="block">

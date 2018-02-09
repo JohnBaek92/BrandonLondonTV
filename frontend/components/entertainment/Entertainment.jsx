@@ -103,6 +103,10 @@ class Entertainment extends React.PureComponent {
     this.setState({ openModal: false });
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <section className="entertainment-wrapper">
