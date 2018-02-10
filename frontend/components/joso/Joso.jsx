@@ -14,6 +14,7 @@ class Joso extends React.Component {
   }
 
   componentWillMount() {
+    window.scrollTo(0,0);
     window.gapi.load("client", () => {
       window.gapi.client.load("youtube", "v3", this.onYouTubeApiLoad);
     });

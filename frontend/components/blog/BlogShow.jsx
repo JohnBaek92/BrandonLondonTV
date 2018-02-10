@@ -7,15 +7,17 @@ class BlogShow extends React.Component {
     this.state = {};
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     let id = this.props.match.params.id;
     fetch("/blogs/" + id)
       .then(res => {
-        console.log(1)
         return res.json();
       })
       .then(blog => {
-        console.log(blog)
         this.setState({ blog });
       })
       .catch(err => this.setState({ error: err.message }));
