@@ -5,7 +5,8 @@ class Joso extends React.Component {
     super(props);
     this.state = {
       recentJOSO: [],
-      videos: []
+      videos: [],
+      tracks: ["396193170", "392031732", "388488576"]
     };
 
     this.onSearchResponse = this.onSearchResponse.bind(this);
@@ -14,11 +15,10 @@ class Joso extends React.Component {
   }
 
   componentWillMount() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     window.gapi.load("client", () => {
       window.gapi.client.load("youtube", "v3", this.onYouTubeApiLoad);
     });
-
   }
 
   onYouTubeApiLoad() {
@@ -58,8 +58,25 @@ class Joso extends React.Component {
     ));
   }
 
+  makeIFrame(src) {
+    return (
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameBorder="no"
+        allow="autoplay"
+        src={
+          "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" +
+          src +
+          "&amp;color=%23FFD046&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
+        }
+      />
+    );
+  }
 
   render() {
+    const { tracks } = this.state;
     return (
       <div>
         <div className="title is-size-2 has-text-weight-bold has-text-centered">
@@ -67,30 +84,7 @@ class Joso extends React.Component {
         </div>
         <div className="columns is-mobile">
           <div className="column sc-joso is-two-thirds centered">
-            <iframe
-              width="100%"
-              height="166"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/396193170&amp;color=%23FFD046&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
-            />
-            <iframe
-              width="100%"
-              height="166"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/392031732&amp;color=%23FFD046&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
-            />
-            <iframe
-              width="100%"
-              height="166"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/388488576&amp;color=%23FFD046&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
-            />
+            {tracks.map(track => this.makeIFrame(track))}
           </div>
         </div>
       </div>
