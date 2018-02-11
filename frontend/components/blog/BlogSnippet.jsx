@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const makeDate = date => {
   return new Date(Date.parse(date)).toLocaleDateString();
@@ -7,7 +8,9 @@ const makeDate = date => {
 const BlogSnippet = ({ blog }) => (
   <div className="blog snippet card">
     <div className="card-image">
+      <Link to={"/blog/" + blog.id}>
         <img src={blog.image} alt="" className="image" />
+      </Link>
     </div>
     <div className="card-content">
       <div className="media">
@@ -19,8 +22,13 @@ const BlogSnippet = ({ blog }) => (
     </div>
     <div className="content">{blog.blurb}</div>
     <div className="tags-container">
-      <span class="tag">
+      <span className="tag">
         <time dateTime="2016-1-1">Published: {makeDate(blog.date)}</time>
+      </span>
+      <span className="tag read-more">
+        <Link to={"/blog/" + blog.id}>
+          <p className="button is-success">Read-More...</p>
+        </Link>
       </span>
     </div>
   </div>

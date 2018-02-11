@@ -17,8 +17,7 @@ class BlogShow extends React.Component {
   }
 
   fetchBlog() {
-    const { props } = this.props;
-    let id = props.match.params.id;
+    let id = this.props.match.params.id;
     fetch("/blogs/" + id)
       .then(res => {
         return res.json();
