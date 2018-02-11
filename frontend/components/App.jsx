@@ -17,11 +17,7 @@ class App extends React.Component {
   constructor() {
     super();
   }
-
-  componentWillUpdate() {
-    window.scrollTo(0, 0);
-  }
-
+  
   render() {
     return (
       <HashRouter>

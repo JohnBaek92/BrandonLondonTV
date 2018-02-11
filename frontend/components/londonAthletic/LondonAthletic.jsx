@@ -1,26 +1,30 @@
 import React from "react";
 
 class LondonAthletic extends React.Component {
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+  
   render() {
     return (
       <div className="london-athletics-wrapper">
         <div className="box columns">
           <div className="column is-two-fifths">
-              <iframe
-                className="london-athletic-video"
-                width="100%"
-                height="100%"
-                frameBorder="1"
-                src="https://www.youtube.com/embed/qUNDomDbYtI"
-              />
+            <iframe
+              className="london-athletic-video"
+              width="100%"
+              height="100%"
+              frameBorder="1"
+              src="https://www.youtube.com/embed/qUNDomDbYtI"
+            />
           </div>
           <div className="column">
             <div className="london-athletic-text padding-bottom-london-athletic">
-              Through the experience of training for a professional
-              football, Brandon London has positioned himself as one of the
-              top Personal Trainer/Sports Trainers in the nation. With
-              workouts ranging from off-season sports specific training to
-              fitness bootcamps, London Athletic appeals to all.
+              Through the experience of training for a professional football,
+              Brandon London has positioned himself as one of the top Personal
+              Trainer/Sports Trainers in the nation. With workouts ranging from
+              off-season sports specific training to fitness bootcamps, London
+              Athletic appeals to all.
             </div>
             <div className="flex-direction-col">
               <div className="padding-bottom-london-athletic font-10px">
@@ -93,17 +97,30 @@ class LondonAthletic extends React.Component {
           </div>
           <div className="block flex-row-center">
             <img className="highschool-photos" src={window.images.coleman} />
-            <img className="padding-left highschool-photos" src={window.images.dubois} />
-            <img className="highschool-photos padding-left" src={window.images.fitzpatrick} />
+            <img
+              className="padding-left highschool-photos"
+              src={window.images.dubois}
+            />
+            <img
+              className="highschool-photos padding-left"
+              src={window.images.fitzpatrick}
+            />
           </div>
           <div className="block flex-row-center">
             <img className="highschool-photos" src={window.images.kg_gray} />
-            <img className="padding-left highschool-photos" src={window.images.lewis} />
-            <img className="padding-left highschool-photos" src={window.images.vassel} />
+            <img
+              className="padding-left highschool-photos"
+              src={window.images.lewis}
+            />
+            <img
+              className="padding-left highschool-photos"
+              src={window.images.vassel}
+            />
           </div>
         </div>
       </div>
-    )}
+    );
+  }
 }
 
 export default LondonAthletic;

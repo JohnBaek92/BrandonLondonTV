@@ -1,7 +1,10 @@
 import React from "react";
 
 class Contact extends React.Component {
-
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+  
   render() {
     return (
       <div className="block flex-direction-col">

@@ -1,6 +1,5 @@
 .blog-posting {
   background-color: white;
-
   text-align: center;
 }
 
@@ -10,6 +9,7 @@
 
 .blog-posting img {
   margin: 5px;
+  max-width: 30em;
 }
 
 .blog-photo {
@@ -29,6 +29,10 @@
   height: 20vw;
   margin: 10px;
   border-radius: 3px;
+  box-shadow: 0px 5px 7px 0px rgba(10, 10, 10, 0.5);
+  &:hover {
+    box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.8);
+  }
   .content {
     padding: 5px;
     max-height: 100px;
@@ -51,4 +55,12 @@ span.is-light:hover {
 
 .hover-style:hover {
   color: #1b02ff;
+}
+
+.hoverReadMore {
+  background-color: #20238a;
+  color: #fff; 
+  &:hover {
+    background-color: rgba(51, 55, 181, 1);
+  }
 }

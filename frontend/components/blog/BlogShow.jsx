@@ -8,6 +8,10 @@ class BlogShow extends React.Component {
     this.fetchBlog = this.fetchBlog.bind(this);
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     this.fetchBlog();
   }

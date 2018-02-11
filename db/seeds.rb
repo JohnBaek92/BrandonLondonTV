@@ -52,15 +52,6 @@ Blog.create({
         ]
 })
 
-Blog.create({
-    content: [
-        ["title","I Hate My code"],
-        ["title2","It's so spagetti"],
-        ["image","https://i.imgur.com/uQu83S6.jpg"],
-        ["subtitle","Has it been 10 years?"],
-        ["text","I remember going back to the team hotel briefly to celebrate with the organization, friends, and family. I think we stayed there for about less than an hour and then went out to Old Scottsdale to celebrate. And when I say celebrate...boy did I have the time of my life! At the time, Browns WR Braylon Edwards was cool with a lot of guys on the team so I went out with teammates and Braylon! I remember Patron being poured in my mouth from the bottle and seeing some of the most beautiful women I’ve ever seen in my life! The entire night was crazy! I didn’t get back to the team hotel until t"]
-    ]
-    })
 links = [
     {
         title: "Eye Opener’ closes to make room for brand-new ‘morning’ (update)",

@@ -11,6 +11,10 @@ class Press extends React.Component {
     this.fetchPress();
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   fetchPress() {
     fetch("/pages/1")
       .then(res => res.json())
@@ -25,19 +29,17 @@ class Press extends React.Component {
     if (!press) {
       return null;
     }
-    return press.slice(start, end).map((el, idx) => <Tile key={idx} article={el} />);
+    return press
+      .slice(start, end)
+      .map((el, idx) => <Tile key={idx} article={el} />);
   }
 
   render() {
     return (
       <div className="block is-uppercase has-text-weight-bold">
         <p className="title has-text-centered">In the News</p>
-        <div className="tile is-ancestor">
-          {this.renderPress(0,4)}
-        </div>
-        <div className="tile is-ancestor">
-          {this.renderPress(4,8)}
-        </div>
+        <div className="tile is-ancestor">{this.renderPress(0, 4)}</div>
+        <div className="tile is-ancestor">{this.renderPress(4, 8)}</div>
       </div>
     );
   }

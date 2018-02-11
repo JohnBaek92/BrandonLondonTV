@@ -10,6 +10,10 @@ class Blog extends React.Component {
     this.addBlogs = this.addBlogs.bind(this);
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     this.fetchBlogs();
   }

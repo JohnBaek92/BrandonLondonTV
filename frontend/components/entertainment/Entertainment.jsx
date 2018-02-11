@@ -105,6 +105,10 @@ class Entertainment extends React.PureComponent {
     this.setState({ openModal: false });
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div
@@ -126,8 +130,8 @@ class Entertainment extends React.PureComponent {
           <img className="column" src={window.images.e8} />
         </div>
         <div className="title has-text-centered">Videos</div>
-        <div className="columns is-mobile" style={{ height: this.state.top }}>
-          {this.videos.slice(0, 2).map(link => this.makeVideo(link, "top"))}
+        <div className="columns is-mobile" style={{ height: this.state.middle }}>
+          {this.videos.slice(0, 2).map(link => this.makeVideo(link, "middle"))}
         </div>
         <div
           className="columns is-mobile"
@@ -140,8 +144,8 @@ class Entertainment extends React.PureComponent {
           style={{ height: this.state.bottom }}
         >
           {this.videos
-            .slice(4, 8)
-            .map((link, idx) => this.makeVideo(link, "bottom", idx))}
+            .slice(6, 8)
+            .map((link, idx) => this.makeVideo(link, "middle", idx))}
         </div>
       </div>
     );
