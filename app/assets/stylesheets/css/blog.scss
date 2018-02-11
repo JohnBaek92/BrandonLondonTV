@@ -21,13 +21,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .snippet {
-  width: 30em;
-  margin: 1em auto;
-  padding-bottom: 0.3em;
+  width: 15vw;
+  min-width: 250px;
+  height: 20vw;
+  margin: 10px;
   border-radius: 3px;
   box-shadow: 0px 5px 7px 0px rgba(10, 10, 10, 0.5);
   &:hover {
@@ -35,11 +35,10 @@
   }
   .content {
     padding: 5px;
-    scroll: auto;
-    text-align: center;
+    max-height: 100px;
+    overflow: auto;
   }
 }
-
 
 .tags {
   justify-content: flex-end;

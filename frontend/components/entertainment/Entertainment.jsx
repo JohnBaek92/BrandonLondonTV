@@ -1,7 +1,6 @@
 import React from "react";
 import Youtube from "react-youtube";
 
-const photoStyle = { width: "15%", height: "15%", cursor: "pointer" };
 
 class Entertainment extends React.PureComponent {
   constructor(props) {
@@ -95,8 +94,11 @@ class Entertainment extends React.PureComponent {
     );
   }
 
-  openModalState(image) {
-    this.setState({ openModal: true, picture: image });
+  openModalState(e) {
+    if (!e.target.src) {
+      return null;
+    }
+    this.setState({ openModal: true, picture: e.target.src });
   }
 
   closeModal() {
@@ -109,79 +111,43 @@ class Entertainment extends React.PureComponent {
 
   render() {
     return (
-      <section className="entertainment-wrapper">
+      <div
+        className="entertainment-wrapper"
+        onClick={e => this.openModalState(e)}
+      >
         {this.state.openModal ? this.openModal() : null}
         <div className="title has-text-centered">Photos</div>
         <div className="columns is-mobile">
-          <img
-            className="column"
-            onClick={() => this.openModalState(window.images.e1)}
-            style={photoStyle}
-            src={window.images.e1}
-          />
-          <img
-            className="column"
-            onClick={() => this.openModalState(window.images.e5)}
-            style={photoStyle}
-            src={window.images.e5}
-          />
-          <img
-            className="column"
-            onClick={() => this.openModalState(window.images.e3)}
-            style={photoStyle}
-            src={window.images.e3}
-          />
-          <img
-            className="column"
-            onClick={() => this.openModalState(window.images.e4)}
-            style={photoStyle}
-            src={window.images.e4}
-          />
+          <img className="column" src={window.images.e1} />
+          <img className="column" src={window.images.e5} />
+          <img className="column" src={window.images.e3} />
+          <img className="column" src={window.images.e4} />
         </div>
         <div className="columns is-mobile">
-          <img
-            className="column"
-            onClick={() => this.openModalState(window.images.e2)}
-            style={photoStyle}
-            src={window.images.e2}
-          />
-          <img
-            className="column"
-            onClick={() => this.openModalState(window.images.e6)}
-            style={photoStyle}
-            src={window.images.e6}
-          />
-          <img
-            className="column"
-            onClick={() => this.openModalState(window.images.e7)}
-            style={photoStyle}
-            src={window.images.e7}
-          />
-          <img
-            className="column"
-            onClick={() => this.openModalState(window.images.e8)}
-            style={photoStyle}
-            src={window.images.e8}
-          />
+          <img className="column" src={window.images.e2} />
+          <img className="column" src={window.images.e6} />
+          <img className="column" src={window.images.e7} />
+          <img className="column" src={window.images.e8} />
         </div>
         <div className="title has-text-centered">Videos</div>
         <div className="columns is-mobile" style={{ height: this.state.middle }}>
           {this.videos.slice(0, 2).map(link => this.makeVideo(link, "middle"))}
         </div>
-        <div className="columns is-mobile" style={{ height: this.state.middle }}>
+        <div
+          className="columns is-mobile"
+          style={{ height: this.state.middle }}
+        >
           {this.videos.slice(2, 4).map(link => this.makeVideo(link, "middle"))}
         </div>
-        <div className="columns is-mobile" style={{ height: this.state.middle }}>
-          {this.videos
-            .slice(4, 6)
-            .map((link, idx) => this.makeVideo(link, "middle", idx))}
-        </div>
-        <div className="columns is-mobile" style={{ height: this.state.middle }}>
+        <div
+          className="columns is-mobile"
+          style={{ height: this.state.bottom }}
+        >
           {this.videos
             .slice(6, 8)
             .map((link, idx) => this.makeVideo(link, "middle", idx))}
         </div>
-      </section>
+      </div>
     );
   }
 }

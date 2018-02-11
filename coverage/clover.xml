@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1518125887991" clover="3.2.0">
+  <project timestamp="1518125887991" name="All files">
+    <metrics statements="212" coveredstatements="93" conditionals="29" coveredconditionals="13" methods="104" coveredmethods="44" elements="345" coveredelements="150" complexity="0" loc="212" ncloc="212" packages="20" files="28" classes="28">
+      <package name="frontend">
+        <metrics statements="10" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="brandon_london_tv.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/brandon_london_tv.jsx">
+          <metrics statements="10" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="15" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <file name="App.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/App.jsx">
+          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.__snapshots__">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="App.test.js.snap" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/__snapshots__/App.test.js.snap">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.about">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="About.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/about/About.jsx">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="8" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.blog">
+        <metrics statements="41" coveredstatements="34" conditionals="11" coveredconditionals="9" methods="20" coveredmethods="15"/>
+        <file name="Blog.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/blog/Blog.jsx">
+          <metrics statements="16" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="8"/>
+          <line num="7" count="4" type="stmt"/>
+          <line num="8" count="4" type="stmt"/>
+          <line num="9" count="4" type="stmt"/>
+          <line num="10" count="4" type="stmt"/>
+          <line num="14" count="4" type="stmt"/>
+          <line num="18" count="4" type="stmt"/>
+          <line num="22" count="6" type="stmt"/>
+          <line num="24" count="4" type="stmt"/>
+          <line num="26" count="4" type="stmt"/>
+          <line num="28" count="5" type="stmt"/>
+          <line num="33" count="9" type="stmt"/>
+          <line num="34" count="9" type="cond" truecount="2" falsecount="0"/>
+          <line num="35" count="2" type="stmt"/>
+          <line num="40" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="41" count="3" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+        </file>
+        <file name="BlogShow.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/blog/BlogShow.jsx">
+          <metrics statements="21" coveredstatements="17" conditionals="7" coveredconditionals="5" methods="9" coveredmethods="7"/>
+          <line num="6" count="15" type="stmt"/>
+          <line num="7" count="15" type="stmt"/>
+          <line num="8" count="15" type="stmt"/>
+          <line num="12" count="15" type="stmt"/>
+          <line num="16" count="17" type="stmt"/>
+          <line num="17" count="17" type="stmt"/>
+          <line num="18" count="17" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="25" count="17" type="stmt"/>
+          <line num="29" count="4" type="stmt"/>
+          <line num="30" count="4" type="cond" truecount="4" falsecount="1"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="54" count="0" type="stmt"/>
+          <line num="57" count="4" type="stmt"/>
+          <line num="61" count="32" type="stmt"/>
+          <line num="62" count="32" type="cond" truecount="1" falsecount="1"/>
+          <line num="63" count="0" type="stmt"/>
+        </file>
+        <file name="BlogSnippet.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/blog/BlogSnippet.jsx">
+          <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.blog.__snapshots__">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="Blog.test.js.snap" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/blog/__snapshots__/Blog.test.js.snap">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+        </file>
+        <file name="BlogShow.test.js.snap" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/blog/__snapshots__/BlogShow.test.js.snap">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.contact">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Contact.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/contact/Contact.jsx">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.contact.__snapshots__">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="contact.test.js.snap" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/contact/__snapshots__/contact.test.js.snap">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.entertainment">
+        <metrics statements="40" coveredstatements="16" conditionals="6" coveredconditionals="2" methods="19" coveredmethods="6"/>
+        <file name="Entertainment.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/entertainment/Entertainment.jsx">
+          <metrics statements="40" coveredstatements="16" conditionals="6" coveredconditionals="2" methods="19" coveredmethods="6"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="65" count="0" type="stmt"/>
+          <line num="69" count="8" type="stmt"/>
+          <line num="70" count="8" type="stmt"/>
+          <line num="71" count="8" type="cond" truecount="1" falsecount="1"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="74" count="8" type="stmt"/>
+          <line num="82" count="0" type="stmt"/>
+          <line num="89" count="0" type="stmt"/>
+          <line num="99" count="0" type="stmt"/>
+          <line num="103" count="0" type="stmt"/>
+          <line num="107" count="1" type="stmt"/>
+          <line num="114" count="0" type="stmt"/>
+          <line num="120" count="0" type="stmt"/>
+          <line num="126" count="0" type="stmt"/>
+          <line num="132" count="0" type="stmt"/>
+          <line num="140" count="0" type="stmt"/>
+          <line num="146" count="0" type="stmt"/>
+          <line num="152" count="0" type="stmt"/>
+          <line num="158" count="0" type="stmt"/>
+          <line num="165" count="2" type="stmt"/>
+          <line num="168" count="2" type="stmt"/>
+          <line num="173" count="4" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.entertainment.__snapshots__">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="entertainment.test.js.snap" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/entertainment/__snapshots__/entertainment.test.js.snap">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.footer">
+        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <file name="Footer.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/footer/Footer.jsx">
+          <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.footer.__snapshots__">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="footer.test.js.snap" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/footer/__snapshots__/footer.test.js.snap">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.header">
+        <metrics statements="29" coveredstatements="20" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="13"/>
+        <file name="Header.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/header/Header.jsx">
+          <metrics statements="23" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="11" coveredmethods="9"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="14" count="3" type="stmt"/>
+          <line num="15" count="3" type="stmt"/>
+          <line num="16" count="3" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="23" count="3" type="stmt"/>
+          <line num="35" count="3" type="stmt"/>
+          <line num="47" count="3" type="stmt"/>
+          <line num="51" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="54" count="0" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
+          <line num="65" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="66" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
+          <line num="73" count="3" type="stmt"/>
+          <line num="96" count="21" type="stmt"/>
+          <line num="101" count="12" type="stmt"/>
+        </file>
+        <file name="header_items.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/header/header_items.jsx">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="5" count="19" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="12" count="3" type="stmt"/>
+          <line num="13" count="27" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.joso">
+        <metrics statements="17" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="3"/>
+        <file name="Joso.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/joso/Joso.jsx">
+          <metrics statements="17" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="3"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="61" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.joso.__snapshots__">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="joso.test.js.snap" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/joso/__snapshots__/joso.test.js.snap">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.landingPage">
+        <metrics statements="12" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <file name="Hero.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/landingPage/Hero.jsx">
+          <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+        </file>
+        <file name="InstagramFeed.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/landingPage/InstagramFeed.jsx">
+          <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+        </file>
+        <file name="Landing.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/landingPage/Landing.jsx">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.londonAthletic">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="LondonAthletic.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/londonAthletic/LondonAthletic.jsx">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.londonAthletic.__snapshots__">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="londonAthletic.test.js.snap" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/londonAthletic/__snapshots__/londonAthletic.test.js.snap">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.misc">
+        <metrics statements="26" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <file name="RecentVideoItem.js" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/misc/RecentVideoItem.js">
+          <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+        </file>
+        <file name="UnderConstruction.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/misc/UnderConstruction.jsx">
+          <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+        </file>
+        <file name="Youtube.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/misc/Youtube.jsx">
+          <metrics statements="22" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="0"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="62" count="0" type="stmt"/>
+          <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="66" count="0" type="stmt"/>
+          <line num="70" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="frontend.components.press">
+        <metrics statements="15" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <file name="Press.jsx" path="/home/wadah/Desktop/BrandonLondonTV/frontend/components/press/Press.jsx">
+          <metrics statements="15" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="0"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
