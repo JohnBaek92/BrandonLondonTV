@@ -24,19 +24,42 @@
 }
 
 .snippet {
-  width: 15vw;
+  width: 25%;
+  display: flex;
   min-width: 250px;
-  height: 20vw;
   margin: 10px;
+  height: 581px;
   border-radius: 3px;
   box-shadow: 0px 5px 7px 0px rgba(10, 10, 10, 0.5);
+  flex-direction: column;
+  justify-content: space-between;
   &:hover {
     box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.8);
+  }
+
+  .truncate {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-image {
+    max-height: 60%;
+    overflow: hidden;
   }
   .content {
     padding: 5px;
     max-height: 100px;
     overflow: auto;
+  }
+  &:first-of-type {
+    width: 80%;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
   }
 }
 
@@ -59,7 +82,7 @@ span.is-light:hover {
 
 .hoverReadMore {
   background-color: #20238a;
-  color: #fff; 
+  color: #fff;
   &:hover {
     background-color: rgba(51, 55, 181, 1);
   }

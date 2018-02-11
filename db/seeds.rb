@@ -1,5 +1,5 @@
+require 'faker'
 press =Page.create({page_type: "Press"})
-
 
 
 
@@ -51,6 +51,37 @@ Blog.create({
             ["text","All in all. Thank you once again to the game of FOOTBALL for allowing me to not only live but be apart some of my brothers dreams!"],
         ]
 })
+
+images = [
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/26993366_1580711935298029_611254072946550428_n.jpg?oh=3c93af7e45f1e68c4b325bdbdc0310f8&oe=5ADA2374",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/21192026_1443073582395199_1062451394177389632_n.jpg?oh=4a5819fc54497e648fec595f045fc263&oe=5B09ADBC",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19990496_1396625053706719_5415138348471492511_n.jpg?oh=b82854cf60033d670bd4c24b0489af49&oe=5B1DF55A",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19989330_1396433117059246_6928315913900142427_n.jpg?oh=d7e294b60f022dac925416daff9c2258&oe=5B137F0C",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/20046280_1396093200426571_7186641344731813799_n.jpg?oh=70fe13bb1a372910e96faf161d8852cf&oe=5B243777",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19895113_1394069727295585_8181690511253445445_n.jpg?oh=624fc2d4471eae24fd402d2960d77fba&oe=5B16D554",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19399241_1376036785765546_4983184253044002155_n.jpg?oh=5209890d0b8704244bd8f8184320d383&oe=5B148862",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15826494_1204036862965540_4945437145124178953_n.jpg?oh=c497f7818d8e1ea05344b1fdcd3769e3&oe=5ADD34BA",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/15724770_1201608249875068_2411188502480021255_o.jpg?oh=385fd41eef0918a3e784869e7bc7cd11&oe=5B112694",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/15724799_1195402847162275_5150642119146931190_o.jpg?oh=4ffbf36807b0ef3fba80ee3f31f18220&oe=5B26E345",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15665427_1194337850602108_2389284949587324711_n.jpg?oh=82d61cacb16b93d0f13f1800f0ebf4b1&oe=5B0C7136",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15621931_1192399300795963_4663776221609686894_n.jpg?oh=40a8642077d715deeb1b5230dedfc64f&oe=5B26E5A4",
+
+]
+
+
+12.times do |i|
+
+    Blog.create({
+        content:[
+            ["title", Faker::Lorem.sentence],
+            ["title2", Faker::Lorem.sentence],
+            ["image", images[i]],
+            ["subtitle", Faker::Lorem.sentence],
+            ["text", Faker::Lorem.paragraph],
+        ]
+    })
+
+end
 
 links = [
     {
