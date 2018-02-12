@@ -1,7 +1,11 @@
 class BlogsController < ApplicationController
 
-    def index 
-        @blogs = Blog.all
+    def index
+        start = params[:start].to_i
+        offset = params[:offset].to_i
+        last = start + offset
+        blogs = Blog.all[start...last]
+        @blogs = blogs ? blogs : []
     end
 
     def show 
@@ -9,8 +13,4 @@ class BlogsController < ApplicationController
     end
 
 
-    private
-    def blog_params
-        params.require(:blog).permit(:title, :points, :user_id, :description, :type)
-    end
 end

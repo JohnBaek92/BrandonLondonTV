@@ -5,7 +5,7 @@ import BlogSnippet from "./BlogSnippet";
 class Blog extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { blogs: [],start: 0 };
     this.fetchBlogs = this.fetchBlogs.bind(this);
     this.addBlogs = this.addBlogs.bind(this);
   }
@@ -16,15 +16,19 @@ class Blog extends React.Component {
 
   componentDidMount() {
     this.fetchBlogs();
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll.bind(this));
   }
 
-  addBlogs(blogs) {
-    this.setState({ blogs });
+  addBlogs(newBlogs) {
+    const { blogs, start } = this.state
+    const newStart = start + 4
+    const combinedBlogs = blogs.concat(newBlogs)
+    this.setState({ blogs: combinedBlogs, start: newStart });
   }
 
   fetchBlogs() {
-    fetch("/blogs")
+    const {start} = this.state
+    fetch("/blogs?offset=4&start=" + start)
       .then(res => {
         return res.json();
       })
@@ -48,12 +52,15 @@ class Blog extends React.Component {
     const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
     const scrollPercent = scrollTop / (docHeight - winHeight);
     const scrollPercentRounded = Math.round(scrollPercent * 100);
+    if (scrollPercentRounded > 70) {
+      this.fetchBlogs()
+    }
   }
 
-  
+
 
   render() {
-    const { blogs, error } = this.state;
+    const { blogs, error, start } = this.state;
     if (error)
       return (
         <div className="container">
@@ -61,6 +68,7 @@ class Blog extends React.Component {
         </div>
       );
     if (!blogs) return null;
+    debugger
     let posts = blogs.map(blog => (
       <BlogSnippet key={blog.id * Math.random(0, 3)} blog={blog} />
     ));
