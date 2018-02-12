@@ -16,6 +16,7 @@ class Blog extends React.Component {
 
   componentDidMount() {
     this.fetchBlogs();
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   addBlogs(blogs) {
@@ -28,10 +29,28 @@ class Blog extends React.Component {
         return res.json();
       })
       .then(blogs => this.addBlogs(blogs))
-      .catch(err =>
-        this.setState({ error: "There Was an Error..." })
-      );
+      .catch(err => this.setState({ error: "There Was an Error..." }));
   }
+
+  handleScroll(event) {
+    const winHeight = window.innerHeight;
+
+    const body = document.body;
+    const html = document.documentElement;
+    const docHeight = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+
+    const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    const scrollPercent = scrollTop / (docHeight - winHeight);
+    const scrollPercentRounded = Math.round(scrollPercent * 100);
+  }
+
+  
 
   render() {
     const { blogs, error } = this.state;
@@ -42,8 +61,14 @@ class Blog extends React.Component {
         </div>
       );
     if (!blogs) return null;
-    let posts = blogs.map(foo => <BlogSnippet blog={foo} />);
-    return <div className="makeFlex">{posts}</div>;
+    let posts = blogs.map(blog => (
+      <BlogSnippet key={blog.id * Math.random(0, 3)} blog={blog} />
+    ));
+    return (
+      <div className="makeFlex">
+        {posts}
+      </div>
+    );
   }
 }
 
