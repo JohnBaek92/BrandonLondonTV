@@ -70,15 +70,11 @@ class Header extends React.Component {
   }
 
   render() {
-    return (
-      <div className="header-wrapper">
+    return <div className="header-wrapper">
+        <react-comment>Hello</react-comment>
         <nav className="top-nav">
           <div className="navbar-brand">
-            <Link
-              className="navbar-item title is-0 header-top"
-              to="/"
-              style={{ marginBottom: "0" }}
-            >
+            <Link className="navbar-item title is-0 header-top" to="/" style={{ marginBottom: "0" }}>
               BRANDON LONDON
             </Link>
             <div className="navbar-burger" data-target="navbar-links">
@@ -103,8 +99,7 @@ class Header extends React.Component {
             </div>
           </div>
         </nav>
-      </div>
-    );
+      </div>;
   }
 }
 

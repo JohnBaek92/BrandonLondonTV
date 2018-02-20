@@ -13,6 +13,30 @@ import Contact from "./contact/Contact";
 import RecentWork from "./entertainment/Entertainment";
 import { HashRouter } from "react-router-dom";
 
+var proto = Object.create(HTMLElement.prototype, {
+  name: {
+    get: function() {
+      return "React HTML Comment";
+    }
+  },
+  createdCallback: {
+    value: function() {
+      /**
+       * Firefox fix, is="null" prevents attachedCallback
+       * @link https://github.com/WebReflection/document-register-element/issues/22
+       */
+      this.is = "";
+      this.removeAttribute("is");
+    }
+  },
+  attachedCallback: {
+    value: function() {
+      this.outerHTML = "<!--" + this.textContent + "-->";
+    }
+  }
+});
+document.registerElement("react-comment", { prototype: proto });
+
 class App extends React.Component {
   constructor() {
     super();
@@ -22,6 +46,7 @@ class App extends React.Component {
     return (
       <HashRouter>
         <div className="Site">
+        <react-comment>Created By John Baek (http://johnbaek.life) and Wadah Adlan (http://wadah.us)</react-comment>
           <Header />
           <div className="header-space" />
 
