@@ -42,6 +42,12 @@ class BlogShow extends React.Component {
               {el[1]}
             </h1>
           );
+        case "youtube":
+          return (
+            <div className="column">
+              <iframe width="100%" height="500px" frameBorder="1" src={el[1]} />
+            </div>
+          );
         case "subtitle":
           return (
             <h1

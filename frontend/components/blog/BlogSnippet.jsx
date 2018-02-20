@@ -25,7 +25,7 @@ const BlogSnippet = ({ blog }) => (
       <span className="tag">
         <time dateTime="2016-1-1">Published: {makeDate(blog.date)}</time>
       </span>
-      <span className="tag read-more">
+      <span className="read-more">
         <Link to={"/blog/" + blog.id}>
           <p className="button is-success">Read-More...</p>
         </Link>

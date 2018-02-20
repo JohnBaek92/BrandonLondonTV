@@ -1,7 +1,44 @@
 require 'faker'
 press =Page.create({page_type: "Press"})
 
+images = [
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/26993366_1580711935298029_611254072946550428_n.jpg?oh=3c93af7e45f1e68c4b325bdbdc0310f8&oe=5ADA2374",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/21192026_1443073582395199_1062451394177389632_n.jpg?oh=4a5819fc54497e648fec595f045fc263&oe=5B09ADBC",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19990496_1396625053706719_5415138348471492511_n.jpg?oh=b82854cf60033d670bd4c24b0489af49&oe=5B1DF55A",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19989330_1396433117059246_6928315913900142427_n.jpg?oh=d7e294b60f022dac925416daff9c2258&oe=5B137F0C",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/20046280_1396093200426571_7186641344731813799_n.jpg?oh=70fe13bb1a372910e96faf161d8852cf&oe=5B243777",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19895113_1394069727295585_8181690511253445445_n.jpg?oh=624fc2d4471eae24fd402d2960d77fba&oe=5B16D554",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19399241_1376036785765546_4983184253044002155_n.jpg?oh=5209890d0b8704244bd8f8184320d383&oe=5B148862",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15826494_1204036862965540_4945437145124178953_n.jpg?oh=c497f7818d8e1ea05344b1fdcd3769e3&oe=5ADD34BA",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/15724770_1201608249875068_2411188502480021255_o.jpg?oh=385fd41eef0918a3e784869e7bc7cd11&oe=5B112694",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/15724799_1195402847162275_5150642119146931190_o.jpg?oh=4ffbf36807b0ef3fba80ee3f31f18220&oe=5B26E345",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15665427_1194337850602108_2389284949587324711_n.jpg?oh=82d61cacb16b93d0f13f1800f0ebf4b1&oe=5B0C7136",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15621931_1192399300795963_4663776221609686894_n.jpg?oh=40a8642077d715deeb1b5230dedfc64f&oe=5B26E5A4",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/15440532_1182422788460281_7853164483374236869_o.jpg?oh=68a44b14178fd85d4289ec0d1ac997bd&oe=5B152C5B",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15181581_1159918210710739_2565663071790198829_n.jpg?oh=87b766a2c1d2bc5b2b8ec16966e70cfb&oe=5B22FE86",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15032654_1151780808191146_969915822132904178_n.jpg?oh=364deb8049bf7b9820d84c7cfbccf49e&oe=5B24C2C8",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15107243_1149929788376248_820373308421641710_n.jpg?oh=dd37d53a1e9cec9155e3f89cbc1b7156&oe=5B0AF961",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15037260_1149422411760319_2634800070772913681_n.jpg?oh=57cdb66ae3af8043dfa0267504a6caaf&oe=5B235651",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14962582_1146174565418437_3602908948726601514_n.jpg?oh=f1e586b48787b7c157acf368178009f1&oe=5B149255",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14915500_1142385669130660_6673703020753697232_n.jpg?oh=9a937884c968b32a4d7bed81729887c6&oe=5B118BB6",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14720385_1119872098048684_8356700610160871728_n.jpg?oh=3d79f9675244ba968b10d17e7dac212f&oe=5B1F5E60",
 
+]
+
+
+15.times do |i|
+
+    Blog.create({
+        content:[
+            ["title", Faker::Lorem.sentence],
+            ["title2", Faker::Lorem.sentence],
+            ["image", images[i]],
+            ["subtitle", Faker::Lorem.sentence],
+            ["text", Faker::Lorem.paragraph],
+        ]
+    })
+
+end
 
 Blog.create({
     content: [
@@ -52,44 +89,36 @@ Blog.create({
         ]
 })
 
-images = [
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/26993366_1580711935298029_611254072946550428_n.jpg?oh=3c93af7e45f1e68c4b325bdbdc0310f8&oe=5ADA2374",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/21192026_1443073582395199_1062451394177389632_n.jpg?oh=4a5819fc54497e648fec595f045fc263&oe=5B09ADBC",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19990496_1396625053706719_5415138348471492511_n.jpg?oh=b82854cf60033d670bd4c24b0489af49&oe=5B1DF55A",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19989330_1396433117059246_6928315913900142427_n.jpg?oh=d7e294b60f022dac925416daff9c2258&oe=5B137F0C",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/20046280_1396093200426571_7186641344731813799_n.jpg?oh=70fe13bb1a372910e96faf161d8852cf&oe=5B243777",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19895113_1394069727295585_8181690511253445445_n.jpg?oh=624fc2d4471eae24fd402d2960d77fba&oe=5B16D554",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19399241_1376036785765546_4983184253044002155_n.jpg?oh=5209890d0b8704244bd8f8184320d383&oe=5B148862",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15826494_1204036862965540_4945437145124178953_n.jpg?oh=c497f7818d8e1ea05344b1fdcd3769e3&oe=5ADD34BA",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/15724770_1201608249875068_2411188502480021255_o.jpg?oh=385fd41eef0918a3e784869e7bc7cd11&oe=5B112694",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/15724799_1195402847162275_5150642119146931190_o.jpg?oh=4ffbf36807b0ef3fba80ee3f31f18220&oe=5B26E345",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15665427_1194337850602108_2389284949587324711_n.jpg?oh=82d61cacb16b93d0f13f1800f0ebf4b1&oe=5B0C7136",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15621931_1192399300795963_4663776221609686894_n.jpg?oh=40a8642077d715deeb1b5230dedfc64f&oe=5B26E5A4",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/15440532_1182422788460281_7853164483374236869_o.jpg?oh=68a44b14178fd85d4289ec0d1ac997bd&oe=5B152C5B",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15181581_1159918210710739_2565663071790198829_n.jpg?oh=87b766a2c1d2bc5b2b8ec16966e70cfb&oe=5B22FE86",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15032654_1151780808191146_969915822132904178_n.jpg?oh=364deb8049bf7b9820d84c7cfbccf49e&oe=5B24C2C8",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15107243_1149929788376248_820373308421641710_n.jpg?oh=dd37d53a1e9cec9155e3f89cbc1b7156&oe=5B0AF961",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15037260_1149422411760319_2634800070772913681_n.jpg?oh=57cdb66ae3af8043dfa0267504a6caaf&oe=5B235651",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14962582_1146174565418437_3602908948726601514_n.jpg?oh=f1e586b48787b7c157acf368178009f1&oe=5B149255",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14915500_1142385669130660_6673703020753697232_n.jpg?oh=9a937884c968b32a4d7bed81729887c6&oe=5B118BB6",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14720385_1119872098048684_8356700610160871728_n.jpg?oh=3d79f9675244ba968b10d17e7dac212f&oe=5B1F5E60",
 
-]
+Blog.create({
+    content: [
+        ["title", "How did you ALL-STAR?"],
+        ["title2", ""],
+        ["image", "https://lionessmagazine.com/wp-content/uploads/2018/02/unnamed-13.jpg"],
+        ["subtitle", ""],
+        ["text", "I’m sure I was not the only person who skipped this years SUPER BOWL and its events because it was cold AF in Minneapolis! I know I’m a former NFL receiver, I’m a Giants TV personality and week of Super Bowl events would be great for my Instagram but nobody has time for 11 degree weather!"],
+        ["text", "Fast forward to this past weekend. NBA ALL-STAR weekend 2018 in LA. No way I was I going to miss out on 75 degree weather, mansion parties, celebrities and beautiful women! Besides, I live here lol. Here’s the thing about All-Star weekend, depending on who you talk to, it’s not as “classy” as Super Bowl week. A lot of people think it is a RATCHET FEST, filled with gold digging women, male groupies, overpriced club entry and people going broke just to “stunt for the gram!” Trust me, I saw a lot of that but, if you do it right and take advantage the exposure to the established and upcoming brands, there are endless opportunities for you to network, party, holla and meet new people."],
+        ["subtitle", "Here’s a couple pics & vids from this past weekend."],
+        ["image", "https://lionessmagazine.com/wp-content/uploads/2018/02/Baron-Davis-and-Christine-Simmons-670x1005.jpg"],
+        ["image", "https://lionessmagazine.com/wp-content/uploads/2018/02/unnamed-17-670x446.jpg"],
+        ["image", "https://lionessmagazine.com/wp-content/uploads/2018/02/Tosca-Musk-and-James-Andrews-670x447.jpg"],
+        ["text", "The Summit began with the BIG LOVEFEST Valentine’s Day Women’s Networking Luncheon at the Jeremey Hotel – West Hollywood, hosted by ESPN Sportscenter Anchor, Cari Champion and sounds by DJ, television personality, and fashion model DJ KISS. The event honored women in business, sports, and entertainment including motivating speeches by Los Angeles Sparks President/COO, Christine Simmons, ESPN Sports Center Host, Cari Champion, and Baron Davis."],
+        ["subtitle", "Awkward Moment:"],
+        ["text", "I think it was a women's only event! I was RSVP’d for it. I even brought my friend from Australia who is an upcoming producer here in LA! So thank you Baron Davis for not kicking me out! I had some remarkable life conversations with some of entertainments brightest women!"],
+        ["subtitle", "The ALLEN IVERSON Experience"],
+        ["text", "I’ve been an A.I fan since living in Hampton, VA as a kid. I couldn’t wait for the event! This is the man who changed basketballs image during his playing days. He merged hip hop and basketball."],
+        ["title2", "Dame Dash- ‘Honor Up’ private screening"],
+        ["subtitle", "Here's the trailer"],
+        ["youtube", "https://www.youtube.com/embed/aCq1srS3PiA" ],
+        ["subtitle", "Mally Mal Party"],
+        ["text", "This event is where I got to party like 23 year old Brandon London. I felt young, alive and invincible. Not invincible in a creepy or arrogant manner. I mean, I still conducted myself in manner that proves I have home training. But when you’re hanging out poolside at a mansion in the Hollywood Hills with rappers, models, DJs and industry people with bottles being popped and dope music, you’re having a good time and  feeling thankful. "],
+        ["text", "Rae Sremmurd came through and his whole camp turned the entire party up. I can’t lie, I’m now a Raw Smeader fan just because of the way he and his entourage saved the party."],
+        ["subtitle", "Oh yea, the LAPD came and shut the party down. Helicopters and all!! That’s a party!"],
+        ["text", "I don’t know where next year's all star weekend is but it’s going to be hard to top 2018!"],
+    ]
+})
 
 
-12.times do |i|
-
-    Blog.create({
-        content:[
-            ["title", Faker::Lorem.sentence],
-            ["title2", Faker::Lorem.sentence],
-            ["image", images[i]],
-            ["subtitle", Faker::Lorem.sentence],
-            ["text", Faker::Lorem.paragraph],
-        ]
-    })
-
-end
 
 links = [
     {

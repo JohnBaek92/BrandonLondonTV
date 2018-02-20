@@ -1,10 +1,8 @@
 class BlogsController < ApplicationController
 
     def index
-        start = params[:start].to_i
-        offset = params[:offset].to_i
-        last = start + offset
-        blogs = Blog.all[start...last]
+        page = params[:page].to_i
+        blogs = Blog.order(created_at: :desc).limit(4).offset(page * 4)
         @blogs = blogs ? blogs : []
     end
 

@@ -5,7 +5,7 @@ import BlogSnippet from "./BlogSnippet";
 class Blog extends React.Component {
   constructor() {
     super();
-    this.state = { blogs: [],start: 0 };
+    this.state = { blogs: [], page: 0 };
     this.fetchBlogs = this.fetchBlogs.bind(this);
     this.addBlogs = this.addBlogs.bind(this);
   }
@@ -20,20 +20,30 @@ class Blog extends React.Component {
   }
 
   addBlogs(newBlogs) {
-    const { blogs, start } = this.state
-    const newStart = start + 4
-    const combinedBlogs = blogs.concat(newBlogs)
-    this.setState({ blogs: combinedBlogs, start: newStart });
+    const { blogs, page } = this.state;
+    const newPage = page + 1;
+    if (!newBlogs.length) {
+      document.removeEventListener(
+        "scroll",
+        this.handleScroll.bind(this),
+        false
+      );
+    }
+    const combinedBlogs = blogs.concat(newBlogs);
+    this.setState({ blogs: combinedBlogs, page: newPage });
   }
 
   fetchBlogs() {
-    const {start} = this.state
-    fetch("/blogs?offset=4&start=" + start)
+    const { page } = this.state;
+    fetch("/blogs?offset=4&page=" + page)
       .then(res => {
         return res.json();
       })
       .then(blogs => this.addBlogs(blogs))
-      .catch(err => this.setState({ error: "There Was an Error..." }));
+      .catch(err => {
+        debugger;
+        this.setState({ error: "There Was an Error..." });
+      });
   }
 
   handleScroll(event) {
@@ -49,18 +59,19 @@ class Blog extends React.Component {
       html.offsetHeight
     );
 
-    const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    const scrollTop =
+      window.pageYOffset ||
+      (document.documentElement || document.body.parentNode || document.body)
+        .scrollTop;
     const scrollPercent = scrollTop / (docHeight - winHeight);
     const scrollPercentRounded = Math.round(scrollPercent * 100);
     if (scrollPercentRounded > 70) {
-      this.fetchBlogs()
+      this.fetchBlogs();
     }
   }
 
-
-
   render() {
-    const { blogs, error, start } = this.state;
+    const { blogs, error, page } = this.state;
     if (error)
       return (
         <div className="container">
@@ -68,15 +79,10 @@ class Blog extends React.Component {
         </div>
       );
     if (!blogs) return null;
-    debugger
     let posts = blogs.map(blog => (
       <BlogSnippet key={blog.id * Math.random(0, 3)} blog={blog} />
     ));
-    return (
-      <div className="makeFlex">
-        {posts}
-      </div>
-    );
+    return <div className="makeFlex">{posts}</div>;
   }
 }
 
