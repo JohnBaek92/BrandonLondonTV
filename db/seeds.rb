@@ -26,19 +26,19 @@ images = [
 ]
 
 
-15.times do |i|
+# 15.times do |i|
 
-    Blog.create({
-        content:[
-            ["title", Faker::Lorem.sentence],
-            ["title2", Faker::Lorem.sentence],
-            ["image", images[i]],
-            ["subtitle", Faker::Lorem.sentence],
-            ["text", Faker::Lorem.paragraph],
-        ]
-    })
+#     Blog.create({
+#         content:[
+#             ["title", Faker::Lorem.sentence],
+#             ["title2", Faker::Lorem.sentence],
+#             ["image", images[i]],
+#             ["subtitle", Faker::Lorem.sentence],
+#             ["text", Faker::Lorem.paragraph],
+#         ]
+#     })
 
-end
+# end
 
 Blog.create({
     content: [

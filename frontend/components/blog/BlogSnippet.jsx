@@ -15,8 +15,8 @@ const BlogSnippet = ({ blog }) => (
     <div className="card-content">
       <div className="media">
         <div className="media-content">
-          <p className="title is-4 truncate">{blog.title}</p>
-          <p className="subtitle is-6 truncate">{blog.subtitle}</p>
+          <p className="title is-4 has-text-centered">{blog.title}</p>
+          <p className="subtitle is-6 has-text-centered">{blog.subtitle}</p>
         </div>
       </div>
     </div>
