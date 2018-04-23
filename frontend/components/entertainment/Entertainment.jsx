@@ -9,7 +9,7 @@ class Entertainment extends React.PureComponent {
       openModal: false,
       picture: null,
       prevVideo: null,
-      top: "35vh",
+      top: "50vh",
       middle: "25vh",
       bottom: "15vh",
       videos: {
@@ -24,16 +24,7 @@ class Entertainment extends React.PureComponent {
       }
     };
 
-    this.videos = [
-      "E8JlWMXJgqA",
-      "BKXLB4-9sfg",
-      "KLmwpPbTsN0",
-      "rJ_qxnuKADY",
-      "YbXrdVjzkC4",
-      "AOmHwHWpdKc",
-      "erRJtA8bkVc",
-      "WSmNvV-8uwU"
-    ];
+    this.videos = ["unxtRCOsZpE", "BKXLB4-9sfg", "Y9YP2EQJ_wI", "AOmHwHWpdKc", "7WOW3hCIg8U", "G4iZJtXw5ig", "rJ_qxnuKADY", "KLmwpPbTsN0", "KLmwpPbTsN0", "4lRkQZTapcg", "erRJtA8bkVc", "J_MAIrPsmRA", "y1_sZeSDlc8"];
     this.changeHeight = this.changeHeight.bind(this);
     this.makeVideo = this.makeVideo.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -78,7 +69,7 @@ class Entertainment extends React.PureComponent {
             height: "100%",
             width: "100%"
           }}
-          onPlay={e => this.changeHeight(row, idx, link, e)}
+          // onPlay={e => this.changeHeight(row, idx, link, e)}
         />
       </div>
     );
@@ -110,11 +101,7 @@ class Entertainment extends React.PureComponent {
   }
 
   render() {
-    return (
-      <div
-        className="entertainment-wrapper"
-        onClick={e => this.openModalState(e)}
-      >
+    return <div className="entertainment-wrapper" onClick={e => this.openModalState(e)}>
         {this.state.openModal ? this.openModal() : null}
         <div className="title has-text-centered">Photos</div>
         <div className="columns is-mobile">
@@ -130,25 +117,45 @@ class Entertainment extends React.PureComponent {
           <img className="column" src={window.images.e8} />
         </div>
         <div className="title has-text-centered">Videos</div>
-        <div className="columns is-mobile" style={{ height: this.state.middle }}>
-          {this.videos.slice(0, 2).map(link => this.makeVideo(link, "middle"))}
+        <div className="subtitle has-text-centered">My Best Moves</div>
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
+          {this.videos
+            .slice(0, 2)
+            .map(link => this.makeVideo(link, "middle"))}
         </div>
-        <div
-          className="columns is-mobile"
-          style={{ height: this.state.middle }}
-        >
-          {this.videos.slice(2, 4).map(link => this.makeVideo(link, "middle"))}
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
+          {this.videos
+            .slice(2, 4)
+            .map(link => this.makeVideo(link, "middle"))}
         </div>
-        <div
-          className="columns is-mobile"
-          style={{ height: this.state.bottom }}
-        >
+        <div className="subtitle has-text-centered">Fan Experience</div>
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
+          {this.videos
+            .slice(4, 6)
+            .map(link => this.makeVideo(link, "middle"))}
+        </div>
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
           {this.videos
             .slice(6, 8)
             .map((link, idx) => this.makeVideo(link, "middle", idx))}
         </div>
-      </div>
-    );
+        <div className="subtitle has-text-centered">On The Road</div>
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
+          {this.videos
+            .slice(8, 10)
+            .map((link, idx) => this.makeVideo(link, "middle", idx))}
+        </div>
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
+          {this.videos
+            .slice(10, 12)
+            .map((link, idx) => this.makeVideo(link, "middle", idx))}
+        </div>
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
+          {this.videos
+            .slice(12, 14)
+            .map((link, idx) => this.makeVideo(link, "middle", idx))}
+        </div>
+      </div>;
   }
 }
 
