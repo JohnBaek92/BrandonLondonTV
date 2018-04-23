@@ -28,8 +28,8 @@ class Entertainment extends React.PureComponent {
     this.ontheroad = ["KLmwpPbTsN0", "4lRkQZTapcg", "erRJtA8bkVc", "J_MAIrPsmRA"];
     this.bestmoves = ["unxtRCOsZpE", "z7unu1gYNwU", "BKXLB4-9sfg", "pfL0FbCBomw", "Y9YP2EQJ_wI", "AOmHwHWpdKc"];
     this.fanexperience = ["7WOW3hCIg8U", "G4iZJtXw5ig", "rJ_qxnuKADY", "y1_sZeSDlc8"];
-    this.asSeenOnTV = ["Dxs596KF7-Y", "NXLMJLd3Wbw", "Bqz9m6dhA-M"];
-    this.goplay = ["WSmNvV-8uwU"];
+    this.asSeenOnTV = ["Dxs596KF7-Y", "E8JlWMXJgqA", "Bqz9m6dhA-M", "NXLMJLd3Wbw"];
+    this.goplay = ["WSmNvV-8uwU", "tQUxs7Tz8-8", "xyRhEEI06lI"];
     this.changeHeight = this.changeHeight.bind(this);
     this.makeVideo = this.makeVideo.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -164,6 +164,11 @@ class Entertainment extends React.PureComponent {
         <div className="columns is-mobile" style={{ height: this.state.top }}>
           {this.goplay
             .slice(0, 2)
+            .map((link, idx) => this.makeVideo(link, "middle", idx))}
+        </div>
+        <div className="columns is-mobile" style={{ height: this.state.top }}>
+          {this.goplay
+            .slice(2, 4)
             .map((link, idx) => this.makeVideo(link, "middle", idx))}
         </div>
         <div className="subtitle has-text-centered">As Seen On TV</div>
